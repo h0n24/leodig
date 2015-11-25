@@ -32,7 +32,7 @@
 		<title>{$meta_title|escape:'htmlall':'UTF-8'}</title>
         {if $LEO_RESPONSIVE}
 			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
-        {/if}    
+        {/if}
 {if isset($meta_description) AND $meta_description}
 		<meta name="description" content="{$meta_description|escape:html:'UTF-8'}" />
 {/if}
@@ -58,16 +58,12 @@
 			var priceDisplayMethod = {$priceDisplay};
 			var roundMode = {$roundMode};
 		</script>
-                <link rel="stylesheet" type="text/css" href="{$BOOTSTRAP_CSS_URI}"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 {if isset($css_files)}
 	{foreach from=$css_files key=css_uri item=media}
 	<link href="{$css_uri}" rel="stylesheet" type="text/css" media="{$media}" />
 	{/foreach}
 {/if}
-{if $LEO_SKIN_DEFAULT &&  $LEO_SKIN_DEFAULT !="default"}
-	<link rel="stylesheet" type="text/css" href="{$content_dir}themes/{$LEO_THEMENAME}/skins/{$LEO_SKIN_DEFAULT}/css/skin.css"/>
-{/if}
-	<link rel="stylesheet" type="text/css" href="{$content_dir}themes/{$LEO_THEMENAME}/css/theme-responsive.css"/>
 
 
 {if isset($js_files)}
@@ -76,7 +72,7 @@
 	{/foreach}
 {/if}
 {$LEO_CUSTOMWIDTH}
-<link rel="stylesheet" type="text/css" href="{$content_dir}themes/{$LEO_THEMENAME}/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <script type="text/javascript" src="{$content_dir}themes/{$LEO_THEMENAME}/js/custom.js"></script>
 {if (isset($cms) && $cms->id == 8) || (isset($cms) && $cms->id == 24) }
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCF2ukOab0QMc_YIXs1gVz09vLdbHk4I7E&sensor=false"></script>
@@ -88,16 +84,8 @@
 {assign var='classfix' value=0}
 {if in_array($page_name,array(index,'prices-drop','new-products','category','best-sales','manufacturer','search','supplier','product'))}{$classfix=1}{/if}
 
-<!--[if IE]>
-	<link rel="stylesheet" type="text/css" href="{$content_dir}themes/{$LEO_THEMENAME}/css/ie.css" />
-<![endif]-->
 
-
-<!--[if lt IE 9]>
-<script src="{$content_dir}themes/{$LEO_THEMENAME}/js/html5.js"></script>
-<script src="{$content_dir}themes/{$LEO_THEMENAME}/js/respond.min.js"></script>
-<![endif]-->
-	{$HOOK_HEADER}	
+	{$HOOK_HEADER}
 	{**KONVERZNI KODY**}
 	{literal}
 		<!-- Seznam remarketing -->
@@ -108,7 +96,7 @@
 		</script>
 		<script type="text/javascript" src="//c.imedia.cz/js/retargeting.js"></script>
 
-	
+
 		<!-- FACEBOOK remarketing -->
 		<script>(function() {
 			  var _fbq = window._fbq || (window._fbq = []);
@@ -130,9 +118,7 @@
 	</head>
 
 	<body {if isset($page_name)}id="{$page_name|escape:'htmlall':'UTF-8'}"{/if} class="{$LEO_BGPATTERN} fs{$FONT_SIZE} {if isset($page_name)}{$page_name|escape:'htmlall':'UTF-8'}{/if}{if $hide_left_column} hide-left-column{/if}{if $hide_right_column} hide-right-column{/if}{if $content_only} content_only{/if} keep-header {if isset($as_seo_title)}seostranka{/if} {if $page_name|strstr:"module-blockwishlist-view"}wishlist_stranka{/if}">
-		<div id="low_ie_popup" style="display: none;background: white;color: black;	width: 400px;min-height: 200px;position: fixed;	top: 15%;left: 0;right: 0;	margin-left: auto;	margin-right: auto;	padding: 3em;	z-index: 100001;	text-align:center;"><h3>Web Helveti.cz právě testujeme pro Internet Explorer ve verzi 8.0. Pokud máte možnost, použijte prosím alternativní prohlížeč (Chrome, Firefox, vyšší verzi IE, apod).</h3></div>
-		<div id="low_ie_overlay" style='position: fixed;top: 0;	left: 0;background: black;	z-index: 100000;	width: 100%;height: 100%;	display: none;	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";	filter: alpha(opacity=50);	opacity: 0.5;'></div>
-		
+
 	<p style="display: block;" id="back-top"> <a href="#top"><span></span></a> </p>
 	{if !$content_only}
 		{if isset($restricted_country_mode) && $restricted_country_mode}
@@ -141,13 +127,13 @@
 		</div>
 		{/if}
 		<section id="page" class="clearfix">
-			
+
 			<!-- Header -->
 			<header id="header" class="navbar-fixed-top clearfix">
 				<section id="topbar">
 
 					<div class="container">
-						{$HOOK_TOP}	
+						{$HOOK_TOP}
 					</div>
 				</section>
 				<section id="header-main">
@@ -160,7 +146,7 @@
 							</div>
 							{if !empty($HOOK_HEADERRIGHT)}
 								<div id="header_right" class="col-sm-6 inner">
-									{$HOOK_HEADERRIGHT}	
+									{$HOOK_HEADERRIGHT}
 								</div>
 							{/if}
 							{if !empty($HOOK_TOPNAVIGATION) }
@@ -174,7 +160,7 @@
 							{/if}
 						</div>
 					</div>
-				</section>	
+				</section>
 			</header>
 			{if !(isset($inOrderProcess)|| isset($current_step)||$page_name == 'order' )}
 			<div class="plovouci_blok">
@@ -238,14 +224,14 @@ var _hwq = _hwq || [];
 				</div>
 			</section>
 			{/if}
-			{if !in_array($page_name,array('index'))}					
+			{if !in_array($page_name,array('index'))}
 				<section id="breadcrumb" class="clearfix">
 					<div class="container">
 						<div class="row">
 							{include file="$tpl_dir./breadcrumb.tpl"}
 						</div>
 					</div>
-				</section>					
+				</section>
 			{/if}
 			<section id="columns" class="clearfix">
 				<div class="container columns-container">
