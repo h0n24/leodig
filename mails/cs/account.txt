@@ -1,0 +1,20 @@
+Dobrý den p. {firstname} {lastname}.
+
+Děkujeme, že jste si vytvořili zákaznický účet v obchodě {shop_name}.
+
+Tady jsou vaše přihlašovací údaje: 
+
+E-mail: {email}
+Heslo: {passwd}
+ 
+Nyní můžete objednávat v našem obchodě: {shop_url}
+
+Důležité bezpečnostní tipy: 
+
+1. Vždy mějte údaje o účtu v bezpečí.
+2. Nikdy nesdělujte komukoliv své přihlašovací údaje.
+3. Pravidelně měňte heslo.
+4. Pokud byste měli podezření že někdo neoprávněně disponuje s Vaším účtem, dejte nám, prosím, okamžitě vědět.
+
+
+Obchod {shop_name} – {shop_url} - specialista na hodinky Potřebujete poradit? Volejte +420 774 744 763 nebo pište na info@helveti.cz 

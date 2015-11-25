@@ -1,0 +1,9 @@
+Dobrý den p. {name},
+
+{customer} vám poslal odkaz na zboží, o kterém si myslí, že by vás mohlo zajímat.
+
+Odkaz:
+{product}: {product_link}
+
+
+Obchod {shop_name} – {shop_url} funguje v systému PrestaShop™

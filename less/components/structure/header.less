@@ -1,0 +1,268 @@
+/*----------------------------------------------------------------------------
+Header
+------------------------------------------------------------------------------*/
+
+	#topbar {
+		background: none repeat scroll 0 0 #282B2F;
+		color: #ABABAB;
+		font-size: 14px;
+		padding: 0;
+		transition: all 1s ease 0s;
+			  -webkit-transition: all 1s ease 0s;
+			  -ms-transition: all 1s ease 0s;
+			  -o-transition: all 1s ease 0s;
+	}
+	#topbar .container {padding-top: 3px; padding-bottom: 1px;}
+		#topbar .links a {
+			background: none repeat scroll 0 0 #363636;
+		    border: 1px solid #363636;
+		    border-radius: 3px;
+		    color: #ABABAB;
+		    font-size: 14px;
+		    padding: 3px 6px;
+		}
+		#topbar .links a:hover {
+			color: #E76D66;
+		}
+		#topbar .links a .fa {
+			margin-right: 8px;
+		}
+		#topbar .container {
+			position: relative;
+		}
+		
+	#header-main {
+		background: none repeat scroll 0 0 #FFFFFF;
+		border-bottom: 1px solid #E7E7E7;
+		border-top: 1px solid #E7E7E7;
+		box-shadow: 0 0 2px #D9DADB;
+		margin-bottom: 12px;
+	}
+		.header-wrap {
+			padding-right: 225px;
+			@media (min-width: 993px) {
+					position: relative;
+			}
+			
+			@media (max-width: 1199px) {
+				padding-right: 135px;
+			}
+		}
+
+	
+
+	#header-main  .header-wrap > div {height: 80px; display: table; position: relative;}
+	#header-main  .header-wrap > div > * {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	#header_right {
+		min-height: 0;
+
+	}
+			
+	#header_logo {		
+		min-height: 80px;
+	}
+		#header_logo img {
+			
+		}
+
+@media (max-width: 992px) {
+
+		
+	/* leomanagewidgets*/
+		.nav-tabs > li > a {line-height: 20px; text-align: center;}
+	/** menu boostrap **/
+		#leo-top-menu {display: none!important;}
+		.navbar-toggle {display: block!important}
+	
+	#header_logo img {margin: auto;}
+	#topbar .container { padding-top: 10px; padding-bottom: 10px;}
+	.header-wrap {display: block}
+	#header-main .header-wrap > div {width: 100%; float: inherit!important; text-align: center;}
+	#languages_block_top,
+	#currencies_block_top {float: right!important;}
+	#header_user {margin-right: 0}
+	#header_nav {display: none;}
+		#header_nav {position: absolute; padding: 10px; background-color: #fff; right: 10px; border-radius: 3px; box-shadow: 0 1px 3px #ccc; z-index: 9;width: 140px;}
+		#header_nav a {background: none!important; border: 0!important;}
+		#header_nav li {display: block; margin: 10px 0;}
+		#header_nav li:first-child {display: none;}
+		#topbar #shopping_cart a {min-width: inherit; margin-right: 30px; padding: 0;  position: relative;}
+		#topbar #shopping_cart a span {display: none!important;}
+		#topbar #shopping_cart  a .fa-shopping-cart { display: block!important; font-size: 18px; line-height: 28px;  margin-top: 0; background: #363636; border-color: #363636}
+		#topbar #shopping_cart  a .ajax_cart_quantity {display: block!important; position: absolute; top: 0; left: 2px;}
+	#header_user {margin-top: 0;}
+	.groupe-btn {
+		padding: 9px 13px;
+		height: 38px;
+		width: 38px;
+		text-align: center;
+		color: #fff;
+	}
+
+	/** menu **/
+	#topnavigation {position: absolute; top: -60px; left: 5px;z-index: 90; width: 100%;}
+	.dropdown-submenu:hover > .dropdown-menu {padding: 0;}
+	.navbar-inverse .navbar-toggle {background-color: #363636; border-color: #363636;}
+	.navbar-inverse .navbar-toggle .icon-bar  {background-color: #fff;}
+	.navbar-inverse .navbar-toggle:hover .icon-bar {background-color: #E76D66}
+	.navbar-inverse .navbar-toggle:focus .icon-bar {background-color: #E76D66}
+	
+	.product_block .wishlist-compare {bottom: 0;}
+}
+
+@media (max-width: 330px) {
+	#header #cart_block {
+		right: 29px;
+		top: 195px;
+		text-align: left;
+	}
+}
+
+@media (max-width: 992px) {
+	#header #topbar > .container {
+		height: 64px;
+	}
+	#header #header-main > .container {
+		position: relative;	
+	}
+}
+
+/* plovoucí blok */
+
+.plovouci_blok {
+	right: -144px;
+	top: 150px;
+	z-index: 1000; 
+	position: fixed;
+	transition: 150ms;
+
+	.jsem_zde, .proc_unas, .vanocni_akce {
+		border-radius: 5px 0 0 5px;
+		background-color:  #9DA9BC;
+		width: 235px; /*91*/
+		height: 124px;
+	}
+
+	.proc_unas, .vanocni_akce {
+		margin-top: 10px;
+	}
+
+	.vanocni_akce {
+		background-color: #E76D66;
+	}
+
+	.jsem_zde_txt, .proc_unas_txt, .jsem_zde_nadpis {
+		color:  #ffffff;
+		font-size: 14px;
+		font-weight: 400;
+		text-align: center;	
+		line-height: 36px;
+	}
+
+	.jsem_zde_img {
+		text-align: center;	
+		
+		img {
+			border-radius: 5px;
+		}
+	}
+
+	.proc_unas_ico {
+		text-align: center;	
+		height: 64px;
+		width: 64px;
+		border-radius: 50%;
+		border: 2px solid #828FA3;
+		padding: 3px;
+		margin: 6px auto;
+		
+		.fa {
+			height: 54px;
+			width: 54px;
+			border-radius: 50%;
+			background-color: #828FA3;
+			line-height: 55px;
+			font-size: 25px;
+			color: #fff;
+		}
+	}
+
+	.jsem_zde_levo, .proc_unas_levo, .vanocni_akce_levo {
+		width: 91px;
+		float: left;
+	}
+
+	.jsem_zde_pravo {
+		width: 139px;
+		float: left;
+		font-size: 14px;
+		color: #fff;
+	}
+
+	.proc_unas_link, .vanocni_akce_link {
+		text-decoration: underline;	
+		line-height: 28px;
+		font-weight: 700;
+	}
+
+	.proc_unas_link:hover, .vanocni_akce_link:hover {
+		text-decoration: none;
+	}
+
+	.jsem_zde_nadpis {
+		text-align: left;
+	}
+
+	.jsem_zde_jmeno {
+		color:  #ffffff;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 22px;
+		margin-left: 10px;
+		margin-bottom: 8px;	
+	}
+
+	.jsem_zde_kontakt {
+		margin-left: 10px;
+	}
+
+	.proc_unas_pravo, .vanocni_akce_pravo {
+		margin-top: 15px;
+		font-size: 12px;
+		padding-left: 10px;
+		width: 129px;
+		float: left;
+		color: 	#fff;
+	}
+
+	.vanocni_akce_pravo {
+		font-size: 15px;
+	}
+
+	.vanocni_akce_img {
+		background-image: url("../img/helveti/vanoce-akce.png");
+		width: 49px;
+		height: 103px;
+		margin: 10px 17px;
+	}
+
+	@media (max-width: 992px) {
+		display: none;
+	}
+}
+
+.plovouci_blok:hover {
+	right: 0;
+	
+	.proc_unas_ico {
+
+		.fa {
+			background-color: #60BF58;
+		}
+	}
+
+}
+

@@ -1,0 +1,105 @@
+/*--------------------------------------------------------------
+Layout
+--------------------------------------------------------------*/
+
+
+
+#page {overflow: hidden;}
+	#header {z-index:90000}
+	#columns {z-index:1; margin-bottom: 20px;}
+	#index  #columns {margin-bottom: 0;}
+		#left_column {}
+		#center_column {}
+		#right_column {}
+	#footer {}
+		.container {padding: 0;}
+
+.maincontainer  {
+	background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px #D9DADB;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+/* sidebar */
+		.column ul {
+			list-style: none;
+		}
+			.column .bullet > li:first-child a {
+				border-top: 0;
+			}
+			.column .bullet  li a {
+				background: url("../img/default/arrow-li.png") no-repeat scroll 0 13px;
+				padding: 7px 0 5px 15px;
+				-webkit-transition: none;
+				transition: none;
+			}
+			.column .bullet  li a.selected,
+			.column .bullet  li a:hover {
+				color: #D04B17;
+				background-position: 0 -37px;
+			} 
+			.column .bullet  li .icon {
+				display: none;
+			}
+				.column .bullet  li  ul li {
+					padding-left: 15px;
+				}
+				.column .bullet  li  ul li  ul li{
+					padding-left: 30px;
+				}	
+				
+	
+	.sidebar .block .title_block {
+		background: none repeat scroll 0 0 #FDFDFD;
+		border-bottom: 1px solid #F2F5F8;
+		border-radius: 4px 4px 0 0;
+		/* font-family: proximanovasemibold; */
+		font-size: 23px;
+		line-height: 33px;
+		padding: 10px 20px;
+	}
+	.sidebar .block .block_content {
+		padding: 15px 20px;
+	}
+		.sidebar .block h4.media-heading {
+			font-size: 14px;
+			/* font-family: proximanovasemibold; */ 
+			text-transform: none;
+		}
+	.sidebar .block dt {font-weight: normal;}
+
+	.sidebar p.lnk {
+		 padding: 0;
+    	text-align: right;
+    	font-weight: bold;
+	}
+	.products_block .s_title_block {height: 25px; overflow: hidden; font-size: 14px}
+	/*maincontainer */
+	
+@media (max-width: 1200px) {
+	.header-wrap {padding-right: 155px}
+	.nivoSlider {height: 340px!important;}
+	.container {padding-left: 10px; padding-right: 10px;}
+}
+
+@media (max-width: 992px) {
+	/*remove fix header*/
+	#page{padding-top: 0 !important}
+	#header.navbar-fixed-top{position: static;}
+	#topbar{margin-top: 0!important}
+	
+	
+}
+
+#hw-87kwowifjjowiklsadh666right {
+	z-index: 80000 !important;
+}
+
+.fancybox-opened {
+	z-index: 110001 !important;
+}
+
+.fancybox-overlay {
+	z-index: 110000 !important;
+}

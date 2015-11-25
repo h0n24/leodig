@@ -1,0 +1,8 @@
+Dobrý den p. {firstname} {lastname}.
+
+Byla pro Vás vygenerována nová objednávka.
+
+Přejít na {order_link} k dokončení platby.
+
+
+Obchod {shop_name} – {shop_url} - specialista na hodinky Potřebujete poradit? Volejte +420 774 744 763 nebo pište na info@helveti.cz 

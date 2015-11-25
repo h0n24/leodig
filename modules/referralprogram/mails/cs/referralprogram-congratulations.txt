@@ -1,0 +1,8 @@
+Blahopřejeme!
+
+Vaší sponzorovaný přítel, {sponsored_firstname} {sponsored_lastname} zadal svoji první objednávku v obchodě {shop_url} !
+
+Jsme rádi, že Vám můžeme nabídnout slevový kupón v hodnotě {discount_display} (kupón č. {discount_name}), který můžete použít na další objednávky.
+
+
+Obchod {shop_name} – {shop_url} funguje v systému PrestaShop™

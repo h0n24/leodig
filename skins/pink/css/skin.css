@@ -1,0 +1,94 @@
+/*
+	PrestaShop CSS
+	green color
+*/
+
+	
+.lnk a:hover	,
+a:focus,
+a:hover {
+	color: #e9584f;
+}
+	/*#header_logo { background: url(../img/logo_pink.png) center center no-repeat; min-width: 173px;}
+	#header_logo img {display: none;}*/
+.carousel-control:hover, .carousel-control:focus {
+	background-color: #e9584f;
+	color: #fff;
+}
+
+	/*button */
+		input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, a.exclusive:hover, span.exclusive:hover, .button:hover, .button_large:hover, .button_small:hover {background-color: #e9584f; border-color: #e9584f!important;}
+	
+	/*tooltip*/
+		.tooltip-inner {background-color: #e9584f }
+		.tooltip.top-left .tooltip-arrow,.tooltip.top-right .tooltip-arrow,.tooltip.top .tooltip-arrow { border-top-color: #e9584f;}
+		.tooltip.right .tooltip-arrow {border-right-color: #e9584f;}
+		.tooltip.left .tooltip-arrow { border-left-color: #e9584f;}
+		.tooltip.bottom-left .tooltip-arrow,.tooltip.bottom-right .tooltip-arrow,.tooltip.bottom .tooltip-arrow {border-bottom-color: #e9584f;}
+	/* pagination */
+		.pagination > li > a:hover, .pagination > li > a:focus, .pagination > li > span:hover, .pagination > li > span:focus,
+		.pagination > li.current > span:hover, .pagination > li.current > span:focus, .pagination > li.current > span {
+			background-color: #e9584f;
+		}
+/*topbar */
+	#topbar .links a.account,
+	#topbar #header_user_info a {
+		color: #e9584f;
+	}
+	#topbar .links a:hover {color: #e9584f;}
+/* main menu */
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > li:focus > a, .navbar-default .navbar-nav > li:hover > a {color: #e9584f; }
+	.navbar-default .navbar-nav > .active > .caret, .navbar-default .navbar-nav > li:focus > .caret, .navbar-default .navbar-nav > li:hover > .caret {border-top-color: #e9584f;}
+	.dropdown-menu li:hover .caret { border-left-color:#e9584f;}
+	.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {color: #e9584f;}
+	.navbar-nav > li > a:before {background-color: #e9584f}
+	
+/** slideshow */
+		.leo-coinslider-basic .nivo-directionNav a{
+			background-image: url(../img/arrow-control.png);
+		}
+		.leo-coinslider-basic .nivo-controlNav a {background-image: url(../img/bullets.png);}
+		
+/* breadcrumb**/
+	.breadcrumb {color:#e9584f; }
+/** Leo Manage Widgets **/
+	.media .readmore a {
+		color: #e9584f;
+		background-image:url(../img/circle-li.png)
+	}
+	.nav-tabs li.active {background-color: #e9584f;}
+	.nav-tabs li.active:before {border-top-color: #e9584f; }
+	.rating_box .fa-star {color: #e9584f;}
+	
+/** advandfooter */
+	#advandfooter a:hover {color: #e9584f; }
+	#block_contact_infos li:hover {color: #e9584f;}
+	#block_contact_infos li:hover span {border-color: #e9584f;}
+	.link a { background-image: url("../img/circle-li.png");}
+	#newsletter_block_left .button_mini {background-color:#e9584f; border-color: #e9584f!important;}
+	
+	#footer-bottom .copyright a {color: #e9584f;}
+	
+/** sidebar **/
+	.column .bullet li a {	background-image: url("../img/arrow-li.png");}
+	.column .bullet li a.selected, .column .bullet li a:hover {color: #e9584f}
+	.column .bullet li a.selected .badge, .column .bullet li a:hover .badge {background-color: #e9584f}
+/** product list*/
+		.cat_desc .lnk_more {
+		   color:#e9584f;
+			background-image:url("../img/circle-li.png");
+		}
+		#productsview .active, #productsview .fa:hover { background-color: #e9584f;  border-color:#e9584f!important;}
+		input.bt_compare {background-color: #e9584f;  border: 1px solid #e9584f !important;}
+		
+/* product */
+	#attributes .attribute_list #color_to_pick_list li.selected {  border-color: #e9584f;} 
+	.idTabs a:hover, .idTabs .selected {color: #e9584f;}
+	
+/*** comment **/
+	#product_comments_block_tab div.star, #product_comments_block_tab div.star_on,
+	#product_comments_block_extra div.star_on,
+	.star, .star a {
+		background-image: url(../img/star.gif);
+	}
+	

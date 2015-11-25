@@ -1,0 +1,24 @@
+
+.kosik-container legend {
+	top: -18px;	
+}
+
+.kosik-container fieldset {
+	padding: 0 0 22px;
+}
+
+.kosik-container #prihlaseni fieldset {
+	padding-top: 0;
+}
+
+.kosik-container #prihlaseni fieldset legend {
+	margin-bottom: 15px;
+}
+
+.cms-onas-infograf-nadobal {
+	display: none;
+}
+
+.cms-onas-infograf-ie {
+	display: block !important;
+}

@@ -1,0 +1,16 @@
+Vážení obchodní přátele,
+
+Obdrželi jste zprávu od zákazníka přes váš obchod: {shop_name}
+
+E-mail zákazníka: {email}
+
+Zpráva zákazníka: 
+
+{message}
+
+Objednávka: {order_name}
+
+Příloha (soubor): {attached_file}
+
+
+Obchod {shop_name} – {shop_url} - specialista na hodinky Potřebujete poradit? Volejte +420 774 744 763 nebo pište na info@helveti.cz 

@@ -1,0 +1,12 @@
+Dobrý den p. {firstname} {lastname}.
+ 
+Jste jedním z našich nejlepších zákazníků a proto Vám chceme poděkovat za vaší dlouhodobou přízeň.
+
+Jako uznání za vaší věrnost, Vám chceme nabídnout slevu {amount} % z další objednávky! Tato nabídka je platná po dobu {days} dnů, takže neztrácejte čas!
+ 
+Zde je váš slevový kupón: {voucher_num}
+
+Zadejte tento kód do nákupního košíku, pro získání slevy.
+
+
+Obchod {shop_name} – {shop_url} funguje v systému PrestaShop™

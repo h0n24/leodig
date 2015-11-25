@@ -1,0 +1,8 @@
+Dobrý den.
+	
+Toto je testovací e-mail z vašeho obchodu PrestaShop™.
+
+Pokud můžete přečíst tuto zprávu, pak byl test úspěšný!
+
+
+Obchod {shop_name} – {shop_url} - specialista na hodinky Potřebujete poradit? Volejte +420 774 744 763 nebo pište na info@helveti.cz 

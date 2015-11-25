@@ -1,0 +1,11 @@
+Dobrý den p. {firstname} {lastname}.
+
+Vytvořili jsme pro Vás slevový kupón za odkaz pro sponzorovaného přítele.
+
+Zde je kód pro Vašeho slevového kupónu: {voucher_num} v hodnotě {voucher_amount}.
+Stačí pouze použít Kopírovat / Vložit tento kód během procesu zadávání další objednávky.
+
+Děkujeme za nákup v obchodě {shop_name}.
+
+
+Obchod {shop_name} – {shop_url} funguje v systému PrestaShop™

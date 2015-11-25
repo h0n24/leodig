@@ -1,0 +1,94 @@
+{*
+* 2007-2013 PrestaShop
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License (AFL 3.0)
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/afl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@prestashop.com so we can send you a copy immediately.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+* versions in the future. If you wish to customize PrestaShop for your
+* needs please refer to http://www.prestashop.com for more information.
+*
+*  @author PrestaShop SA <contact@prestashop.com>
+*  @copyright  2007-2013 PrestaShop SA
+*  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+*  International Registered Trademark & Property of PrestaShop SA
+*}
+
+{if !$opc}
+	<script type="text/javascript">
+	// <![CDATA[
+	var currencySign = '{$currencySign|html_entity_decode:2:"UTF-8"}';
+	var currencyRate = '{$currencyRate|floatval}';
+	var currencyFormat = '{$currencyFormat|intval}';
+	var currencyBlank = '{$currencyBlank|intval}';
+	var txtProduct = "{l s='product' js=1}";
+	var txtProducts = "{l s='products' js=1}";
+	// ]]>
+	</script>
+
+	{capture name=path}{l s='Your payment method'}{/capture}
+{/if}
+
+{if !$opc}
+	{assign var='current_step' value='shipping'}
+	{include file="$tpl_dir./order-steps.tpl"}
+
+	{include file="$tpl_dir./errors.tpl"}
+{else}
+	<div id="opc_payment_methods" class="opc-main-block">
+		<div id="opc_payment_methods-overlay" class="opc-overlay" style="display: none;"></div>
+{/if}
+
+<div class="kosik-container kosik-container-payment">
+
+{if !$opc}<h1>{l s='Vyberte způsob platby'}</h1>{else}<h2><span>3</span> {l s='Please choose your payment method'}</h2>{/if}
+<div class="clearfix"></div>
+<div class="paiement_block">
+
+<div id="HOOK_TOP_PAYMENT">{$HOOK_TOP_PAYMENT}</div>
+
+{if $HOOK_PAYMENT}
+	{if !$opc}
+<div id="order-detail-content" class="table_block ">
+	
+</div>
+{/if}
+	{if $opc}<div id="opc_payment_methods-content">{/if}
+		<div id="HOOK_PAYMENT">{$HOOK_PAYMENT}</div>
+	{if $opc}</div>{/if}
+{else}
+	<p class="warning">{l s='No payment modules have been installed.'}</p>
+{/if}
+
+{if !$opc}
+	<p class="cart_navigation">
+		<a href="{$link->getPageLink('order', true, NULL, "step=2")|escape:'html'}" title="{l s='Previous'}" class="zpet-do-obchodu"><i class="fa fa-chevron-left"></i> {l s='Zpět na způsob dopravy'}</a>
+		<a href=""  class="button standard-checkout pull-right" id="test"/>Pokračovat v objednávce <i class="fa fa-chevron-right"></i></a>
+		</p>
+	{literal}
+	<script>
+		$("#test").click(function(){
+			url=$("input[name=pay]:checked").attr("rel");
+			if(url)
+				window.location.replace(url);
+			else
+				alert("Vyberte prosím způsob platby.");
+			return false;
+		})
+	</script>
+	{/literal}		
+{else}
+	</div>
+{/if}
+</div>
+
+</div>

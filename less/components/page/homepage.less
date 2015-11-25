@@ -1,0 +1,423 @@
+/*----------------------------------------------------------------------------
+Homepage modules
+------------------------------------------------------------------------------*/
+
+#homecontent-displaySlideshow {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.img-responsive-inline-hp {
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	border-radius: 6px;
+	box-shadow: 1px 1px 4px rgba(0,0,0,.1);
+
+}
+
+.hp-banner2-obal {
+	margin: 0 2%;
+	
+	@media (max-width: 1199px) {
+		margin: 0 2%;
+	}
+	
+	@media (max-width: 992px) {
+		margin: 0 2%;
+	}
+
+	@media (max-width: 767px) {
+		margin: 0;
+		margin-left: 1%;
+	}
+
+}
+
+.hp-banner3-obal {
+	
+	@media (min-width: 1200px) {
+		width: 374px;
+		height: 300px;
+	}
+
+	@media (min-width: 600px) and (max-width: 767px) {
+		margin: 20px 25%;
+	}
+}
+
+.hp-banner-obal {
+	display: inline-block;
+	position: relative;
+	width: 32%;
+	height: auto;
+	
+	@media (max-width: 767px) {
+		width: 49%;
+	}
+
+	@media (max-width: 599px) {
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+		margin-bottom: 3%;
+	}
+
+	@media (max-width: 479px) {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.hp-banner-txt {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 20%;
+	border-radius: 0 0 6px 6px;
+	line-height: 380%;
+	padding-left: 6%;
+	font-size: 16px;
+	text-decoration: underline;
+	color: #fff;
+	
+	@media (max-width: 1199px) {
+		line-height: 340%;
+		font-size: 14px;
+	}
+
+	@media (max-width: 992px) {
+		line-height: 280%;
+		font-size: 13px;
+	}
+
+	@media (max-width: 767px) {
+		font-size: 15px;
+		font-size: 2vw;
+		line-height: 360%;
+	}
+
+	@media (max-width: 599px) {
+		font-size: 15px;
+		font-size: 3.3vw;
+	}
+
+	@media (max-width: 479px) {
+		font-size: 14px;
+		font-size: 4.1vw;
+	}
+}
+
+.hp-banner-obal:hover {
+	opacity: 0.8;
+}
+
+.hp-banner-obal:hover .hp-banner-txt {
+	text-decoration: none;
+}
+
+.hp-banner1-txt {
+	background-color: @modra;
+	background-color: fade(@modra, 79%);
+}
+
+.hp-banner2-txt {
+	background-color: @cervena;
+	background-color: fade(@cervena, 79%);
+}
+
+#slideshow {
+	display: block !important;
+}
+
+.block-vyhoda {
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+
+#ikony_homepage {
+	overflow: hidden;
+}
+
+.ikona-hp .media {
+	height: 120px;
+	
+	h4 a {
+		font-family: @font;
+		color: #FFF;
+		font-size: 17px;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}
+
+
+.ikona-hp-kraj {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.ikona-hp-stredlevo {
+	padding-left: 18px;
+	padding-right: 9px;
+}
+
+.ikona-hp-stredpravo {
+	padding-right: 18px;
+	padding-left: 9px;
+}
+
+.ikona-hp-1 {
+	
+	.media-object {
+		margin-top: 6px;
+		margin-left: 15px;
+		
+		@media (max-width: 1199px) {
+			margin-left: 0px;
+		}
+	}
+
+	.media-body {
+		margin-top: 13px;
+		width: 165px;
+		text-align: center;
+		
+		@media (max-width: 1199px) {
+			margin-top: 13px;
+			width: 115px;
+		}
+	}
+}
+
+
+.ikona-hp-2 {
+	
+	.media-object {
+		margin-top: 15px;
+		margin-left: 14px;
+		
+		@media (max-width: 1199px) {
+			margin-left: 6px;
+		}
+	}
+
+	.media-body {
+		margin-top: 13px;
+		width: 135px;
+		text-align: center;
+		
+		@media (max-width: 1199px) {
+			width: 95px;
+		}
+	}
+}
+
+.ikona-hp-3 {
+	
+	.media-object {
+		margin-top: 8px;
+		margin-left: 8px;
+		
+		@media (max-width: 1199px) {
+			margin-left: 0px;
+		}
+	}
+
+	.media-body {
+		margin-top: 13px;
+		width: 135px;
+		text-align: center;
+		
+		@media (max-width: 1199px) {
+			width: 95px;
+		}
+	}
+}
+
+.ikona-hp-vydejny {
+	margin-top: -2px;
+	text-transform: uppercase;
+}
+
+.ikona-hp-4 {
+	
+	.media-object {
+		margin-top: 13px;
+		margin-left: 14px;
+		
+		@media (max-width: 1199px) {
+			margin-left: -3px;
+		}
+	}
+
+	.media-body {
+		margin-top: 5px;
+		width: 140px;
+		text-align: center;
+		
+		@media (max-width: 1199px) {
+			width: 100px;
+		}
+	}
+}
+
+.ikona-hp-odkaz {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.lista-homepage-in {
+	overflow: hidden;
+	border-radius: 6px;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+	background-color: #FFF;
+	margin: 20px 0;
+}
+
+.bunka_v_liste {
+	display: inline-block;
+	margin: 20px 0;
+	padding: 0 42px;
+	position: relative;
+	text-align: center;
+	
+	@media (max-width: 1199px) {
+		padding: 0 15px;
+	}
+
+	@media (max-width: 992px) {
+		padding: 0 30px;
+	}
+
+	@media (max-width: 767px) {
+		padding: 0;
+		width: 49%;
+	}
+
+	@media (max-width: 330px) {
+
+	}
+}
+
+.bunka_v_liste::after {
+	content: " ";
+	height: 38px;
+	width: 1px;
+	background-color: #CDCDCD;
+	position: absolute;
+	right: 0;
+	top: 7px;
+}
+
+.bunka_v_liste-4::after {
+	width: 0px;
+}
+
+.bunka_v_liste-2::after {
+	@media (max-width: 767px) {
+		width: 0px;
+	}
+}
+
+.cislo_v_bunce {
+	font-size: 22px;
+	color: @cervena;
+	font-weight: 700;
+	text-align: center;
+}
+
+.txt_v_bunce {
+	text-align: center;
+}
+
+.text_v_liste {
+	display: inline-block;
+	text-align: center;
+	width: 68%;
+	
+	@media (max-width: 1199px) {
+		width: 60%;
+		padding: 2%;
+	}
+
+	@media (max-width: 992px) {
+		width: 52%;
+		padding: 6% 2%;
+	}
+
+	@media (max-width: 767px) {
+		width: 50%;
+		padding: 8% 3%;
+	}
+
+	@media (max-width: 720px) {
+		width: 45%;
+	}
+
+	@media (max-width: 670px) {
+		width: 42%;
+	}
+
+	@media (max-width: 635px) {
+		width: 100%;
+	}
+}
+
+.heureka_v_liste {
+	display: inline-block;
+	float: right;
+	background-image: url("../img/helveti/heureka-info.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 340px;
+	height: 130px;
+	
+	@media (max-width: 1199px) {
+		margin-top: 20px;
+	}
+
+	@media (max-width: 635px) {
+		width: 100%;
+		text-align: center;
+	}
+
+	@media (max-width: 370px) {
+		background-image: none;
+		height: auto;
+		width: 	auto;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+#bestseller-11-carousel {
+	
+	.leo-md-5 {
+		width: 25%;
+		
+		@media (max-width: 767px) {
+			width: 49%;
+			display: inline-block;
+		}
+		
+
+		@media (max-width: 479px) {
+			width: 100%;
+		}
+	}
+
+	
+
+
+}

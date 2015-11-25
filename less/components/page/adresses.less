@@ -1,0 +1,160 @@
+/*----------------------------------------------------------------------------
+PAGE ADRESSES
+------------------------------------------------------------------------------*/
+
+div.addresses {}
+
+ul.address {
+    border: 1px solid #CFCFCF;
+	margin: 30px 0;
+	padding-left: 0;
+}
+
+ul.address li {
+	padding: 3px 15px 3px 26px;
+	list-style-type: none;
+	font-weight: 700;
+	font-size: 16px;
+	color: #000;
+}
+
+ul.address li.address_title {
+	color: #000000;
+	font-size: 20px;
+	font-weight: 400;
+	background-color: #fff;
+	border-bottom: 0px solid transparent;
+	display: inline-block;
+	margin-left: 15px;
+	width: auto;
+	padding: 2px 10px;
+	position: relative;
+	top: -18px;
+	margin-bottom: -5px;
+}
+ul.address .address_alias {
+	font-weight: normal;
+	text-transform: none;
+}
+ul.address >li:first-child + li {
+}
+
+ul.address  li.address_update {
+	margin-bottom: 5px;
+	
+	a {
+		color: #636363;
+		font-size: 16px;
+		font-weight: 700;
+		text-decoration: underline;
+		line-height: 52px;
+		
+		.fa {
+			text-decoration: none;
+			color: #e97b74;
+			margin-left: 5px;
+			line-height: 52px;
+		}
+	}
+}
+
+.address_add {
+	padding:0 0 20px 0;
+}
+
+#address_invoice_form {
+	padding-bottom: 0;
+	margin-bottom: 0;
+	
+	a {
+		margin-left: 10px;
+	}
+}
+
+.address_add, #address_invoice_form {
+   
+    a {
+   		color: #636363;
+		font-size: 16px;
+		font-weight: 700;
+		text-decoration: underline;
+		line-height: 52px;
+		
+		.fa {
+			text-decoration: none;
+			color: #e97b74;
+			margin-left: 10px;
+			line-height: 52px;
+		}
+    }
+
+    a:hover {
+		color: #e9584f;
+	}
+}
+
+
+/* PAGE ADRESSES ******************************************************************************* */
+
+.addresses ul.address .address_update,
+.addresses ul.address .address_delete {
+	display: inline-block;
+}
+
+#addresses {
+
+	#page {
+
+		#center_column  {
+
+			.panel-default {
+				padding-bottom: 0;
+			}
+
+			.button {
+				width: 250px;
+				background-position: 208px -2px;
+				line-height: 45px;
+				text-decoration: none;
+			}
+
+			.button:hover {
+				background-position: 208px -50px !important;
+			}
+
+			.address_delete a {
+				color: #636363;
+				font-size: 16px;
+				font-weight: 700;
+				text-decoration: underline;
+				line-height: 52px;
+
+				 .fa {
+				 	color: 	@cervena;
+				 }
+			}
+
+			.address_update a {
+				color: #636363;
+				font-size: 16px;
+				font-weight: 700;
+				text-decoration: underline;
+				line-height: 52px;
+
+				 .fa {
+				 	color: 	@cervena;
+				 }
+			}
+
+			.address_update a:hover, .address_delete a:hover {
+				color: #e9584f;
+			}
+			
+		}
+
+	
+	}	
+
+} 
+
+

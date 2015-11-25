@@ -1,0 +1,7 @@
+Dobrý den p. {firstname} {lastname}.
+ 
+Obchod {shop_name} Vás prosí o odeslání odkazu svým přátelům, aby mohli vidět váš seznam přání {wishlist}.
+
+{message}
+
+ 

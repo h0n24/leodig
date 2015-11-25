@@ -1,0 +1,16 @@
+Dobrý den p. {firstname} {lastname}.
+
+Děkujeme za nákup v obchodě {shop_name}.
+
+Vaše nové hodinky {nazev_hodinek} byly dnes odeslány. Můžete je tak očekávat do jednoho pracovního dne.
+
+Můžete sledovat svou zásilku přes následující odkaz: {followup}
+
+Věříme, že Vám budou hodinky {znacka} skvěle sloužit.
+
+Ještě jednou děkujeme za Vaši objednávku. Chtěli bychom Vás poprosit o vyplnění dotazníku ohledně nákupu na našem eshopu od společnosti Heuréka, který Vám v nejbližších dnech dorazí, nebo již dorazil. Moc nám tím pomůžete.
+
+Váš tým Helveti.cz. 
+
+
+Obchod {shop_name} – {shop_url} - specialista na hodinky Potřebujete poradit? Volejte +420 774 744 763 nebo pište na info@helveti.cz 

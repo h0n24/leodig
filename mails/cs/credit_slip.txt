@@ -1,0 +1,10 @@
+Dobrý den p. {firstname} {lastname}.
+
+Děkujeme za nákup v obchodě {shop_name}!
+
+Byl vytvořen dobropis na vaše jméno pro objednávku s označením {order_name}.
+
+Můžete si prohlédnout tento dobropis. Fakturu si stáhnete v sekci "Moje dobropisy" ve vašem účtu kliknutím "Můj účet".
+
+
+Obchod {shop_name} – {shop_url} - specialista na hodinky Potřebujete poradit? Volejte +420 774 744 763 nebo pište na info@helveti.cz 

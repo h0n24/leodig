@@ -1,0 +1,6 @@
+Dobrý den p. {firstname} {lastname}.
+ 
+Děkujeme vám za přihlášení k odběru novinek v obchodě {shop_name}
+ 
+
+Obchod {shop_name} – {shop_url} funguje v systému PrestaShop™

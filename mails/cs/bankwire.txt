@@ -1,0 +1,28 @@
+Dobrý den p. {firstname} {lastname}.
+
+Děkujeme za nákup v obchodě {shop_name} a zároveň gratulujeme k výbornému výběru!
+
+Vaše objednávka {order_name} byla úspěšně dokončená. Zboží Vám bude dodáno, když obdržíme Vaši platbu.
+
+Vybrali jste si platbu bankovním převodem.
+
+Zde jsou bankovní údaje pro platbu bankovním převodem: 
+
+Částka k úhradě: {total_paid}
+
+Variabilní symbol: {order_name}
+
+Vlastník účtu: {bankwire_owner}
+
+Detaily účtu: 
+{bankwire_details}
+
+Adresa banky: 
+{bankwire_address}
+
+Můžete zkontrolovat svou objednávku a stáhnout si fakturu ze stránky "Historie objednávek" Vašeho zákaznického účtu kliknutím na odkaz "Můj účet".
+
+Pokud máte účet návštěvníka, můžete sledovat své objednávky prostřednictvím "Sledování pro návštěvníky": {guest_tracking_url}
+
+
+Obchod {shop_name} – {shop_url} - specialista na hodinky Potřebujete poradit? Volejte +420 774 744 763 nebo pište na info@helveti.cz 

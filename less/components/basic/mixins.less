@@ -1,0 +1,151 @@
+/*------------------------------------------------------------------------------
+ _____    _     _                                       _      _             
+|__  /___| | __| | __ _ _ __ _____   _____    _ __ ___ (_)_  _(_)_ __  _   _ 
+  / // _ \ |/ _` |/ _` | '__/ _ \ \ / / _ \  | '_ ` _ \| \ \/ / | '_ \| | | |
+ / /|  __/ | (_| | (_| | | | (_) \ V / (_) | | | | | | | |>  <| | | | | |_| |
+/____\___|_|\__,_|\__,_|_|  \___/ \_/ \___/  |_| |_| |_|_/_/\_\_|_| |_|\__, |
+                                                                       |___/ 
+------------------------------------------------------------------------------*/
+
+/* font-size */
+
+.font-size(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+  	@pxValue: @sizeValue;
+  	font-size: ~"@{pxValue}px"; 
+ // 	font-size: ~"@{remValue}rem";
+}
+
+.font-size-im(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    font-size: ~"@{pxValue}px" !important; 
+ //   font-size: ~"@{remValue}rem" !important;
+}
+
+/* velikosti */
+
+.height(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    height: ~"@{pxValue}px"; 
+ //   height: ~"@{remValue}rem";
+}
+
+.min-height(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    min-height: ~"@{pxValue}px"; 
+ //   min-height: ~"@{remValue}rem";
+}
+
+.width(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    width: ~"@{pxValue}px"; 
+  //  width: ~"@{remValue}rem";
+}
+
+.min-width(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    min-width: ~"@{pxValue}px"; 
+ //   min-width: ~"@{remValue}rem";
+}
+
+/* padding */
+
+.padding(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    padding: ~"@{pxValue}px"; 
+ //   padding: ~"@{remValue}rem";
+}
+
+.padding-left(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    padding-left: ~"@{pxValue}px"; 
+ //   padding-left: ~"@{remValue}rem";
+}
+
+.padding-right(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    padding-right: ~"@{pxValue}px"; 
+//    padding-right: ~"@{remValue}rem";
+}
+
+.padding-bottom(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    padding-bottom: ~"@{pxValue}px"; 
+//    padding-bottom: ~"@{remValue}rem";
+}
+
+.padding-top(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    padding-top: ~"@{pxValue}px"; 
+ //   padding-top: ~"@{remValue}rem";
+}
+
+/* Margin */
+
+.margin-top(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    margin-top: ~"@{pxValue}px"; 
+ //   margin-top: ~"@{remValue}rem";
+}
+
+.margin-bottom(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    margin-bottom: ~"@{pxValue}px"; 
+ //   margin-bottom: ~"@{remValue}rem";
+}
+
+.margin-left(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    margin-left: ~"@{pxValue}px";  
+ //   margin-left: ~"@{remValue}rem";
+}
+
+.margin-right(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    margin-right: ~"@{pxValue}px"; 
+ //   margin-right: ~"@{remValue}rem";
+}
+
+/* Pozicování */
+
+.top(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    top: ~"@{pxValue}px"; 
+  //  top: ~"@{remValue}rem";
+}
+
+.left(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    left: ~"@{pxValue}px"; 
+ //   left: ~"@{remValue}rem";
+}
+
+.right(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    right: ~"@{pxValue}px"; 
+ //   right: ~"@{remValue}rem";
+}
+
+.bottom(@sizeValue) {
+    @remValue: (@sizeValue / 10);
+    @pxValue: @sizeValue;
+    bottom: ~"@{pxValue}px"; 
+  //  bottom: ~"@{remValue}rem";
+}

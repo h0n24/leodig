@@ -1,0 +1,10 @@
+Dobrý den,
+
+produkt {product} je téměř vyprodán.
+Zbývající zásoby jsou nyní menší než specifikované minimum {last_qty}.
+Zbývající zásoby: {qty}
+
+Doporučujeme otevřít stránku s administraci produktu a doplnit své zásoby.
+
+
+Obchod {shop_name} – {shop_url} funguje v systému PrestaShop™

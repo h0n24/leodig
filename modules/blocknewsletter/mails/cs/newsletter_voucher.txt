@@ -1,0 +1,5 @@
+Dobrý den p. {firstname} {lastname}.
+ 
+Za Vaši registraci k odběru novinek, Vám nabízíme následující slevový kupón: {discount}
+ 
+Obchod {shop_name} – {shop_url} funguje v systému PrestaShop™

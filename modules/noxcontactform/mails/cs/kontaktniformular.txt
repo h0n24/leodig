@@ -1,0 +1,4 @@
+Dotaz z kontaktního formuláře
+	Jméno: {jmeno}
+	Kontakt: {kontakt} 
+	Dotaz:{dotaz}

@@ -1,0 +1,8 @@
+{product} je momentálně vyprodán.
+ 
+Stav produktu {product} na skladu je momentálně menší než specifikované minimum {warning_coverage}.
+
+Aktuální stav skladu: {current_coverage}
+
+
+Obchod {shop_name} – {shop_url} funguje v systému PrestaShop™

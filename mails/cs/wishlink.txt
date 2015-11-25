@@ -1,0 +1,8 @@
+Dobrý den p. {firstname} {lastname}.
+ 
+Obchod {shop_name} Vás prosí o odeslání odkazu svým přátelům, aby mohli vidět váš seznam přání {wishlist}.
+
+{message}
+
+ 
+Obchod {shop_name} – {shop_url} funguje v systému PrestaShop™

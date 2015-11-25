@@ -1,0 +1,8 @@
+Dobrý den p. {firstname} {lastname}.
+
+Aktualizovali jsme stav vrácení objednávky č. {id_order_return}, nový stav je: "{state_order_return}"
+
+Můžete zkontrolovat svou objednávku a stáhnout si fakturu ze stránky "Historie objednávek" Vašeho zákaznického účtu kliknutím na odkaz "Můj účet".
+
+
+Obchod {shop_name} – {shop_url} - specialista na hodinky Potřebujete poradit? Volejte +420 774 744 763 nebo pište na info@helveti.cz 

@@ -1,0 +1,12 @@
+Dobrý den p. {firstname} {lastname}.
+
+Slevový kupón na Vaše jméno byl vytvořen jako výsledek objednávky s označením {order_name}.
+
+Kód slevového kupónu: {voucher_num}, v hodnotě {voucher_amount}.
+
+Stačí pouze použít Kopírovat / Vložit tento kód během procesu zadávání další objednávky.
+
+Děkujeme za nákup v obchodě {shop_name}.
+
+
+Obchod {shop_name} – {shop_url} - specialista na hodinky Potřebujete poradit? Volejte +420 774 744 763 nebo pište na info@helveti.cz 

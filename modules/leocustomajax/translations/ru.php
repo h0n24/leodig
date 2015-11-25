@@ -1,0 +1,31 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{leocustomajax}leodig>leocustomajax_048db14395aeb0b3cda64df23385016a'] = 'Лев Пользовательские Аякс';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_20403cc83f2cbe11ce1cc7f1a411cc7b'] = 'Показать номер продукта категории и шоу-рейтинге.';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_6af91e35dff67a43ace060d1d57d5d1a'] = 'Ваши настройки были обновлены.';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_f4f70727dc34561dfde1a3c529b6205c'] = 'Настройки';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_08efc089be3924e98b82c4df6fd8af9a'] = 'Показать количество продукта.';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'Включено';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_b9f5c797ebbf55adccdd8539a65a0241'] = 'Инвалид';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_efd1a2e68ddfd7fea0e1ed0ea39e0ba5'] = 'Запуск сценария возврата количество продукта в категории или нет.';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_a33173bf873337a4009ed58a4f2273a5'] = 'Показать рейтинг продукта.';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_ffb6ef83bd116b639e8a4b9c9ecd93b6'] = 'Вы должны убедиться, что вы используете productcomment модуль PrestaShop.';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_dc676599fd6874bd0e2538c0ba53174f'] = 'Вы можете добавить этот код в TPL файла модуля вы хотите показать комментарий:';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_57e43db64fb56a480b5e0e4bd9c206a7'] = 'Переход изображение изделия.';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_73a5bbd66b862b72465aa55779719ea5'] = 'Вы можете добавить этот код в TPL файла модуля вы хотите Переход изображение продукта:';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_3af9375aef7bb3cd20c605d445643f5b'] = 'Показать Несколько изображение изделия.';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_7e942246b9b3e65ee13a2261b6090185'] = 'Вы можете добавить этот код в TPL файла модуля вы хотите показать Несколько изображение изделия:';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_c3c39ec0a19d1e16efee05a262bb725c'] = 'Показать Быстрый просмотр.';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_7e48c5b97c82ad598833007688c631a6'] = 'Вы можете добавить этот код в TPL файл модуля, который вы хотите показать кнопку быстрого просмотра:';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_d68619cec53e5ad6ddddf1203cd16b88'] = 'Пожалуйста редактировать {Ls = \'Quick View\'} до {Ls = \'Quick View\' MOD = \'XXX\'}, когда вы используете этот код в модуль, с XXX является имя модуля';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_780edb349a720cc4cf57c59202e928a1'] = 'Вы можете редактировать ширину Fancybox в файле / модулей / leocustomajax / footer.tpl линии 73:. $ (\'. Быстрого вид\') Fancybox (...';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_9b9935ad5969c28de13381a2e512b47c'] = 'ПРИМЕЧАНИЕ:';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_9290a1b1f6e1f5308aa34c4b5c4b2f8b'] = 'Если вы хотите мой сценарий прекрасно работать с модулем блоге слоя.';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_c3f7ca7e72ba69b5562882f869b237b0'] = 'Скопируйте переопределить файла модулей / blocklayered / blocklayered.js в папку темы / template_name / JS / модули / blocklayered / blocklayered.js.';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_764d58b564d7e371b334e6c3a42d6fcb'] = 'Затем найдите функция reloadContent (params_plus) по умолчанию в линии 318.';
+$_MODULE['<{leocustomajax}leodig>leocustomajax_c9cc8cce247e49bae79f15173ce97354'] = 'Экономить';
+$_MODULE['<{leocustomajax}leodig>product_9981d2af851e4b4a4ea612d59f08ab9c'] = 'Другие виды';
+$_MODULE['<{leocustomajax}leodig>product_dd1f775e443ff3b9a89270713580a51b'] = 'Предыдущий';
+$_MODULE['<{leocustomajax}leodig>product_10ac3d04253ef7e1ddc73e6091c0cd55'] = 'Следующий';

@@ -1,0 +1,16 @@
+Dobrý den p. {firstname} {lastname}.
+ 
+Všimli jsme si, že během své poslední návštěvy obchodu {shop_name}, jste nedokončili objednávku, kterou jste začali.
+
+Váš košík byl uložen, můžete pokračovat v objednávce tím, že navštívíte náš obchod: 
+
+{shop_url}
+
+Jako motivaci pro Vás, Vám nabízíme slevu {amount} % z další objednávky! Tato nabídka je platná {days} dní, takže neztrácejte čas!
+ 
+Zde je váš slevový kupón: {voucher_num}
+
+Zadejte tento kód do nákupního košíku, pro získání slevy.
+
+
+Obchod {shop_name} – {shop_url} funguje v systému PrestaShop™

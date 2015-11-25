@@ -1,0 +1,10 @@
+Dobrý den p. {firstname} {lastname}.
+ 
+Zpráva z obchodu {shop_name}
+ 
+{firstname} {lastname} uvedl(a), že by jste mohl(a) chtít vidět jeho(její) seznam přání:
+
+{wishlist}
+ 
+
+ Obchod {shop_name} – {shop_url} funguje v systému PrestaShop™

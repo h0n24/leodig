@@ -1,0 +1,14 @@
+{firstname_friend} {lastname_friend}, připojte se k nám!
+
+Váš přítel {firstname} {lastname} Vás chce odkázat na obchod {shop_name}.
+
+Kupte uvedené zboží a získejte slevový kupón ve výši {slevy}!
+
+Je to velmi jednoduché se zaregistrovat. Stačí kliknout na následující odkaz: 
+
+{shop_url}{link}
+
+Když se zaregistrujete, nezapomeňte uvést e-mail přítele, který Vás doporučil: {email}.
+
+
+Obchod {shop_name} – {shop_url} funguje v systému PrestaShop™

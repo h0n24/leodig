@@ -1,0 +1,322 @@
+/*----------------------------------------------------------------------------
+COMPARATOR
+------------------------------------------------------------------------------*/
+
+#product_comparison tr.comparison_header {font-weight:bold}
+#product_comparison tr.comparison_header,
+#product_comparison td.comparison_feature_even {background:#f8f8f8}
+.comparison_availability_statut {display:none}
+
+.buttons-action > * {
+	display: inline-block;
+	clear: both;
+}
+.comparison_infos .product_meta {position: relative}
+#product_comparison td {padding: 7px; font-size: 15px;}
+
+
+#product_comparison .content_price {
+	display: inline-block;
+}
+#product_comparison .product_image img {width: 60%;}
+#product_comparison .product_desc {height: 40px;}
+.comparison.availability{ 
+	margin-top: 10px;
+}
+
+/* barre comparaison / tri ********************************************************************* */
+.content_sortPagiBar {
+	margin: 20px 15px 20px 0;
+	border-top: 1px solid #e3e3e3;
+	border-bottom: 1px solid #e3e3e3;
+}
+	#center_column .sortPagiBar {
+		padding:8px 10px 0;
+	}
+	#center_column .sortPagiBar p {padding:0;}
+	
+
+	.sortPagiBar #productsSortForm {
+		width: 200px;
+		display: inline-block;
+		margin-left: 20px;
+		
+		.select {
+			margin-bottom: 10px;
+			margin-top: 3px;
+		}
+		}
+		.sortPagiBar select#selectPrductSort, #selectPrductSort {
+			height: 40px;
+			width: 200px;
+			font-size: 13px;
+			border-radius: 6px;
+			border-width: 2px;
+			border-color: @cervena;
+			background-color: #F5F5F5;
+			padding: 6px 12px 6px 8px;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+
+		#productsSortForm {
+			display: inline-block;
+		}
+
+	.sortPagiBar .nbrItemPage {margin-left:40px;}
+	.sortPagiBar .PrductSort {float:left;}
+	.sortPagiBar .nbrProduct {
+		display:inline-block;
+		padding:0 10px;
+	}
+	.selectProductSort {
+		height: 30px;
+		line-height: 30px;
+	}
+	.sortPagiBar #nb_item {border:1px solid #F2F5F8}
+	#productsview {
+		margin-top: 5px;
+	}
+		#productsview a {display: inline-block;}
+		#productsview span {
+			line-height: 30px;
+			margin-right: 10px;
+		}
+		#productsview .fa {
+			color: #9C9B9B;
+			padding: 6px;
+			margin-left:  5px;
+    		border: 1px solid #CCCCCC;
+    		transition: all 0.5s ease-in-out 0s;
+    		-web-transition: all 0.5s ease-in-out 0s;
+    		-ms-transition: all 0.5s ease-in-out 0s;
+		}
+		#productsview .active,
+		#productsview .fa:hover {
+			color: #fff;
+			background-color: #E76D66;
+   			border: 1px solid #E76D66;	
+		}
+		.content_sortPagiBar .fa span {
+			margin-left: 5px;	
+		}
+		
+#bt_compare {
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 400;
+	border-radius: 4px;
+	background-color: #e97b74;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	line-height: 24px; 
+	text-transform: none;
+	padding-right: 55px;
+	padding-left: 14px;
+	border-color: #e9584f;
+	background-image: url("../img/helveti/compare-btn-bg-sm.png");
+	background-repeat: no-repeat;
+	background-position: 138px -2px;
+	-webkit-transition: none;
+	transition: none;
+	height: 45px;
+	width: 180px;
+	border: 0px !important;
+	
+	@media (max-width: 599px) {
+		display: none;
+	}
+}
+
+#bt_compare:hover {
+	background-color: #E76D66;
+	background-position: 138px -50px;
+	color: #FFFFFF;
+}
+
+#bt_compare_bottom {
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 400;
+	border-radius: 4px;
+	background-color: #e97b74;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	line-height: 24px; 
+	text-transform: none;
+	padding-right: 35px;
+	padding-left: 5px;
+	border-color: #e9584f;
+	background-image: url("../img/helveti/compare-btn-bg-exsm.png");
+	background-repeat: no-repeat;
+	background-position: 139px -2px;
+	-webkit-transition: none;
+	transition: none;
+	height: 33px;
+	width: 170px;
+	border: 0px !important;
+}
+
+#bt_compare_bottom:hover {
+	background-color: #E76D66;
+	background-position: 139px -38px;
+	color: #FFFFFF;
+}
+
+.bt_compare_obal {
+	position: relative;
+}
+
+.bt_compare_number {
+	position: absolute;
+	color: #FFF;
+	font-size: 14px;
+	font-weight: 700;
+	top: 13px;
+	right: 18px;
+}
+
+.porovnat-pag-bot .bt_compare_number {
+	font-size: 13px;
+	top: 7px;
+	right: 12px;
+}
+
+.products-comparison #center_column {
+	
+	.zpet-do-obchodu {
+		color: #636363;
+		font-size: 16px;
+		font-weight: 700;
+		text-decoration: underline;
+		line-height: 52px;
+		
+		.fa {
+			text-decoration: none;
+			color: #e97b74;
+			margin-right: 5px;
+			line-height: 52px;
+			font-size: 16px;	
+		}
+	}
+
+	.zpet-do-obchodu:hover {
+		color: 	@cervena;
+	}
+
+	.product_block .name {
+		line-height: 24px;
+	}
+
+	h1 {
+		color: #000000;
+		font-size: 20px;
+		font-weight: 700;
+		display: inline-block;
+		float: none;
+		margin-top: 15px;
+		margin-bottom: 0;
+	}
+
+	table, td {
+		border: 0px !important;
+	}
+
+	.srovnani_tlacitko_odebrat, .srovnani_tlacitko_zobrazit {
+
+		a {
+	        border-radius: 6px;
+	        font-size: 15px;
+	        position: relative;
+	        padding: 0 35px 0 20px;
+	        height: 34px;
+	        line-height: 32px;
+	        text-align: center;
+	        background-color: #E9584F;
+	        color: #fff;
+	        text-decoration: none;
+	        border: 0px solid transparent !important;
+	        text-transform: none;
+	        margin-bottom:  10px;
+	    }
+
+        a:after {
+            content: "\f105";
+            font-size: 20px;
+            position: absolute;
+            top: 6px;
+            right: 18px;
+            display: inline-block;
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a:hover{
+            background-color: #E76D66;
+        }
+    }
+
+    .srovnani_tlacitko_odebrat {
+
+    	a:after {
+    		content: "\f00d";
+    		font-size: 12px;
+			top: 11px;
+			right: 14px;
+			font-weight: 400;
+    	}
+    	
+    }
+
+    .srovnani_tlacitko_kosik {
+    	display: block;	
+    }
+
+    .buttons-action {
+    	clear: both;
+    	width: 	230px;
+    	margin: 0 auto;
+    }
+
+    .ajax_add_to_cart_button {
+    	background-color: #70b53f;
+    	border: 0px solid transparent !important;
+    	width: 230px;
+    	height: 40px;
+    	line-height: 40px;
+    	font-size: 15px;
+    	background-image: url("../img/helveti/btn-koupit-small.png");
+		background-repeat: no-repeat;
+		background-position: -1px -1px;
+		font-weight: 700;
+		text-transform: none;
+		transition: none;
+		padding-left: 60px;
+    }
+
+    .ajax_add_to_cart_button:hover {
+    	background-color: #64a238;
+    	border: 0px solid transparent !important;
+    	background-image: url("../img/helveti/btn-koupit-small.png");
+    	background-repeat: no-repeat;
+    	background-position: -1px -45px;
+    }
+
+    .img-responsive {
+    	max-width: 	260px !important;
+    	max-height: 270px;
+    }
+
+    .product_block {
+    	margin-bottom: 10px;
+    	height: auto;
+    }
+
+}
+

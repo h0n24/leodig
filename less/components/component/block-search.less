@@ -1,0 +1,76 @@
+/*----------------------------------------------------------------------------
+block top search
+------------------------------------------------------------------------------*/
+
+
+#search_block_top {
+	position: absolute;
+    left: 140px;
+    top: 58px;
+	z-index: 10;
+    width: 220px;
+    
+    @media (max-width: 1199px) {
+        left: 110px;
+        width: 140px;
+    }
+
+    @media (max-width: 992px) {
+        z-index: 1200;
+        left: 60px;
+        top: 3px;
+        
+        .groupe-btn {
+            height:  40px;
+            
+            .fa {
+                margin-top: 9px;
+            }
+        }
+    }
+}
+#searchbox  .button {
+    background: url("../img/helveti/hledani-ico.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    box-shadow: none;
+    height: 15px;
+    padding: 0;
+    text-indent: 999px;
+    width: 18px;
+	border-color: transparent;
+	position: absolute;
+	right: 13px;
+	top: 11px;
+	overflow: hidden;
+	border:none!important;
+}
+
+#search_query_top {padding-right: 25px;}
+
+#search_block_top .form-control {
+    height: 40px;
+    border-radius: 6px;
+    border-color: #EAEAEA;
+    padding: 6px 12px 6px 18px;
+}
+
+
+@media (max-width: 992px) {
+
+
+    /* search */
+        #search_block_top {position: absolute; width: auto; padding: 0}
+        #search_block_top  .groupe-btn {margin: 10px;}
+        .groupe-btn .fa {font-size: 16px;}
+        #searchbox {
+            display: none;
+            position: absolute;
+            left: -5px;
+            top: 55px;
+            width: 200px;
+        }
+        #search_block_top:hover #searchbox{display: block;}
+        .groupe-btn > .caret {display: none;}
+
+    
+}

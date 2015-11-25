@@ -1,0 +1,2258 @@
+/*----------------------------------------------------------------------------
+CART steps
+------------------------------------------------------------------------------*/
+
+ul#order_step { background-color: white;
+    margin: 0 0 20px 0px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 5px;
+    overflow: hidden;
+}
+ul.step {
+	 height: 55px;
+    	list-style-type: none;
+}
+ul.step li {
+    float: left;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 34px;
+    text-align: center;
+    width: 27.5%;
+	margin-left: -2.5%;
+	position: relative;
+	left: 2.5%;
+	color: #4F5050;
+	
+	@media (max-width: 1199px) {
+		width: 27%;
+	}
+
+	@media (max-width: 992px) {
+		width: 25%;
+		margin-left: 0;
+		left: 0;
+	}
+}
+
+.step-in {
+	height: 55px;
+	float: left;
+	background-color: #EFEFEF;
+	border-top: 1px solid #C4C4C4;
+	border-bottom: 1px solid #C4C4C4;
+	width: 80%;
+	line-height: 54px;
+	font-size: 14px;
+	font-weight: 700;
+	color:  #b0b0b0;
+	
+	@media (max-width: 992px) {
+		border-left: 2px solid #C4C4C4;
+		border-right: 2px solid #C4C4C4;
+		width: 90%;
+		margin-left: 5%;
+	}
+}
+
+.step-pred {
+	float: left;
+	height: 55px;
+	width: 19px;
+	background: url("../img/helveti/krok-kosik-levo.png");
+	
+	@media (max-width: 992px) {
+		display: none !important;
+	}
+}
+
+.step-po {
+	float: left;
+	height: 55px;
+	width: 19px;
+	background: url("../img/helveti/krok-kosik-pravo.png");
+	
+	@media (max-width: 992px) {
+		display: none !important;
+	}
+}
+
+.step_current, .step_current_end {
+
+	.step-in {
+		background-color: #fff;
+		border-top: 2px solid #E97B74;
+		border-bottom: 2px solid #E97B74;
+		color:  #000;
+		
+		@media (max-width: 992px) {
+			border-left: 2px solid #E97B74;
+			border-right: 2px solid #E97B74;
+		}
+	}
+
+	.step-pred {
+		background: url("../img/helveti/krok-kosik-aktiv-levo.png");
+		
+		@media (max-width: 992px) {
+			display: none;
+		}
+	}
+
+	.step-po {
+		background: url("../img/helveti/krok-kosik-aktiv-pravo.png");
+		
+		@media (max-width: 992px) {
+			display: none;
+		}
+	}
+}
+
+ul.step li a, ul.step li.step_current span, ul.step li.step_current_end span {
+	
+}
+ul.step li.step_current {
+	color: #FFFFFF;
+}
+
+ul.step li.step_current_end {
+	font-weight:bold;
+}
+ul.step li.step_current_end span
+{
+
+}
+ul.step li.step_todo span {
+	display:inline-block;
+}
+ul.step li.step_done {
+	font-weight:bold;
+}
+
+/* nav bottom ********************************************************************************** 
+#order #left_column , #order-confirmation #left_column {display:none}
+#order #center_column, #order-confirmation #center_column{width:757px}
+*/
+.cart_navigation {
+	margin:20px 0 10px;
+	
+	.zpet-do-obchodu {
+		color:  #636363;
+		font-size: 16px;
+		font-weight: 700;
+		text-decoration: underline;
+		line-height: 52px;
+		
+
+		@media (max-width: 550px) {
+			width: 100%;
+			display: inline-block;
+			text-align: center;
+			margin-top: 20px;
+		}
+		
+		.fa {
+			text-decoration: none;
+			color: #e97b74;
+			margin-right: 5px;
+			line-height: 52px;
+		}
+	}
+
+	.zpet-do-obchodu:hover {
+		color: @cervena;
+	}
+
+	.standard-checkout {
+		color: #ffffff;
+		font-size: 18px;
+		font-weight: 700;
+		border-radius: 4px;
+		background-color: #e97b74;
+		overflow: hidden;
+		position: relative;
+		display: inline-block;
+		height: 53px;
+		line-height: 52px;
+		text-transform: none;
+		padding-right: 66px;
+		padding-left: 14px;
+		padding-top: 0;
+		padding-bottom: 0;
+		border: 0px solid transparent !important;
+		width: 	310px;
+		
+		@media (max-width: 550px) {
+			width: 100%;
+		}
+
+		@media (max-width: 400px) {
+			font-size: 16px;
+			padding-right: 14px;
+		}
+		
+		.fa {
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color:  #c25851;
+			display: block;
+			height: 100%;
+			width: 50px;
+			line-height: 54px;
+			font-size: 18px;
+			
+			@media (max-width: 400px) {
+				display: none;
+			}
+		}
+	}
+
+	input.standard-checkout {
+		background-image: url("../img/helveti/kosik-btn-bg.png");
+		background-repeat: no-repeat;
+		background-position: 259px -2px;
+		transition: none;
+	}
+
+	input.standard-checkout:hover {
+		background-position: 259px -59px;
+	}
+
+	.standard-checkout:hover {
+		background-color: #E76D66;
+		
+		.fa {
+			background-color: darken(#c25851,5%);
+		}
+	}
+
+}
+
+.cart_navigation .exclusive,
+.cart_navigation .exclusive_large {
+	float:right
+}
+
+/* step 1 - cart ******************************************************************************* */
+
+#kupon {
+	margin-top: 20px;
+	
+	#kupon_helper {
+		margin-right: 5px;
+		position: relative;
+		top: 2px;
+	}
+	
+	label {
+		color:  #000000;
+		font-size: 15px;
+		font-weight: 400;
+		
+		.fa {
+			color: #e97b74;
+			margin-left: 8px;
+		}
+	}
+}
+
+#voucher {
+
+	.discount_name_block {
+		margin-top: 15px;
+	}
+	
+	.discount_name {
+		border-radius: 5px;
+		background-color: #F5F5F5;
+		border: 1px solid #C8C8C8;
+		line-height: 40px;
+		box-shadow: none;
+		height: 40px;
+	}
+
+	.button {
+		color: #ffffff;
+		font-size: 15px;
+		font-weight: 700;
+		border-radius: 4px;
+		background-color: #e97b74;
+		display: inline-block;
+		height: 40px;
+		line-height: 39px;
+		text-transform: none;
+		border: 0px solid transparent !important;
+		position: relative;
+		top: 3px;
+	}
+
+	.submit {
+		margin-bottom: 0;
+	}
+
+	.button:hover {
+		background-color: #E76D66;
+	}
+}
+
+#cart_voucher, #total_price_container {
+	border-bottom: 0px solid transparent !important;
+}
+
+@media (max-width: 992px) {
+
+	#cart_voucher {
+		width: 49% !important;
+		float: left;
+	}
+
+	#total_price_container {
+		width: 49% !important;
+		float: left;
+	}
+
+	#cart_summary #kosik_dopravy, #cart_summary #kosik_platby, #cart_summary #doprava_platba_info {
+		display: none;	
+	}
+}
+
+
+
+.cart_last_product {display:none}
+
+/*p.cart_navigation .multishipping-button { margin-right: 10px }*/
+
+table#cart_summary  td {
+	padding:10px 6px;
+	vertical-align:top;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: #DBDBDB;
+}
+table#cart_summary  td.cart_delete,
+table#cart_summary  td.price_discount_del {text-align: center}
+
+@media (max-width: 992px) {
+	
+	#order-detail-content:after {
+		content:"";
+		display:table;
+		clear:both;
+	}
+}
+
+#cart_summary {
+	border: 0px solid transparent !important;
+
+	th {
+		color:  #000000;
+		font-size: 14px;
+		font-weight: 400;
+		border-width: 0 0 1px 0;
+		border-style: solid;
+		border-color: #DBDBDB;
+		text-transform: none;
+		text-align: center;
+	}
+
+	.cart_description{
+		width: 30%;
+		
+		@media (max-width: 992px) {
+			width: 24%;
+		}
+
+
+		@media (max-width: 767px) {
+			width: 80%;
+		}
+
+		@media (max-width: 650px) {
+			width: 65% !important;
+			padding-bottom: 0  !important;
+		}
+
+		@media (max-width: 450px) {
+			width: 70% !important;
+		}
+
+		@media (max-width: 400px) {
+			width: 64% !important;
+		}
+	}
+
+	td.cart_description {
+		vertical-align: middle;
+		position: relative;
+		padding: 10px 20px;
+		line-height: 75px;
+		
+		@media (max-width: 650px) {
+			min-height: 65px;
+			line-height: 30px;
+		}
+	}
+
+	td.cart_description::before {
+		content: " ";
+		display: block;
+		height: 60px;
+		width: 1px;
+		background-color: #EBEBEB;
+		position: absolute;
+		top: 21px;
+		left: 0;
+		
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	td.cart_description::after {
+		content: " ";
+		display: block;
+		height: 60px;
+		width: 1px;
+		background-color: #EBEBEB;
+		position: absolute;
+		top: 21px;
+		right: 0;
+		
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	td.cart_description .s_title_block {
+		padding-bottom: 0 !important;
+		margin-bottom: 0;
+		font-size: 18px !important;
+		color:  #505050;
+		line-height: 28px;
+		
+		a {
+			font-size: 18px !important;
+			color:  #505050;
+		}
+	}
+
+	td.cart_ref {
+		vertical-align: middle;
+		text-align: center;
+		font-size: 18px;
+		font-weight: 700;
+		color:  #70b53f;
+		text-transform: uppercase;
+		width: 16.5%;
+		
+		@media (max-width: 992px) {
+			font-size: 14px;
+			width: 12%;
+			line-height: 80px;
+		}
+
+		@media (max-width: 767px) {
+			position: absolute;
+			right: 10px;
+			top: 38px;
+			height: 50px;
+			line-height: 30px;
+		}
+
+		@media (max-width: 600px) {
+			left: 0px;
+			width: 95px !important;
+			top: 95px;
+		}
+	}
+
+	td.cart_unit, td.cart_total {
+		vertical-align: middle;
+		text-align: center;
+		width: 16.5%;
+		position: relative;
+		
+		@media (max-width: 992px) {
+			width: 14%;
+		}
+
+		@media (max-width: 767px) {
+			width: 30%;
+			height: 70px;
+		}
+
+		@media (max-width: 650px) {
+			width: 65% !important;
+			padding-top: 0;
+			height: 50px !important;	
+		}
+
+		@media (max-width: 450px) {
+			width: 70% !important;
+		}
+
+		@media (max-width: 400px) {
+			width: 64% !important;
+		}
+		
+		.price {
+			color:  #e97b74;
+			font-size: 18px;
+			font-weight: 700;
+			text-align: center;
+			width: 100%;
+			line-height: 150%;
+			
+			@media (max-width: 767px) {
+				margin-top: 0 !important;
+				width: 	auto;
+			}
+			
+			.old-price {
+				color: #b0b0b0;
+			}
+
+			@media (max-width: 992px) {
+				font-size: 16px;
+				margin-top: 28px;
+			}
+		}
+	}
+
+	td.cart_unit::before {
+		content: " ";
+		display: block;
+		height: 60px;
+		width: 1px;
+		background-color: #EBEBEB;
+		position: absolute;
+		top: 21px;
+		left: 0;
+		
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	td.cart_unit::after {
+		content: " ";
+		display: block;
+		height: 60px;
+		width: 1px;
+		background-color: #EBEBEB;
+		position: absolute;
+		top: 21px;
+		right: 0;
+		
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	td.cart_quantity {
+		text-align: center;
+		vertical-align: middle;
+		width: 16.5%;
+		position: relative;
+		
+		.cart_quantity_input {
+			border: 1px solid #C4C4C4;
+			text-align: center;
+			width: 36px;
+			height: 28px;
+			margin-left: 0px;
+		}
+
+		.cart_quantity_in {
+			display: inline-block;
+			height: 30px;
+			
+			@media (max-width: 992px) {
+				margin-top: 25px;
+			}
+		}
+
+		@media (max-width: 767px) {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+
+		@media (max-width: 450px) {
+			left: 13px;
+			width: 70px !important;
+		}
+	}
+
+	td.cart_quantity::after {
+		content: " ";
+		display: block;
+		height: 60px;
+		width: 1px;
+		background-color: #EBEBEB;
+		position: absolute;
+		top: 21px;
+		right: 0;
+		
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	td.cart_delete {
+		text-align: center;
+		vertical-align: middle;
+		width: 6%;
+
+		@media (max-width: 767px) {
+			position: absolute;
+			top: -25px;
+			right: 20px;
+		}
+
+		@media (max-width: 450px) {
+			top: -30px;
+			right: 5px;
+		}
+	}
+
+	td.cart_delete a {
+		font-size: 20px;
+		color: #9C9C9C;
+		
+		@media (max-width: 992px) {
+			margin-top: 25px;
+			display: inline-block;
+		}
+	}
+
+	td.cart_delete a:hover {
+		font-size: 20px;
+		color: #000;
+	}
+
+	.total_price_container {
+		display: table-cell;
+		width: 100%;
+		
+		@media (max-width: 992px) {
+			display: block;
+		}
+		
+		#ceny_s_dph {
+			font-size: 14px;
+			font-style: italic;
+			margin-top: 25px;
+		}
+
+		.celkem_kosik {
+			clear: both;
+			text-align: right;
+			margin-top: 10px;
+			color:  #636363;
+			font-size: 24px;
+			font-weight: 400;
+			margin-top: 10px;
+			padding-top: 15px;
+		}
+
+		.cena_celkem {
+			color:  #e97b74;
+			font-size: 26px;
+			font-weight: 700;
+		}
+	}
+
+	.mobile-cart-text {
+		display: none;
+		
+		@media (max-width: 767px) {
+			display: inline-block;
+			margin-top: 27px;
+		}
+	}
+
+	@media (max-width: 992px) {
+		
+		tfoot, tbody, thead {
+			display: block;	
+			float: left;
+			width: 100%;
+			
+			td, tr {
+				display: block;
+				float: left;
+				height: 105px;
+			}
+
+			th {
+				display: block;
+				float: left;
+				height: 40px;
+				font-size: 12px;
+			}
+
+			tr {
+				width: 100%;
+			}
+		}
+
+		thead {
+			td, tr {
+				display: block;
+				float: left;
+				height: 40px;
+			}
+		}
+
+		tfoot {
+			position: relative;	
+
+			td, tr {
+				height: auto;
+			}
+		}
+	}
+
+
+	@media (max-width: 767px) {
+
+		thead {
+			display: none;
+		}
+
+		tfoot, tbody {
+			
+			td, tr {
+				height: auto;
+			}
+
+			tr {
+				border-width: 0 0 1px 0;
+				border-style: solid;
+				border-color: #DBDBDB;	
+				position: relative;
+			}
+
+			td {
+				border-bottom: 0px;
+			}
+		}
+	}
+
+	@media (max-width: 450px) {
+
+		tbody tr {
+			padding-bottom: 20px;
+		}
+	}
+
+	/* slevový koupon */
+	
+	.cart_discount_name:after {
+		content: none !important;
+	}
+
+	.cart_discount_delete {
+		font-size: 18px;
+	}
+
+	/* možnosti dopravy a platby */
+
+	.ikonka_moznosti {
+		display: inline-block;
+		margin-top: 15px;
+		margin-right: 15px;
+		height: 32px;
+	}
+
+	#kosik_platby .ikonka_moznosti {
+		position: relative;
+		top: -5px;
+	}
+
+	#ulozenka {
+		position: relative;
+		top: -2px;
+	}
+
+	#osobni {
+		position: relative;
+		top: -2px;
+	}
+
+	.kosik_moznosti {
+		display: inline-block;
+		color: #000;
+		margin-top: 20px;
+	}
+
+	#kosik_dopravy {
+		margin-right: 70px;
+	}
+
+	#doprava_platba_info {
+		border-radius: 5px;
+		background-color: #F0E7C7;
+		border: 1px solid #D1BF7E;
+		color:  #6d5e42;
+		font-size: 16px;
+		font-weight: 400;
+		padding: 11px;
+		width: 520px;
+		margin-top: 25px;
+		
+		.ikonka_i {
+			background-color: #AD9870;
+			display: inline-block;
+			margin-left: 0;
+		}
+	}
+}
+
+#kosik_box_doprava_zdarma {
+	border-radius: 5px;
+	background-color:  #e8f8dd;
+	border: 1px solid #62834E;
+	color:  #62834e;
+	font-size: 16px;
+	font-weight: 700;
+	width: 215px;
+	text-align: center;
+	float: right;
+	padding: 5px;
+	margin-top: 10px;
+	line-height: 34px;
+			
+	img {
+		margin-right: 15px;
+		margin-top: -2px;
+	}
+}
+
+table#cart_summary tr.customization.odd {
+	background-color: #fff
+}
+table#cart_summary tr.customization.even {
+	background-color: #f3f3f3
+}
+
+table#cart_summary tr ul {
+	list-style: none;
+}
+table#cart_summary .cart_product {
+	width:8%;
+	text-align:center;
+	
+	@media (max-width: 992px) {
+		width:12%;
+	}
+
+	@media (max-width:650px) {
+		height: 180px;
+	}
+}
+table#cart_summary  .cart_product  img {}
+table#cart_summary .cart_description {
+	
+}
+table#cart_summary .cart_description .s_title_block {padding-bottom: 5px;}
+table#cart_summary .cart_description .s_title_block a {font-size: 14px; height: 16px;}
+table#cart_summary .cart_unit {text-align: center}
+table#cart_summary td.cart_unit {text-align: right}
+table#cart_summary  .cart_quantity {  }
+table#cart_summary .customization .cart_quantity {padding: 8px 12px 0;}
+.cart_quantity .cart_quantity_input {
+	float:left;
+	margin-left: 5px;
+	width: 20px;
+	border:1px solid #fff
+}
+.cart_quantity .cart_quantity_button {
+	float:left;
+	position: relative; 
+	top: -4px; 
+	left: 6px;
+	
+	.cart_quantity_down {
+		position: relative;
+		top: -4px;
+	}
+}
+
+.cart_quantity {
+	@media (max-width: 992px) {
+		width: 16%;
+	}
+}
+
+.cart_quantity_up {line-height: 10px;}
+
+table#cart_summary .cart_total {
+
+	width:20%;
+	text-align: center;
+
+	@media (max-width: 992px) {
+		width: 	16%;
+	}
+
+	@media (max-width: 767px) {
+		width: 30%;
+	}
+}
+table#cart_summary td.cart_total {text-align: right}
+table#cart_summary .cart_delete {
+	width:50px;
+	text-align:center;
+	
+	@media (max-width: 992px) {
+		width: 	1%;
+	}
+}
+table#cart_summary .cart_discount_price {text-align: right}
+
+#customer_cart_total  td.price{
+		width:40%;
+		border-left:1px solid #F2F5F8;
+		font-size: 17px;
+	
+}
+
+.cart_total_price .total_price_container {
+	border-right:none;
+}
+
+.cart_voucher p { 
+	display: inline-block;
+    margin-right: 5px;
+    vertical-align: top;
+	padding: 0;
+}
+.cart_voucher p.s_title_block {
+	margin-top: 5px;
+		
+}
+.cart_voucher .title_block, .cart_voucher h4 {
+	margin-right:12px;
+	padding:5px 0;
+	font-size:13px
+}
+.cart_voucher #display_cart_vouchers {
+	clear:both;
+	line-height: 16px;
+	color:#666;
+	padding-top:2px;
+	font-weight:normal;
+	border-top:1px dotted #F2F5F8
+}
+.cart_voucher #display_cart_vouchers .title_offers {margin-top:10px}
+.cart_voucher #display_cart_vouchers span {font-weight:bold}
+
+#cart_summary .price {
+	text-align: right;
+	white-space: nowrap;
+}
+.total_price_container p {text-align: left}
+
+table#cart_summary .cart_total_price .total_price_container {
+	padding:0;
+}
+.cart_total_price .total_price_container p {
+	display:block;
+}
+.cart_total_price .total_price_container span {
+}
+
+#order_carrier {
+	clear:both;
+	margin-top:20px;
+	border:1px solid #999;
+	background:#fff
+}
+#order_carrier .title_block  {
+	padding:0 15px;
+	height: 29px;
+	font-weight: bold;
+	line-height:29px;
+	color:#fff;
+	font-weight:bold;
+	text-transform:uppercase;
+	background:url(../img/bg_table_th.png) repeat-x 0 -10px #999
+}
+#order_carrier span {
+	display:block;
+	padding:15px;
+	font-weight:bold
+}
+.order_delivery .first_item {}
+.multishipping_close_container {
+	text-align: center;
+}
+
+table#cart_summary .gift-icon {
+	color: white;
+	background: #0088CC;
+	line-height: 20px;
+	padding: 2px 5px;
+	border-radius: 5px;
+}
+
+#cart_summary .cart_voucher {
+	
+	@media (max-width: 550px) {
+		width: 100% !important;
+	}
+}
+
+#total_price_container {
+		
+	@media (max-width: 550px) {
+		width: 100% !important;
+		
+		#kosik_box_doprava_zdarma {
+			width: 100%;
+		}
+
+		.celkem_kosik {
+			text-align: center !important;
+		}
+	}
+}
+
+/* step 2 - authentification ******************************************************************* */
+
+
+#login_form p.submit {
+	float:left;
+}
+
+#login_form {
+	.panel-body {
+		padding-right: 0;	
+	}
+}
+
+#authentication #create-account_form fieldset,
+#authentication #login_form fieldset, #password fieldset {
+	border: 1px solid #D6D1CC;
+}
+
+#authentication #create-account_form .form_content,
+#authentication #login_form .form_content {
+	padding:5px 12px 12px;
+	min-height: 190px;
+}
+#create-account_form .title_block  {
+	padding-bottom:10px;
+	font-size:14px;
+	font-family: arial;
+	color:#808181;
+}
+.lost_password {
+	float: right;
+	margin-right: 30px;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	margin-top: -30px;
+}
+.lost_password a {line-height: 28px;}
+
+#order-opc .lost_password {
+	float:none;
+	font-size:11px;
+}
+
+#ordermsg {
+	margin-bottom: 70px;
+}
+
+#ordermsg p {padding-bottom:0}
+#ordermsg p.txt {
+	float:left;
+	margin:0px 25px 10px 0px;
+}
+/*#ordermsg .textarea {float:right}*/
+#ordermsg .textarea textarea {
+	height:160px;
+	width:99%;
+	border:1px solid #C8C8C8;
+}
+
+#authentication, #order {
+	h1 {
+		color:  #000000;
+		font-size: 20px;
+		font-weight: 700;
+		display: inline-block;
+		float: left;
+		margin-top: 15px;
+		margin-bottom: 0;
+	}
+
+	.kosik-container {
+		margin-top: 15px;
+	}
+
+}
+
+.kosik-container-vkosiku {
+	
+}
+
+.kosik-container-prihlaseni {
+	
+	.registration_form_container {
+		width: 50%;
+		float: left;
+	}
+
+	.login_form_container {
+		width: 50%;
+		float: left;
+	}
+
+	#registrace fieldset {
+		margin-top: 0 !important;
+		min-height: 175px;
+		
+		.title_block {
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+	}
+
+	#prihlaseni fieldset {
+		min-height: 175px;
+		position: relative;
+	}
+
+	.error_formular_s_popiskem {
+		float: right;
+		margin-right: 100px;
+		margin-top: 10px;
+		margin-bottom: 8px;
+	}
+
+	.lost_password {
+		position: absolute;
+		bottom: -58px;
+		margin-left: 30%;
+	}
+
+	.col-sm-4 {
+		width: 55%;
+	}
+
+	.col-sm-3 {
+		width: 35%;
+	}
+}
+
+.prihlaseni_v_kosiku {
+	border: 1px solid #62834E;
+	border-radius: 4px;
+	background-color:  #e8f8dd;
+	padding: 15px 25px;
+	color: #62834E;
+	font-weight: 700;
+	font-size: 16px;
+	float: right;
+	
+	.fa {
+		margin: 0 10px 0 0;
+	}
+}
+
+.kosik-container {
+
+	h1 {
+		color: #000000;
+		font-size: 20px;
+		font-weight: 700;
+		display: inline-block;
+		float: left;
+		margin-top: 15px;
+		margin-bottom: 0;
+	}
+
+	.panel {
+		border: 0px solid;
+		box-shadow: none;
+	}
+
+	fieldset {
+		border: 1px solid #CFCFCF !important;
+		margin-top: 25px !important;
+		padding: 15px 0 22px;
+		
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			padding: 0 0 22px;
+		}
+	}
+
+	legend {
+		color: #000000;
+		font-size: 20px;
+		font-weight: 400;
+		background-color: #fff;
+		border-bottom: 0px solid transparent;
+		display: inline-block;
+		margin-left: 15px;
+		width: auto;
+		padding: 2px 10px;
+		position: relative;
+		top: 0;
+		margin-bottom: 5px;
+		
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			top: -18px;
+		}
+	}
+
+	label {
+		color:  #000000;
+		font-size: 15px;
+		font-weight: 400;
+		
+		sup {
+			color: @cervena;
+			font-size: 14px;
+			position: relative;
+			top: -1px;
+		}
+	}
+
+	input[type="text"], input[type="password"], select {
+		height: 40px;
+		border-radius: 6px;
+		border-color: #c8c8c8;
+		background-color: #F5F5F5;
+		padding: 6px 12px 6px 18px;
+		box-shadow: none;
+	}
+
+	input[type="text"]:focus, input[type="password"]:focus, select:focus, input.spatne-vyplneno:focus {
+		background-color: #FFF;
+		box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(213,213,213,0.6);
+		outline: 0;
+	}
+
+	input.spatne-vyplneno {
+		border-color: #ff4f44;
+		background-color: #faeeee;
+	}
+
+	.form-group, .control-group {
+		margin-bottom: 8px;
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	.control-group:before, .control-group:after {
+		clear: both;
+		content: "";
+		display: block;
+	}
+
+	.misto-hvezdicka {
+		width: 7px;
+		display: inline-block;
+	}
+
+	.error_formular {
+		color: #ff4f44;
+		font-weight: 700;
+		display: table-cell;
+		vertical-align: middle;
+		height: 40px;
+		padding-top: 2px;
+	}
+
+	.error_ikonka {
+		color: #ff4f44;
+		border: 1px solid #ff4f44;
+		border-radius: 50%;
+		height: 21px;
+		width: 21px;
+		display: inline-block;
+		text-align: center;
+		line-height: 18px;
+		font-size: 12px;
+		padding-left: 1px;
+		margin-right: 10px;
+		position: relative;
+		top: -2px;
+	}
+
+	.vzor {
+		color:  #7f7f7f;
+		font-size: 14px;
+		font-weight: 400;
+		margin-left: 31px;
+		position: relative;
+		top: -3px;
+	}
+
+	.error_formular_s_popiskem .error_ikonka {
+		position: relative;
+		top: 6px;
+	}
+
+	.checkbox {
+		color:  #000000;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 30px;
+		margin-left: 10px;
+		padding-top: 0;
+		
+		label {
+			line-height: 36px;
+			margin-left: 5px;
+		}
+	}
+
+	#prihlaseni fieldset {
+		padding-top: 34px;
+		margin-top: 0 !important;
+		
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			padding-top: 0px;
+			
+			legend {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	.zpet_na_registraci_off, .zpet_na_registraci {
+		color: #636363;
+		font-size: 16px;
+		font-weight: 700;
+		text-decoration: underline;
+		line-height: 52px;
+		float: left;
+		
+		.fa {
+			text-decoration: none;
+			color: #e97b74;
+			margin-right: 5px;
+			line-height: 52px;
+		}
+	}
+
+	.zpet_na_registraci_off:hover, .zpet_na_registraci:hover {
+		color: #e9584f;
+	}
+
+	#SubmitLogin, #SubmitCreate {
+		color: #ffffff;
+		font-size: 16px;
+		font-weight: 700;
+		border-radius: 4px;
+		background-color: #e97b74;
+		overflow: hidden;
+		position: relative;
+		display: inline-block;
+		line-height: 24px;
+		text-transform: none;
+		padding-right: 55px;
+		padding-left: 14px;
+		border-color: #e9584f;
+		background-image: url("../img/helveti/kosik-btn-bg-sm.png");
+		background-repeat: no-repeat;
+		background-position: 138px -2px;
+		-webkit-transition: none;
+		transition: none;
+		height: 45px;
+		width: 180px;
+		border: 0px !important;
+		float: right;
+	}
+
+	#SubmitLogin:hover, #SubmitCreate:hover {
+		background-color: #E76D66;
+		background-position: 138px -50px;
+		color: #FFFFFF;
+	}
+
+	.nakup_na_firmu {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		
+		#nakup_na_firmu {
+			margin-right: 10px;
+		}
+	}
+}
+
+.icko_formular {
+	float: left;
+	margin-top: 8px;
+}
+
+.zobraz_login {
+	font-weight: 400;
+	text-decoration: underline;
+}
+
+.addresses {
+
+	.control-label {
+		float: left;	
+	}
+
+	.control-label {
+		padding-top: 9px;
+	}
+}
+
+.form-horizontal .address_delivery {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#ordermsg {
+	
+	label {
+		font-size: 16px;
+		margin-bottom: 	25px;
+		margin-top: 5px;
+	}
+}
+
+#new_account_form #invoice_address, #new_account_form #newsletter {
+	height: 30px;
+}
+
+#new_account_form .checkbox label {
+	line-height: 36px;
+}
+
+#opc_account_form, #opc_invoice_address {
+	margin-bottom: 20px;
+}
+
+/* step 3 - address ************************************************************************** */
+.order_delivery {
+	margin-top: 20px;
+}
+.address-form-multishipping { padding: 10px 0px; }
+#multishipping_mode_box {
+	border: 1px solid #D0D3D8;
+	background: url("../img/form_bg.jpg") repeat-x scroll left top #D0D1D5;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+#multishipping_mode_checkbox {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+#multishipping_mode_box.on {
+	border: 1px solid #ddd;
+}
+#multishipping_mode_box .title {
+	padding: 5px;
+	font-weight: bold;
+}
+#multishipping_mode_box .description, #multishipping_mode_box .description_off {
+	padding: 5px;
+}
+#multishipping_mode_box .description_off {
+	display: none;
+	padding: 5px;
+}
+#multishipping_mode_box .description_off div {
+	margin-bottom: 10px;
+}
+#multishipping_mode_box .description_off a, #multishipping_mode_box .description a {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	padding: 5px 10px;
+	border: 1px solid #F2F5F8;
+	background: #ddd;
+}
+#multishipping_mode_box .description_off a:hover, #multishipping_mode_box .description a:hover {
+	background: #f3f3f3;
+	border: 1px solid #F2F5F8;
+}
+#multishipping_mode_box.on .description_off {
+	display: block;
+}
+
+.kosik-container-adress {
+
+	.cart_navigation {
+		width: 1130px;
+		position: absolute;
+		bottom: 0;
+		
+		@media (max-width: 1199px) {
+			width: 910px;
+		}
+
+		@media (max-width: 992px) {
+			width: 690px;
+		}
+	}
+
+	.form-group, .control-group {
+		margin-left: 0;
+		margin-right: 0;	
+	}
+
+	.checkbox {
+		margin-bottom: 8px; 
+
+		input {
+			height: 30px;
+		}
+	}
+}
+
+
+/* step 4 - paiement ************************************************************************** */
+
+#order .delivery_option_radio, #order-opc .delivery_option_radio {
+	float: left;
+	margin: 21px 0;
+	width: 3%;
+}
+#order .delivery_option label, #order-opc .delivery_option label {
+	display: block;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	width: 97%;
+	float: left;
+}
+
+#order .delivery_option.item, #order-opc .delivery_option.item {}
+#order .delivery_option.alternate_item, #order-opc .delivery_option.alternate_item {
+	
+}
+
+.order_carrier_content {
+	padding:10px;
+	margin-top:20px;
+	font-size:12px;
+	margin-bottom: 10px;
+}
+.order_carrier_content h3.carrier_title { margin-top:0}
+.order_carrier_content input {
+	position:relative;
+	margin-top: 0;
+}
+.order_carrier_content h3
+{
+	margin-bottom:10px;
+}
+.delivery_options_address {
+	margin-bottom: 20px;
+}
+.delivery_options_address h3 {
+	background: #FDFDFD;
+	padding:3px 10px;
+	font-size: 16px;
+	border-bottom: 1px solid #F2F5F8;
+}
+.delivery_option {
+	border-bottom: 1px solid #c9c9c9;
+}
+.delivery_options > .delivery_option:last-child {border-bottom: 0;}
+#carrierTable {
+	border:1px solid #D6D1CC;
+	border-bottom:none;
+	background:#fff
+}
+
+.delivery_option_title {
+	font-weight: bold;
+	font-size: 15px;
+	width: 38%;
+	padding-left: 2%;
+}
+
+.delivery_option_logo {
+	width: 19%;
+	
+	img {
+		width: 100%;
+		max-width: 120px;
+		height: auto;
+	}
+}
+
+.delivery_option_delay {
+	width: 18%;
+	color:  #688c53;
+	font-size: 15px;
+	font-weight: 700;
+	padding: 0 1% 0 1%;
+}
+
+.delivery_option_price {
+	width: 14%;
+	font-size: 15px; 
+	font-weight: 700;
+	padding: 0 1% 0 0;
+	
+	.free-shipping {
+		color:  #688c53;
+		text-transform: uppercase;
+	}
+}
+
+.delivery_option_icko {
+	width: 4%;
+	
+	.tooltip {
+		width: 250px;
+		
+		h3 {
+			background-color: transparent;
+			border-bottom: 0px;
+			font-size: 	14px;
+			padding: 3px 3px 6px;
+		}
+
+		.tooltip-inner {
+			max-width: 240px;
+		}
+	}
+}
+
+#carrierTable tbody{
+	border-bottom:1px solid #D6D1CC;
+}
+
+#gift_div {
+	display:none;
+	padding-bottom:10px
+}
+#gift_div label {
+	display:block;
+	margin-bottom:5px
+}
+
+
+a.iframe {font-weight:bold}
+
+.hook_extracarrier {
+	margin-top: 5px;
+	padding: 5px;
+}
+
+.kosik-container-delivery {
+
+	.cart_navigation {
+		width: 1130px;
+		position: absolute;	
+		bottom: 0;
+	}
+
+	@media (max-width: 1199px) {
+		width: 910px;
+	}
+
+	@media (max-width: 992px) {
+		width: 690px;
+	}
+	
+}
+
+.delivery_options strong {
+	margin-left: 32px;
+}
+
+/* step 5 - paiement ************************************************************************** */
+.paiement_block {
+	display: block;
+	clear: both;
+}
+
+.payment_module {
+	position:relative;
+	padding-top:20px;
+	border-top:1px solid #F2F5F8;
+	text-transform:uppercase;
+}
+.payment_module a {display:block;}
+.payment_module img {
+	float:left;
+	margin-right:10px
+}
+/*.payment_module span {
+	position:absolute;
+	top:50px;
+	left:145px
+}*/
+
+.payment_module:before,
+.payment_module:after {
+	content: ".";
+	display: block;
+	height: 0;
+	overflow: hidden
+}
+.payment_module:after {clear: both}
+.payment_module {zoom: 1}
+
+.kosik-container-payment {
+
+	.cart_navigation {
+		width: 1130px;
+		position: absolute;
+		bottom: 0;
+		
+		@media (max-width: 1199px) {
+			width: 910px;
+		}
+
+		@media (max-width: 992px) {
+			width: 690px;
+		}
+	}
+
+	.form-group, .control-group {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	#HOOK_PAYMENT {
+		padding-top: 20px;
+	}
+
+	.payment_option_logo {
+		text-align: center;	
+		width: 9%;
+	}
+
+	.payment_option_title {
+		width: 30%;
+	}
+
+	.payment_option_popis {
+		width: 51%;
+	}
+
+	.delivery_option_price {
+		width: 10%;
+		color:  #688c53;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+
+	.delivery_option:last-child {
+		border-bottom: 0;
+	}
+
+	.payment_option_popis {
+		height: 45px;
+	}
+}
+
+/* step 6 - shrnutí ************************************************************************** */
+
+.doprava_shrnuti, .platba_shrnuti {
+	
+	td::before, td::after {
+		content: none !important;
+	}
+
+	.cart_product {
+		vertical-align: middle !important;
+	}
+
+	.cart_description {
+		font-size: 20px;
+		color: #000;
+		padding: 20px !important;
+	}
+
+	.cart_total {
+		text-align: center !important;	
+		color: #70b53f;
+		font-size: 16px;	
+		font-weight: 700;
+	}
+}
+
+.module-cashondelivery-validation, .module-bankwire-payment {
+	
+	.celkem_kosik {
+		float: right;
+		width: 304px;
+		text-align: center;
+		color:  #636363;
+		font-size: 24px;
+		font-weight: 400;
+		margin-top: 25px;
+		
+		.cena_celkem {
+			color:  #e97b74;
+			font-size: 26px;
+			font-weight: 700;
+		}
+	}
+
+	.cart_navigation {
+		margin-top: 0;	
+	}
+
+	.zpet-do-obchodu {
+		margin-top: 30px;
+	}
+
+	.tlacitko-zpet {
+		float: left;
+	}
+
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.module-cashondelivery-validation {
+	.tlacitko-zpet {
+		margin-top: 12px;
+		float: left;
+	}
+}
+
+.module-bankwire-payment {
+	.tlacitko-zpet {
+		margin-top: 52px;
+		float: left;
+	}
+}
+
+.souhlas-obchodni-podminky {
+	float: right;
+	text-align: right;
+	margin-top: 30px;
+	
+	a {
+		font-weight: 400;
+		text-decoration: underline;	
+	}
+}
+
+/* potvrzení objednávky */
+
+#order-confirmation {
+
+	.success-objednavka-kompletni {
+		background-position: 20px 29px;
+		padding: 13px 10px 10px 60px;
+		width: 57%;	
+		
+		h1 {
+			margin-top: 15px;
+			margin-bottom: 0px;
+		}
+	}
+	
+	.infobox-kosik-container {
+		float: left;
+		margin-left: 0;
+		margin-right: 3%;
+		width: 34%;
+		margin-bottom: 20px;	
+		
+		legend {
+			text-align: center;	
+		}
+	}
+
+	.zdarma_barva {
+		color: #70B53F;
+	}
+
+	h1 {
+		margin-top: 40px;
+		font-size: 	26px;
+		color: 	#000;
+	}
+
+	#rekapitulace_box_kosik  {
+		
+		.rekapitulace_zbozi {
+			margin: 15px 20px;
+			
+			tr {
+				border-bottom: 1px solid #c0c0c0;
+			}
+
+			tr:last-child {
+				border-bottom: 	0;
+			}
+		}
+
+		.zdarma_barva {
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+
+		.rekapitulace_doprava_cena, .rekapitulace_platba_cena {
+			text-align: right;
+		}
+
+		.rekapitulace_doprava, .rekapitulace_platba_nazev {
+			color: #000;
+		}
+
+		.rekapitulace_celkem td {
+			font-size: 18px;
+			font-weight: 400;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	
+	}
+
+	.zpet-do-eshopu {
+		font-size: 14px;
+		font-weight: 700;
+		border-radius: 4px;
+		overflow: hidden;
+		position: relative;
+		display: inline-block;
+		background-color: #e97b74;
+		height: 45px;
+		line-height: 44px;
+		padding-right: 14px;
+		padding-left: 55px;
+		padding-top: 0;
+		padding-bottom: 0;
+		color: #fff;
+		text-decoration: none;
+		border: 0px solid transparent !important;
+		text-transform: none;
+		
+		.fa {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: #c25851;
+			display: block;
+			height: 100%;
+			width: 43px;
+			line-height: 45px;
+			font-size: 16px;
+		}
+	}
+
+	.potvrzeni-tlacitka {
+		float: left;
+		width: 100%;	
+	}
+
+	.zpet-do-eshopu:hover, .zpet-do-eshopu:active {
+		background-color: #E76D66;
+			
+		.fa {
+			background-color: #b94841;
+		}
+	}
+
+	.shrnuti-ico-kosik  {
+		background-image: url("../img/helveti/shrnuti-ico-kosik.png");
+		height: 24px;
+		width: 29px;
+		margin-right: 10px;
+		display: inline-block;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		position: relative;	
+		top: 5px;
+	}
+
+	.shrnuti-ico-nakupy {
+		background-image: url("../img/helveti/shrnuti-ico-nakupy.png");
+		height: 24px;
+		width: 29px;
+		margin-right: 10px;
+		display: inline-block;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		position: relative;	
+		top: 5px;
+	}
+
+	.shrnuti-ico-odhlasit {
+		background-image: url("../img/helveti/shrnuti-ico-odhlasit.png");
+		height: 24px;
+		width: 29px;
+		margin-right: 5px;
+		display: inline-block;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		position: relative;	
+		top: 5px;
+	}
+
+	.potvrzeni-objednavky-linky a {
+		font-size: 15px;
+		font-weight: 700;
+		text-decoration: underline;line-height: 25px;
+		margin-right: 20px;
+		color: 	#000;
+	}
+
+	.potvrzeni-objednavky-linky {
+		float: right;
+		width: 680px; 
+	}
+
+	.shrnuti-platebni-udaje {
+		margin: 20px 0 25px;
+	}
+
+	.shrnuti-info {
+		line-height: 200%;
+	}
+
+}
+
+.informace_o_objednavce {
+	background-color: #F1F1F1;
+	border-bottom: 1px solid #fff;
+	text-align: center;
+	height: 34px;
+	color: 	#636363;
+	line-height: 34px;
+}
+
+.potvrzeni-objednavky-obsah { 
+	font-size: 16px;
+	margin-top: 44px;	
+	float: right;
+	width: 680px; 
+	margin-bottom: 20px;	
+	color: 	#000;
+	 
+	.success {
+		font-size: 16px;
+		width: auto;
+		display: inline-block;
+		padding-right: 20px;
+		margin-bottom: 20px;	
+	}
+}
+
+
+/* guest tracking */
+
+#guest-tracking fieldset p:first-child {
+	padding-top: 10px;
+}
+#guest-tracking fieldset p:last-child {
+	padding-bottom: 10px;
+}
+
+/* infobox */
+
+.infobox-kosik-container {
+	width: 26%;
+	margin-left: 3%;
+	float: right;
+	margin-bottom: 100px;
+}
+
+.kosik-container {
+	width: 71%;
+	float: right;
+}
+
+.box_kosik {
+	border: 1px solid #CFCFCF;
+	margin: 40px 0;
+	
+	legend {
+		color:  #000000;
+		font-size: 20px;
+		font-weight: 400;
+		background-color: #fff;
+		border-bottom: 0px solid transparent;
+		display: inline-block;	
+		margin-left: 15px;
+		width: auto;
+		padding: 2px 10px;
+		position: relative;
+		top: -18px;
+		margin-bottom: 0;
+	}
+}
+
+
+#info_box_kosik {
+	height: 160px;
+	margin-top: 100px;
+	
+	legend {
+		margin-bottom: 5px;
+	}
+
+	table {
+		width: 100%;
+		
+		td {
+			vertical-align: middle;
+		}
+	}
+
+	#box_fotka {
+		width: 35%;
+		text-align: center;
+		
+		img {
+			margin-top: 4px;
+		}
+	}
+
+	#box_popis {
+		width: 65%;
+	}
+
+	#box_jmeno {
+		color:  #000000;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 30px;
+		margin-left: 3px;
+	}
+
+	#box_tel .txt {
+		color:  #000000;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 30px;
+	}
+
+	#box_email .txt {
+		color:  #000000;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 30px;
+		text-decoration: underline;
+	}
+
+	#box_email .txt:hover {
+		text-decoration: none;
+	}
+
+	.fa {
+		color: #e97b74;
+		margin-right: 5px;
+		font-size: 18px;
+	}
+}
+
+#rekapitulace_box_kosik {
+	margin-bottom: 18px;
+
+	table {
+		width: 100.1%;
+		max-width: 100.1%;
+	}
+
+	.rekapitulace_zbozi {
+		margin: -10px 15px 0;
+		width: auto;
+		
+		td {
+			padding: 18px 0 !important;
+		}
+
+		tr {
+			border-bottom: 1px solid #c0c0c0;
+		}
+
+		tr:last-child {
+			border-bottom: 0px solid transparent;
+		}
+	}
+
+	.rekapitulace_produkt {
+		width: 54%;
+		font-size: 14px; 
+		color: #000;
+		font-weight: 700;
+	}
+
+	.rekapitulace_pocet {
+		width: 18%;
+		text-align: center;
+		font-size: 14px; 
+		color: #000;
+	}
+
+	.rekapitulace_cena {
+		width: 28%;
+		padding: 18px 15px 18px 0 !important;
+		text-align: right;
+		color:  #e97b74;
+		font-size: 14px; 
+		font-weight: 700;
+	}
+
+	.rekapitulace_celkem_zbozi {
+		width: 72%;
+	}
+
+	.rekapitulace_celkem {
+		background-color:  #999999; 
+		
+		td {
+			color: #FFF;
+			font-size: 14px;
+			font-weight: 700;
+			padding: 18px 15px;
+		}
+	}
+
+	.rekapitulace_cena {
+		text-align: right;
+	}
+}
+
+#spodek_box_kosik {
+
+	a {
+		color:  #2c2c2c;
+		font-size: 15px;
+		font-weight: 700;
+		text-decoration: underline;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	#kosik_box_doprava_zdarma {
+		width: 100%;
+		margin-top: 24px;
+		
+		img {
+			margin-right: 28px;
+		}
+	}
+
+	#kosik_box_doprava_placena {
+		font-size: 16px;
+		font-weight: 700;
+		text-align: center;
+		float: right;
+		padding: 5px;
+		line-height: 34px;
+		width: 100%;
+		margin-top: 24px;
+		border: 1px solid #CFCFCF;
+		border-radius: 5px;	
+	}
+}

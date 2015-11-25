@@ -1,0 +1,85 @@
+/*----------------------------------------------------------------------------
+block top user information
+------------------------------------------------------------------------------*/
+
+
+#header_user_info  {
+	margin-top: 5px;
+}
+#topbar  #header_user_info  a {
+	color: #da655e;
+	background: none;
+	border-color: transparent
+}
+#topbar #shopping_cart a {background:none; border-color: transparent; font-size: 13px; display: inline-block; color: #E76D66; min-width: 145px;}
+#topbar .links a .fa-shopping-cart {
+	background: none repeat scroll 0 0 #363636;
+    border: 1px solid #363636;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-top: -2px;
+    padding: 4px 6px;
+	transition: all 0.3s ease 0s;
+}
+#topbar .links a:hover .fa-shopping-cart {
+	background-color: #E76D66;
+	border-color: #E76D66;
+}
+#topbar .links a.account {
+	background: none;
+	border-color: transparent;
+	color: #da655e; 
+	padding-left: 0;
+} 
+#header_user {margin-top: 5px}
+
+.cislo-hlavicka {
+	color: @cervena;
+	padding: 3px 6px;
+	display: inline-block;
+}
+
+.header_user_info-left {
+	padding-left: 0;
+
+	.cerveny-link-up {
+		color: #ABABAB !important;
+		text-decoration: underline;
+	}
+	.cerveny-link-up:hover {
+		text-decoration: none;
+	}
+}
+
+.phone-link-up {
+	text-decoration: none;
+	color: @cervena !important;
+	
+	.fa-phone {
+		font-size: 15px;
+		margin-right: 4px;
+		position: relative;
+		top: 1px;
+	}
+}
+
+@media (max-width: 992px) {
+
+    #header_user {
+        z-index: 1000;
+        position: relative;	
+        margin-top: 3px;
+        
+        .groupe-btn {
+            height:  40px;
+        }
+    }
+
+	#header_user .groupe-btn .fa {
+		margin-top: 9px;
+	}
+
+}
+
+

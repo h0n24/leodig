@@ -1,0 +1,226 @@
+/*----------------------------------------------------------------------------
+Footer
+------------------------------------------------------------------------------*/
+
+#footer {color: #808080}
+	#footer .title_block ,
+	#footer .title_block  a {
+		font-size:16px;
+		color:#fff;
+		padding: 0 0 8px;
+		font-weight: 700;
+	}
+	/*link*/
+		#footer  ul {list-style: none;}
+		.link a{
+			background: url("../img/default/circle-li.png") no-repeat scroll -10px 12px transparent;
+			display: block;
+			padding: 5px 0;
+		}
+		.link a:hover {
+			background-position: 5px 12px;
+			padding-left: 20px;
+		}
+/* copyright */
+#footer-bottom .container-inner {
+	background-color: #272727;
+    border-radius: 0 0 3px 3px;
+    border-top: 1px solid #303030;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 30px 30px 0px;
+}
+#footer-bottom .copyright  a{
+	color: #E76D66;
+}
+
+@media (min-width: 1200px) {
+
+#footer-bottom .copyright {
+	margin-top: 18px;
+}
+
+}
+
+@media (min-width: 767px) and (max-width: 1199px)  {
+
+#footer-bottom .copyright {
+	margin-top: 50px;
+}
+
+}
+
+@media (max-width: 767px) {
+
+	#footer-bottom .copyright {
+		margin-bottom: 30px;
+	}
+		
+}
+
+/* BLOCK .footer_links (cms pages) ************************************************************* */
+.footer_links {
+	list-style-type:none;
+	margin-bottom:20px;
+	margin-top: 10px;
+}
+.footer_links li {float:left}
+.footer_links li.f_right {float:right}
+.footer_links li .icon {
+	position:relative;
+	top:6px;
+	left:0
+}
+.footer_links  .fa {
+	font-size: 16px;
+	margin-right: 5px;
+}
+
+
+/* -- */
+
+@media (max-width: 992px) {
+
+	/** block advfooter **/
+	#lofadva-pos-2 .blocks-wrap > div { width: 47%!important;margin-bottom: 20px; padding-left:5%}
+	#lofadva-pos-2 .blocks-wrap > div:nth-child(2n+1) {
+		clear: both;
+		padding-left: 0;		
+	}
+	.social a {padding: 0 2%;}
+	.header-wrap {padding-right: 0; display: table; }
+}
+
+@media (max-width: 600px) {
+
+	/** blockadvfooter **/
+		#lofadva-pos-2 .blocks-wrap > div { width: 100%!important; padding:0}
+		.social a {
+			height: 30px;
+			overflow: hidden;
+			padding: 0 1%;
+			width: 40px;
+		}
+		.social .fa {padding:0; font-size: 30px;}
+		
+		.view-list .product_block .center_block {width: 100%!important;}
+		.view-list .product_block .right_block {clear: both;}
+		.view-list .product-container .on_sale, .view-list .product-container .discount {top: -40px;}
+}
+
+/* advfooter */
+
+#advandfooter .block {
+	margin-bottom: 0;
+}
+#advandfooter a {
+	color: #808080
+}
+#advandfooter a:hover {
+	color: #E76D66
+}
+.blocks-wrap {
+	padding: 30px;
+}
+
+	/*block 1*/
+	#lofadva-pos-1 {
+		background-color: #303030;
+		border-radius: 4px 4px 0 0;
+	}
+		.social {text-align: center;}
+			.social a {
+				color: #808080;
+				display: inline-block;
+				padding: 0 4%;
+				transition: all 0.4s ease 0s;
+			}
+			.social .fa {font-size: 21px; padding-right: 5px;}
+	/* block 2*/
+		#lofadva-pos-2 {
+			background-color: #292929;
+		}
+
+
+.social-levo {
+	width: 48%;
+	float: left;
+	margin-left: -60px;
+	
+	@media (max-width: 1199px) {
+		width: 100%;
+		float: none;
+		margin-left: 0px;
+		text-align: center;
+		margin: 0 0 50px;
+	}
+
+	@media (max-width: 660px) {
+		margin: 0 0 0 -15px;
+		
+		.texty {
+			display: none;
+		}
+	}
+
+}
+
+.social-pravo {
+	width: 50%;
+	float: right;
+	text-align: right;
+	
+	@media (max-width: 1199px) {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+
+	@media (max-width: 660px) {
+		display: none;
+	}
+}
+
+.facebook-widget {
+	width: 155px;
+	overflow: hidden;
+	display: inline-block;
+	display: inline-flex;
+	position: relative;
+	top: 1px;
+}
+
+#lofadva-pos-2 .widget-items {
+	padding-left: 0;
+}
+
+#block_contact_infos ul {
+	padding-left: 0;
+}
+
+
+.loga-paypal-paticka {
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+.footer-pod-odkazy {
+	margin-bottom: 30px;
+	color: #000;
+	font-size: 15px;
+	
+	a {
+		text-decoration: underline;
+	}
+}
+
+#lofadva-pos-2 > div > div:nth-child(3) > div > div > ul > li.link > a {
+	margin-top: 12px;
+}
+
+.gplus-widget {
+	margin-right: 16px;
+	margin-left: -14px;
+	display: inline-block;
+}

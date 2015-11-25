@@ -1,0 +1,99 @@
+/*----------------------------------------------------------------------------
+Leo manage widget
+------------------------------------------------------------------------------*/
+
+/** promotiontop */
+	.media-list .media {
+		border-radius: 5px;
+		box-shadow: 0 1px 2px #D9DADB;
+		padding: 20px 10px 10px 20px;
+		position: relative;
+	}
+	
+	h3.media-heading {
+		font-family: proximanovasemibold;
+		font-size: 23px;
+		text-transform: none;
+	}
+	h4.media-heading {
+		font-family: proximanovalight;
+		font-size: 21px;
+		text-transform: uppercase;
+	}
+	
+/* tab product */
+	.products_block .carousel-control {top: 38%; height: 60px; border-radius: 0 3px 3px 0;width: 30px;font-size: 40px;line-height: 52px;}
+	.products_block .carousel-control.right {border-radius: 3px 0 0 3px;}
+	.nav-tabs  li{
+		border-left: 1px solid #EEEEEE;
+		width: 25%;
+	}
+	.nav-tabs  li:first-child {
+		border-left: 0;
+	}
+	.nav-tabs  li.active {
+		background-color: #57A6B9; 
+	}
+	.nav-tabs  li.active:before {
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		bottom: -10px;
+		content: "";
+		display: inline-block;
+		left: 44%;
+		position: absolute;
+
+	}
+	.nav-tabs li.active:before {
+		border-top: 10px solid #57A6B9;
+	}
+	.nav-tabs li.active:last-child {
+		border-radius: 0 5px 5px 0;
+	}
+	.nav-tabs li.active:first-child {
+		border-radius: 5px 0 0 5px;
+	}
+	.nav-tabs > li.active > a, 
+	.nav-tabs > li.active > a:hover, 
+	.nav-tabs > li.active > a:focus,
+	.nav-tabs > li > a,
+	.nav-tabs > li > a:hover,
+	.nav-tabs > li > a:focus {
+		background: transparent;
+		border: 0;
+		color: inherit;
+	}
+	.nav-tabs > li > a {
+		font-family: proximanovasemibold;
+		font-size: 18px;
+		overflow: hidden;
+		padding: 15px 0 15px 25px;
+		line-height: 53px;
+	}
+	.nav-tabs > li.active > a:focus,
+	.nav-tabs > li.active > a:hover,
+	.nav-tabs > li.active > a {
+		color: #fff;
+	}
+	.highlight-carousel .title_block {font-size: 17px;}
+	/** Promotion  **/
+		#homecontent-displayPromoteTop h4.media-heading a {color: #fff;}
+	/** home content */
+		#homecontent-displayHome .leo-custom .media {border: 1px solid #FEFEFE}		
+		.media-list .media:before {
+			background: none repeat scroll 0 0 rgba(255, 255, 255, 0.1);
+			content: "";
+			display: inline-block;
+			height: 559px;
+			position: absolute;
+			right: 755px;
+			top: 0;
+			transform: skew(-45deg);
+			transition: all 0.6s ease-in-out 0s;
+			width: 600px;
+		}
+		.media-list .media:hover:before {
+			right: -700px;
+		}
+		/*bottom */
+	 #homecontent-displayBottom  p {padding-bottom: 0;}

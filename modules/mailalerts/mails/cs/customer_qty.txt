@@ -1,0 +1,11 @@
+Dobrý den,
+
+produkt {product} je již dostupný.
+Tato položka je opět na skladě.
+
+Můžete otevřít stránku produktu na: {product_link}
+
+Právě teď si můžete objednat v našem internetovém obchodě.
+
+
+Obchod {shop_name} – {shop_url} funguje v systému PrestaShop™

@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title></title>
+</head>
+<body>
+	<div>
+<table style="font-family: Verdana,sans-serif; font-size: 11px; color: #374953; width: 550px;">
+<tbody>
+<tr>
+<td align="left"><a title="{shop_name}" href="{shop_url}"><img style="border: none;" src="{shop_logo}" alt="{shop_name}" /></a></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td align="left">Dobr&yacute; den <strong>{firstname} {lastname}</strong>,</td>
+</tr>
+<tr>
+<td align="left">Děkujeme za n&aacute;kup v obchodě {shop_name} a z&aacute;roveň gratulujeme k v&yacute;born&eacute;mu v&yacute;běru!<br /><br /> Va&scaron;e objedn&aacute;vka {order_name} byla &uacute;spě&scaron;ně dokončen&aacute;.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td style="background-color: {color}; color: #eee; font-size: 12px; font-weight: bold; padding: 0.5em 1em;" align="left">Informace o objedn&aacute;vce</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>{informace_platba}</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td style="background-color: {color}; color: #eee; font-size: 12px; font-weight: bold; padding: 0.5em 1em;" align="left">Detaily objedn&aacute;vky</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td align="left">
+<table style="width: 100%; font-family: Verdana,sans-serif; font-size: 11px; color: #374953;">
+<tbody>
+<tr style="background-color: #b9babe; text-align: center;"><th style="width: 15%; padding: 0.6em 0;">K&oacute;d</th><th style="width: 30%; padding: 0.6em 0;">Produkt</th><th style="width: 20%; padding: 0.6em 0;">Jedn. cena</th><th style="width: 15%; padding: 0.6em 0;">Množstv&iacute;</th><th style="width: 20%; padding: 0.6em 0;">Cena celkem</th></tr>
+<tr>
+<td colspan="5">{products}</td>
+</tr>
+<tr>
+<td colspan="5">{discounts}</td>
+</tr>
+<tr style="text-align: right;">
+<td style="background-color: #ebecee; padding: 0.6em 0.4em;" colspan="4">Zbož&iacute;</td>
+<td style="background-color: #ebecee; padding: 0.6em 0.4em;">{total_products}</td>
+</tr>
+<tr style="text-align: right;">
+<td style="background-color: #ebecee; padding: 0.6em 0.4em;" colspan="4">Slevy</td>
+<td style="background-color: #ebecee; padding: 0.6em 0.4em;">{total_discounts}</td>
+</tr>
+<tr style="text-align: right;">
+<td style="background-color: #dde2e6; padding: 0.6em 0.4em;" colspan="4">Po&scaron;tovn&eacute;</td>
+<td style="background-color: #dde2e6; padding: 0.6em 0.4em;">{total_shipping}</td>
+</tr>
+<tr style="text-align: right; font-weight: bold;">
+<td style="background-color: #F1AEAE; padding: 0.6em 0.4em;" colspan="4">Celkem k &uacute;hradě</td>
+<td style="background-color: #F1AEAE; padding: 0.6em 0.4em;">{total_paid}</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td align="left">Objedn&aacute;vka: <strong> <span>{order_name} </span> vytvořena {date}</strong><br /> Platba: <strong>{payment}</strong><br /> Dopravce: <strong>{carrier}</strong></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>
+<table style="width: 100%; font-family: Verdana,sans-serif; font-size: 11px; color: #374953;">
+<tbody>
+<tr style="background-color: #b9babe; text-transform: uppercase;"><th style="text-align: left; padding: 0.3em 1em;">Dodac&iacute; adresa</th><th style="text-align: left; padding: 0.3em 1em;">Fakturačn&iacute; adresa</th></tr>
+<tr>
+<td style="padding: 0.5em 0 0.5em 0.5em; background-color: #ebecee;">{delivery_block_html}</td>
+<td style="padding: 0.5em 0 0.5em 0.5em; background-color: #ebecee;">{invoice_block_html}</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td align="left">Můžete zkontrolovat svou objedn&aacute;vku a st&aacute;hnout si fakturu ze str&aacute;nky <a style="color: {color}; font-weight: bold; text-decoration: none;" href="{history_url}">"Historie objedn&aacute;vek"</a> Va&scaron;eho z&aacute;kaznick&eacute;ho &uacute;čtu kliknut&iacute;m na odkaz <a style="color: {color}; font-weight: bold; text-decoration: none;" href="{my_account_url}">"Můj &uacute;čet"</a><br /> &nbsp;</td>
+</tr>
+<tr>
+<td align="left">Pokud m&aacute;te &uacute;čet n&aacute;v&scaron;těvn&iacute;ka, můžete sledovat sv&eacute; objedn&aacute;vky prostřednictv&iacute;m <a style="color: {color}; font-weight: bold; text-decoration: none;" href="{guest_tracking_url}">"Sledov&aacute;n&iacute; pro n&aacute;v&scaron;těvn&iacute;ky"</a></td>
+</tr>
+<tr>
+<td>
+<p>Je&scaron;tě jednou děkujeme za objedn&aacute;vku a o dal&scaron;&iacute;m průběhu V&aacute;s budeme informovat.</p>
+<br />
+<p>V&aacute;&scaron; t&yacute;m Helveti.cz.</p>
+</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td style="font-size: 10px; border-top: 1px solid #D9DADE;" align="center">Obchod <a style="color: {color}; font-weight: bold; text-decoration: none;" href="{shop_url}">{shop_name}</a> - specialista na hodinky</td>
+</tr>
+<tr>
+<td style="font-size: 10px; padding-top: 10px;" align="center">Potřebujete poradit? Volejte +420 774 744 763 nebo pi&scaron;te na info@helveti.cz.<br /> Souč&aacute;st&iacute; objedn&aacute;vky jsou tak&eacute; <a style="color: {color}; font-weight: bold; text-decoration: none;" href="{podminky}">obchodn&iacute; podm&iacute;nky.</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

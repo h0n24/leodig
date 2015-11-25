@@ -1,0 +1,27 @@
+Dobrý den p. {firstname} {lastname}.
+
+Děkujeme Vám za vaší objednávku v obchodě {shop_name}!
+
+Objednávka: {order_name} vytvořená {date}
+Platba: {payment}
+
+Produkty: {total_products}
+Slevy: {total_discounts}
+Přeprava: {total_shipping}
+Celkem k platbě: {total_paid}
+
+Dopravce: {carrier}
+
+Dodací adresa:
+{delivery_block_txt}
+
+Fakturační adresa:
+{invoice_block_txt}
+
+Můžete zkontrolovat svou objednávku a stáhnout si fakturu ze stránky "Historie objednávek" Vašeho zákaznického účtu kliknutím na odkaz "Můj účet".
+
+Pokud máte účet návštěvníka, můžete sledovat své objednávky prostřednictvím "Sledování pro návštěvníky": {guest_tracking_url}
+
+Ještě jednou děkujeme za objednávku a o dalším průběhu Vás budeme informovat. Váš tým Helveti.cz.
+
+Obchod {shop_name} – {shop_url} - specialista na hodinky Potřebujete poradit? Volejte +420 774 744 763 nebo pište na info@helveti.cz 

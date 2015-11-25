@@ -1,0 +1,30 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{mailalerts}leodig>mailalerts-account_ae0e822b6fad0de61c231ef188997e92'] = 'Musíte mít produkt, pro který chcete odstranit upozornění.';
+$_MODULE['<{mailalerts}leodig>mailalerts-account_0d15d3afa8c174934ff0e43ce3b99bd3'] = 'Musíte být přihlášeni, abyste mohli spravovat své upozornění.';
+$_MODULE['<{mailalerts}leodig>mailalerts-account_a9839ad48cf107667f73bad1d651f2ca'] = 'Žádná šablona nalezena';
+$_MODULE['<{mailalerts}leodig>mailalerts_fd30254803e8db32521d3390131a44da'] = 'Oznámení e-mailem [Mail alerts]';
+$_MODULE['<{mailalerts}leodig>mailalerts_2d51f4a7ab8a12c4f35b507019523b8c'] = 'Posílá e-mailové oznámení zákazníkům a obchodníkům.';
+$_MODULE['<{mailalerts}leodig>mailalerts_8fd3b84964bd6dfec8095f658d200b29'] = 'Jste si jisti, že chcete vymazat všechna oznámení pro zákazníky?';
+$_MODULE['<{mailalerts}leodig>mailalerts_c1ee76f076a5b97e3b4b0c0e5703246e'] = 'Nelze aktualizovat nastavení';
+$_MODULE['<{mailalerts}leodig>mailalerts_ce241f25e003bafeb9fce6857d8f027f'] = 'Vyplňte e-mailovou adresu (případně i více e-mailových adres)';
+$_MODULE['<{mailalerts}leodig>mailalerts_29aae9c646337554f4de7ae29050c39f'] = 'E-mailová adresa je ve špatném formátu:';
+$_MODULE['<{mailalerts}leodig>mailalerts_7cb9a154f101c674c945f88dad5c5e28'] = 'Žádné oznámení';
+$_MODULE['<{mailalerts}leodig>mailalerts_1d744a9ad1dac20645cfc4a36b77323b'] = 'obrázek(y)';
+$_MODULE['<{mailalerts}leodig>mailalerts_9137796c15dd92e5553c3f29574d0968'] = 'Kód slevového kupónu:';
+$_MODULE['<{mailalerts}leodig>mailalerts_58a20987a1f4e45d508b4491614a2c57'] = 'Zákaznické oznámení';
+$_MODULE['<{mailalerts}leodig>mailalerts_6f974bbda9064a9c0836370dbf5a6076'] = 'Obchodní oznámení';
+$_MODULE['<{mailalerts}leodig>mailalerts-account_36c94bd456cf8796723ad09eac258aef'] = 'Správa mého účtu';
+$_MODULE['<{mailalerts}leodig>mailalerts-account_d95cf4ab2cbf1dfb63f066b50558b07d'] = 'Můj účet';
+$_MODULE['<{mailalerts}leodig>mailalerts-account_4edfd10d0bb5f51e0fd2327df608b5a8'] = 'Moje upozornění';
+$_MODULE['<{mailalerts}leodig>mailalerts-account_1063e38cb53d94d386f21227fcd84717'] = 'Odebrat';
+$_MODULE['<{mailalerts}leodig>mailalerts-account_8bb23c2ae698681ebb650f43acb54dab'] = 'Žadne e-mailove upozornění není k dispozici';
+$_MODULE['<{mailalerts}leodig>mailalerts-account_0b3db27bc15f682e92ff250ebb167d4b'] = 'Zpět na Váš účet';
+$_MODULE['<{mailalerts}leodig>my-account_4edfd10d0bb5f51e0fd2327df608b5a8'] = 'Moje oznámení';
+$_MODULE['<{mailalerts}leodig>product_67135a14d3ac4f1369633dd006d6efec'] = 'vas@email.cz';
+$_MODULE['<{mailalerts}leodig>product_61172eb93737ebf095d3fa02119ce1df'] = 'Váš požadavek byl zaevidován';
+$_MODULE['<{mailalerts}leodig>product_bb51a155575b81f4a07f7a9bafdc3b01'] = 'Již máte upozornění o tomto produktu';
+$_MODULE['<{mailalerts}leodig>product_900f8551b29793ecb604a545b2059cc1'] = 'Váš e-mailová adresa je neplatná';
+$_MODULE['<{mailalerts}leodig>product_546e02eaa9a986c83cc347e273269f2c'] = 'Informujte mě, až bude k dispozici';

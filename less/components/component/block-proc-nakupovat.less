@@ -1,0 +1,288 @@
+/*----------------------------------------------------------------------------
+Proč nakupovat
+------------------------------------------------------------------------------*/
+
+/* produkt */
+
+#blok_staticke_info {
+	float: left;
+	width: 75%;
+	padding: 60px 20px 20px;
+	
+	@media (max-width: 1199px) {
+		padding: 20px 10px 10px;
+	}
+
+	@media (max-width: 992px) {
+		padding-left: 30px;	
+		padding-right: 30px;
+		width: 100%;
+	}
+
+	.ikonka {
+		line-height: 35px;
+		padding-left: 40px;
+		display: inline-block;
+		background-repeat: no-repeat;
+		margin: 5px;
+	}
+
+	.ikonka_doprava {
+		background-image: url("../img/helveti/proc01.png");
+		background-position: 0px 8px;
+	}
+
+	.ikonka_pojisteni {
+		background-image: url("../img/helveti/proc10.png");
+		background-position: 0px 6px;
+	}
+
+	.ikonka_zaruka {
+		background-image: url("../img/helveti/proc12.png");
+		background-position: 0px 7px;
+	}
+
+	.ikonka_zitra {
+		background-image: url("../img/helveti/proc02.png");
+		background-position: 2px 6px;
+	}
+
+	.ikonka_prodejna {
+		background-image: url("../img/helveti/proc03.png");
+		background-position: 1px 7px;
+	}
+
+	.ikonka_specialiste {
+		background-image: url("../img/helveti/proc04.png");
+		background-position: 3px 6px;
+	}
+
+	.ikonka_pomahame {
+		background-image: url("../img/helveti/proc11.png");
+		background-position: 2px 6px;
+	}
+	
+	.ikonka_sz {
+		background-image: url("../img/helveti/proc06.png");
+		background-position: 2px 4px;
+	}
+
+	.ikonka_skladem {
+		background-image: url("../img/helveti/proc07.png");
+		background-position: 2px 7px;
+	}
+
+	.ikonka_vydejen {
+		background-image: url("../img/helveti/proc08.png");
+		background-position: 6px 6px;
+	}
+
+	.ikonka_akce {
+		background-image: url("../img/helveti/proc09.png");
+		background-position: 0px 4px;
+	}
+
+	h3 {
+		font-weight: 700;
+		color: #000;
+		font-size: 15px;
+		margin-bottom: 10px;
+	}
+}
+
+	#nakupovat, #hodinky_kategorie {
+		width: 33%;
+		float: left;
+	}
+
+	#nakupovat {
+		@media (max-width: 992px) {
+			width: 50%;
+		}
+
+		@media (max-width: 450px) {
+			width: 100%;
+		}
+	}
+
+	#hodinky_kategorie {
+		@media (max-width: 992px) {
+			width: 100%;
+		}
+	}
+
+	#heureka_last2 {
+		width: 28%;
+		margin-right: 5%;
+		float: left;
+		
+		@media (max-width: 992px) {
+			width: 44%;
+		}
+
+		@media (max-width: 450px) {
+			width: 100%;
+			margin-top: 20px;
+		}
+	}
+
+	.heureka_jmeno {
+		font-weight: 700;
+		color: #000;
+		font-size: 15px;
+		margin: 2px 0 5px;
+	}
+
+	.heureka_datum {
+		display: none;
+	}
+
+	.heureka_hvezdy {
+		color: #389bd2;
+		font-size: 18px;
+		font-weight: 700;
+		margin: 2px 0;
+	}
+
+	.heureka_klady {
+		color: #50ad30;
+		margin: 5px 0;
+	}
+
+	.heureka_zapory {
+		color: #dc2424;
+		margin: 5px 0;
+	}
+
+	.heureka_text {
+		color: #000;
+		font-size: 12px;
+		margin: 5px 0 15px;
+		padding-bottom: 25px;
+		border-bottom: 1px solid #DADADA;
+	}
+
+	.plus {
+		padding-left: 20px;
+		background-image: url("../img/helveti/heureka-plus.gif");
+		background-repeat: no-repeat;
+		background-position: 1px 5px;
+		display: inline-block;
+		margin: 5px 0px;
+		font-size: 12px;
+	}
+
+	.minus {
+		padding-left: 20px;
+		background-image: url("../img/helveti/heureka-minus.gif");
+		background-repeat: no-repeat;
+		background-position: 1px 5px;
+		display: inline-block;
+		margin: 5px 0px;
+		font-size: 12px;
+	}
+
+	.heureka_star {
+		background: url("../img/helveti/heureka-stars.gif") no-repeat scroll 0 0;
+		height: 20px; 
+		display: inline-block;
+		position: relative;
+		top: 2px;
+		margin-left: 4px;
+	}
+
+	.heureka_star1 {
+		width: 20px;
+	}
+
+	.heureka_star15 {
+		width: 30px;
+	}
+
+	.heureka_star2 {
+		width: 40px;
+	}
+
+	.heureka_star25 {
+		width: 50px;
+	}
+	
+	.heureka_star3 {
+		width: 60px;
+	}
+
+	.heureka_star35 {
+		width: 70px;
+	}
+
+	.heureka_star4 {
+		width: 80px;
+	}
+
+	.heureka_star45 {
+		width: 90px;
+	}
+	
+	.heureka_star5 {
+		width: 100px;
+	}
+
+
+#hodinky_kategorie {
+
+	.productcats {
+
+		li a {
+			color: #767676;
+			font-size: 15px;
+			font-weight: 700;
+			background-color: transparent;
+			text-decoration: underline;
+			line-height: 30px;
+			position: relative;
+			display: inline-block;
+		}
+
+		li a:hover {
+			background-color: transparent;
+			color: @cervena;
+		}
+
+		li a::before {
+			content: "\f054";
+			display: inline-block;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			position: absolute;
+			left: 1px;
+			top: 14px;
+			font-size: 10px;
+			color: #CACACA;
+		}
+	}
+}
+
+
+/* kategorie */
+
+#category #blok_staticke_info, #search #blok_staticke_info, .seostranka #blok_staticke_info, .wishlist_stranka #blok_staticke_info {
+	width: 100%;
+	padding-top: 0px;
+	
+	#nakupovat {
+		width: 100%;
+	}
+
+	#heureka_last2 {
+		width: 100%;
+		
+		@media (max-width: 1199px) {
+			margin-top: 10px;
+		}
+	}
+}
+

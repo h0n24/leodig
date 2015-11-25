@@ -1,0 +1,39 @@
+/*----------------------------------------------------------------------------
+pagination
+------------------------------------------------------------------------------*/
+
+/* pagination ********************************************************************************** */
+form.pagination {display:none;}
+
+.pagination{
+	margin: 0;
+}
+.pagination > li > span:hover,
+.pagination > li > span:focus {
+	background-color: #FFFFFF;
+}
+.pagination > li.current > span:hover,
+.pagination > li.current > span:focus,
+.pagination > li.current > span{
+	color: #fff;
+	background-color: #E76D66;
+}
+
+.pagination > li > a, .pagination > li > span {
+	border-radius: 4px;
+	border: 0px;
+	margin: 0 3px;
+	padding: 6px 12px 7px;
+	line-height: 20px;
+}
+
+.pagination .truncate {
+	float: left;
+	margin: 8px 5px;
+}
+
+.pagination-slova {
+	@media (max-width: 620px) {
+		display: none;
+	}
+}

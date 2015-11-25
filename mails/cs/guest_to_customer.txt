@@ -1,0 +1,13 @@
+Dobrý den p. {firstname} {lastname}.
+
+Spolu s Vaší objednávkou jsme Vám vytvořili zákaznický účet na našem eshopu. Máte tak možnost sledovat stav Vaší objednávky {history_url}, nahlížet do historie objednávek {history_url} a využívat slevy a akce.
+
+E-mail: {email}
+Heslo: {passwd}
+
+Heslo si můžete ihned změnit v nastavení Vašeho účtu {my_account_url}.
+
+S pozdravem Váš tým Helveti.cz.
+
+
+Obchod {shop_name} – {shop_url} - specialista na hodinky Potřebujete poradit? Volejte +420 774 744 763 nebo pište na info@helveti.cz 
