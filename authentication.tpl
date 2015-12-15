@@ -209,7 +209,7 @@ $(document).ready(function() {
 					<legend>{l s='Create an account'}</legend>
 					
 						<p class="title_block">{l s='Please enter your email address to create an account.'}.</p>
-						<div class="error" id="create_account_error" style="display:none"></div>
+						<div class="error display-none" id="create_account_error"></div>
 						<div class="form-group text">
 							<label class="col-sm-3 control-label" for="email_create">{l s='Email address'}</label>
 							<div class="col-sm-4">
@@ -262,7 +262,7 @@ $(document).ready(function() {
 	{if isset($inOrderProcess) && $inOrderProcess && $PS_GUEST_CHECKOUT_ENABLED}
 	<form action="{$link->getPageLink('authentication', true, NULL, "back=$back")|escape:'html'}" method="post" id="new_account_form" class="std form-horizontal clearfix">
 		<div  id="bez_registrace"  class="panel panel-default">
-			<div id="opc_account_form" style="display: block; ">
+			<div id="opc_account_form" class="display-block" ">
 				<!-- Account -->
 				<fieldset>
 				<legend>Osobní údaje</legend>
@@ -310,7 +310,7 @@ $(document).ready(function() {
 							</div>
 						</div>
 					
-					<div id="firemni_udaje" style="display:none;">
+					<div id="firemni_udaje" class="display-none">
 						<div class="form-group text">
 							<label class="control-label col-sm-2" for="company">{l s='Firma'} <span class="misto-hvezdicka"></span></label>
 							<div class="col-sm-4">
@@ -327,7 +327,7 @@ $(document).ready(function() {
 							</div>
 						</div>
 						{elseif $field_name eq "vat_number"}
-						<div id="vat_number" {*style="display:none;"*}>
+						<div id="vat_number" {*class="display-none"*}>
 							<div class="form-group text">
 								<label class="col-sm-2 control-label" for="vat_number">{l s='VAT number'} <span class="misto-hvezdicka"></span></label>
 								<div class="col-sm-4">
@@ -483,7 +483,7 @@ $(document).ready(function() {
 					</div>
 					{elseif $field_name eq "state" || $field_name eq 'State:name'}
 					{$stateExist = true}
-					<div class="form-group required id_state_invoice select" style="display:none;">
+					<div class="form-group required id_state_invoice select display-none" >
 						<label class="control-label col-sm-2" for="id_state_invoice">{l s='State'} <sup>*</sup></label>
 						<div class="col-sm-4">
 							<select name="id_state_invoice" id="id_state_invoice" class="form-control">
@@ -758,7 +758,7 @@ $(document).ready(function() {
 						</div>
 					{/if}
 				{elseif $field_name eq "vat_number"}
-					<div id="vat_number" {*style="display:none;"*}>
+					<div id="vat_number" {*class="display-none"*}>
 						<div class="form-group text">
 							<label class="col-sm-2 control-label" for="vat_number">{l s='VAT number'} <span class="misto-hvezdicka"></span></label>
 							<div class="col-sm-4">

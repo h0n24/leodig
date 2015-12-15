@@ -1,0 +1,307 @@
+#START AS4 RULES (Do not remove)
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^as4_seositemap.xml$ modules/pm_advancedsearch4/seositemap.xml [L]
+RewriteCond %{QUERY_STRING} !^controller=products-comparison [NC]
+RewriteRule ^([a-z]{2})?/?s/([0-9]+)/([a-zA-Z0-9/_-]*) index.php?fc=module&module=pm_advancedsearch4&controller=advancedsearch4&isolang=$1&id_seo=$2&seo_url=$3 [QSA,L]
+RewriteCond %{QUERY_STRING} ^isolang=([a-z]{2})&id_seo=([0-9]+)&seo_url=([a-zA-Z0-9/_-]*).*p=([0-9]+)$
+RewriteRule ^advancedsearch4.php /%1/s/%2/%3?p=%4 [R=301,L]
+RewriteCond %{QUERY_STRING} ^isolang=([a-z]{2})&id_seo=([0-9]+)&seo_url=([a-zA-Z0-9/_-]*)
+RewriteRule ^advancedsearch4.php /%1/s/%2/%3? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id_seo=([0-9]+)&seo_url=([a-zA-Z0-9/_-]*).*p=([0-9]+)$
+RewriteRule ^advancedsearch4.php /s/%1/%2?p=%3 [R=301,L]
+RewriteCond %{QUERY_STRING} ^id_seo=([0-9]+)&seo_url=([a-zA-Z0-9/_-]*)
+RewriteRule ^advancedsearch4.php /s/%1/%2? [R=301,L]
+</IfModule>
+#END AS4 RULES
+
+####### Fungovani starych linku ######
+RewriteCond %{HTTP_HOST}  ^www\.helveti\.cz$ [NC]
+RewriteCond %{QUERY_STRING}  ^$
+RewriteRule ^military http://www.helveti.cz/tactical [R=301,L]
+RewriteRule ^professional http://www.helveti.cz/heritage [R=301,L]
+RewriteRule ^automat http://www.helveti.cz/seiko-5 [R=301,L]
+RewriteRule ^hledame-roberta/ http://www.helveti.cz/blog/hledame-roberta/ [R=301,L]
+RewriteRule ^wenger-novinky-baselworld-2014/ http://www.helveti.cz/blog/wenger-novinky-baselworld-2014/ [R=301,L]
+RewriteRule ^novinky-traser-hodinek-pro-kveten-cerven-2013/ http://www.helveti.cz/blog/novinky-traser-hodinek-pro-kveten-cerven-2013/ [R=301,L]
+RewriteRule ^traser-sponzoruje/ http://www.helveti.cz/blog/traser-sponzoruje/ [R=301,L]
+RewriteRule ^wenger-commando-chrono-navrat-legendy/ http://www.helveti.cz/blog/wenger-commando-chrono-navrat-legendy/ [R=301,L]
+RewriteRule ^kosovo-fotky-z-cesty/ http://www.helveti.cz/blog/kosovo-fotky-z-cesty/ [R=301,L]
+RewriteRule ^kosovo-traser-red-combat-na-setkani-s-velitelem-ceskeho-eulex/ http://www.helveti.cz/blog/kosovo-traser-red-combat-na-setkani-s-velitelem-ceskeho-eulex/ [R=301,L]
+RewriteRule ^wenger-podporuje-sport/ http://www.helveti.cz/blog/wenger-podporuje-sport/ [R=301,L]
+RewriteRule ^novinky-a-akce-v-jednom-emailu/ http://www.helveti.cz/blog/novinky-a-akce-v-jednom-emailu/ [R=301,L]
+RewriteRule ^kosovo-prvni-dny-cesty-traser-red-combat/ http://www.helveti.cz/blog/kosovo-prvni-dny-cesty-traser-red-combat/ [R=301,L]
+RewriteRule ^nove-kombinace-hodinek-zakaznik-ma-u-nas-hlavni-slovo/ http://www.helveti.cz/blog/nove-kombinace-hodinek-zakaznik-ma-u-nas-hlavni-slovo/ [R=301,L]
+RewriteRule ^nasi-zakaznici-nam-delaji-radost/ http://www.helveti.cz/blog/nasi-zakaznici-nam-delaji-radost/ [R=301,L]
+RewriteRule ^specialni-edice-traser-mil-g-se-safirovym-sklickem/ http://www.helveti.cz/blog/specialni-edice-traser-mil-g-se-safirovym-sklickem/ [R=301,L]
+RewriteRule ^hodinky-traser-red-combat-pojedou-na-testy-do-kosova/ http://www.helveti.cz/blog/hodinky-traser-red-combat-pojedou-na-testy-do-kosova/ [R=301,L]
+RewriteRule ^vyprodej-hodinek-vrcholi-slevy-akce/ http://www.helveti.cz/blog/vyprodej-hodinek-vrcholi-slevy-akce/ [R=301,L]
+RewriteRule ^mobilni-aplikace-traser/ http://www.helveti.cz/blog/mobilni-aplikace-traser/ [R=301,L]
+RewriteRule ^alfex-ikon-minimalismus-v-barvach/ http://www.helveti.cz/blog/alfex-ikon-minimalismus-v-barvach/ [R=301,L]
+RewriteRule ^recenze-traser-p6506-commander-100-force/ http://www.helveti.cz/blog/recenze-traser-p6506-commander-100-force/ [R=301,L]
+RewriteRule ^traser-vyprodava-sklady-sleva-6000-kc/ http://www.helveti.cz/blog/traser-vyprodava-sklady-sleva-6000-kc/ [R=301,L]
+RewriteRule ^recenze-hodinek-traser-officer-pro-na-armadnim-webu/ http://www.helveti.cz/blog/recenze-hodinek-traser-officer-pro-na-armadnim-webu/ [R=301,L]
+RewriteRule ^novinka-od-traseru-traser-classic-elegance-chronograph/ http://www.helveti.cz/blog/novinka-od-traseru-traser-classic-elegance-chronograph/ [R=301,L]
+RewriteRule ^traser-vyrobil-sve-200000-hodinky/ http://www.helveti.cz/blog/traser-vyrobil-sve-200000-hodinky/ [R=301,L]
+RewriteRule ^wenger-bude-zdrazovat/ http://www.helveti.cz/blog/wenger-bude-zdrazovat/ [R=301,L]
+RewriteRule ^navysili-jsme-sklad-hodinek-traser/ http://www.helveti.cz/blog/navysili-jsme-sklad-hodinek-traser/ [R=301,L]
+RewriteRule ^vyhlaseni-vysledku-souteze-o-nuz-traser/ http://www.helveti.cz/blog/vyhlaseni-vysledku-souteze-o-nuz-traser/ [R=301,L]
+RewriteRule ^traser-podporuje-sportovce/ http://www.helveti.cz/blog/traser-podporuje-sportovce/ [R=301,L]
+RewriteRule ^novinka-traser-outdoor-pioneer/ http://www.helveti.cz/blog/novinka-traser-outdoor-pioneer/ [R=301,L]
+RewriteRule ^vojenske-hodinky-traser/ http://www.helveti.cz/blog/vojenske-hodinky-traser/ [R=301,L]
+RewriteRule ^proc-by-si-muz-mel-doprat-i-vice-hodinek-pro-nosime-hodinky-cz/ http://www.helveti.cz/blog/proc-by-si-muz-mel-doprat-i-vice-hodinek-pro-nosime-hodinky-cz/ [R=301,L]
+RewriteRule ^jak-spravne-nosit-nato-reminek/ http://www.helveti.cz/blog/jak-spravne-nosit-nato-reminek/ [R=301,L]
+RewriteRule ^jak-jsme-vytvorili-vlastni-edici-wenger-hodinek/ http://www.helveti.cz/blog/jak-jsme-vytvorili-vlastni-edici-wenger-hodinek/ [R=301,L]
+RewriteRule ^darek-na-posledni-chvili-hodinky-jsou-to-prave/ http://www.helveti.cz/blog/darek-na-posledni-chvili-hodinky-jsou-to-prave/ [R=301,L]
+RewriteRule ^tritiovy-privesek-k-hodinkam-traser/ http://www.helveti.cz/blog/tritiovy-privesek-k-hodinkam-traser/ [R=301,L]
+RewriteRule ^mame-uz-14-vydejnich-mist/ http://www.helveti.cz/blog/mame-uz-14-vydejnich-mist/ [R=301,L]
+RewriteRule ^traser-p6600-red-combat-novinka-traseru-pro-leden-2014/ http://www.helveti.cz/blog/traser-p6600-red-combat-novinka-traseru-pro-leden-2014/ [R=301,L]
+RewriteRule ^jak-je-to-s-bezpecnosti-tritia-v-hodinkach-traser/ http://www.helveti.cz/blog/jak-je-to-s-bezpecnosti-tritia-v-hodinkach-traser/ [R=301,L]
+RewriteRule ^privitejte-s-nami-hodinky-boccia-titanium/ http://www.helveti.cz/blog/privitejte-s-nami-hodinky-boccia-titanium/ [R=301,L]
+RewriteRule ^wenger-predstavil-novinku-urban-classic/ http://www.helveti.cz/blog/wenger-predstavil-novinku-urban-classic/ [R=301,L]
+RewriteRule ^ziskali-jsme-certifikat-garance-nakupu/ http://www.helveti.cz/blog/ziskali-jsme-certifikat-garance-nakupu/ [R=301,L]
+RewriteRule ^karolina-erbanova-novou-tvari-wengeru/ http://www.helveti.cz/blog/karolina-erbanova-novou-tvari-wengeru/ [R=301,L]
+RewriteRule ^roztocili-jsme-to/ http://www.helveti.cz/blog/roztocili-jsme-to/ [R=301,L]
+RewriteRule ^svycarske-hodinky-a-jejich-pradavny-puvod/ http://www.helveti.cz/blog/svycarske-hodinky-a-jejich-pradavny-puvod/ [R=301,L]
+RewriteRule ^padelky-hodinek-wenger/ http://www.helveti.cz/blog/padelky-hodinek-wenger/ [R=301,L]
+RewriteRule ^potkejte-nas-na-veletrhu-hodinky-a-klenoty-2013/ http://www.helveti.cz/blog/potkejte-nas-na-veletrhu-hodinky-a-klenoty-2013/ [R=301,L]
+RewriteRule ^vytvorili-jsme-samostatne-stranky-pro-radu-wenger-sea-force/ http://www.helveti.cz/blog/vytvorili-jsme-samostatne-stranky-pro-radu-wenger-sea-force/ [R=301,L]
+RewriteRule ^zlevnili-jsme-70-modelu-hodinek-wenger-sleva-10-20/ http://www.helveti.cz/blog/zlevnili-jsme-70-modelu-hodinek-wenger-sleva-10-20/ [R=301,L]
+RewriteRule ^traser-bude-mit-zarivejsi-modry-trigalight/ http://www.helveti.cz/blog/traser-bude-mit-zarivejsi-modry-trigalight/ [R=301,L]
+RewriteRule ^wenger-predstavil-specialni-edici-hodinek-sea-force-slavia/ http://www.helveti.cz/blog/wenger-predstavil-specialni-edici-hodinek-sea-force-slavia/ [R=301,L]
+RewriteRule ^traser-predstavil-v-cervenci-3-novinky/ http://www.helveti.cz/blog/traser-predstavil-v-cervenci-3-novinky/ [R=301,L]
+RewriteRule ^hodinky-wenger-na-islandu/ http://www.helveti.cz/blog/hodinky-wenger-na-islandu/ [R=301,L]
+RewriteRule ^novinky-wenger-predstavene-na-hodinarskem-veletrhu-baselworld-2013/ http://www.helveti.cz/blog/novinky-wenger-predstavene-na-hodinarskem-veletrhu-baselworld-2013/ [R=301,L]
+RewriteRule ^soutez-o-zapalovac-zippo/ http://www.helveti.cz/blog/soutez-o-zapalovac-zippo/ [R=301,L]
+RewriteRule ^soutez-o-nuz-wenger/ http://www.helveti.cz/blog/soutez-o-nuz-wenger/ [R=301,L]
+RewriteRule ^vyhlaseni-vysledku-souteze/ http://www.helveti.cz/blog/vyhlaseni-vysledku-souteze/ [R=301,L]
+RewriteRule ^pravidla-souteze/ http://www.helveti.cz/blog/pravidla-souteze/ [R=301,L]
+RewriteRule ^wenger-predstavi-nove-modely-hodinek/ http://www.helveti.cz/blog/wenger-predstavi-nove-modely-hodinek/ [R=301,L]
+RewriteRule ^wenger-video-novinek-2013/ http://www.helveti.cz/blog/wenger-video-novinek-2013/ [R=301,L]
+RewriteRule ^prestehovali-jsme-se/ http://www.helveti.cz/blog/prestehovali-jsme-se/ [R=301,L]
+RewriteRule ^wenger-skonci-s-vyrobou-nozu/ http://www.helveti.cz/blog/wenger-skonci-s-vyrobou-nozu/ [R=301,L]
+RewriteRule ^spustili-jsme-affiliate-program/ http://www.helveti.cz/blog/spustili-jsme-affiliate-program/ [R=301,L]
+RewriteRule ^hledame-nove-kancelare/ http://www.helveti.cz/blog/hledame-nove-kancelare/ [R=301,L]
+RewriteRule ^hledame-kolegu-kodera-programatora/ http://www.helveti.cz/blog/hledame-kolegu-kodera-programatora/ [R=301,L]
+RewriteRule ^tag/helveti/ http://www.helveti.cz/blog/tag/helveti/ [R=301,L]
+RewriteRule ^author/stencek/page/3/ http://www.helveti.cz/blog/author/stencek/page/3/ [R=301,L]
+RewriteRule ^author/stencek/page/2/ http://www.helveti.cz/blog/author/stencek/page/2/ [R=301,L]
+RewriteRule ^author/stencek/ http://www.helveti.cz/blog/author/stencek/ [R=301,L]
+RewriteRule ^tag/traser/page/3/ http://www.helveti.cz/blog/tag/traser/page/3/ [R=301,L]
+RewriteRule ^tag/hodinky/page/2/ http://www.helveti.cz/blog/tag/hodinky/page/2/ [R=301,L]
+RewriteRule ^tag/wenger/page/2/ http://www.helveti.cz/blog/tag/wenger/page/2/ [R=301,L]
+RewriteRule ^tag/helveti/page/2/ http://www.helveti.cz/blog/tag/helveti/page/2/ [R=301,L]
+RewriteRule ^tag/chrono/ http://www.helveti.cz/blog/tag/chrono/ [R=301,L]
+RewriteRule ^tag/p6600/ http://www.helveti.cz/blog/tag/p6600/ [R=301,L]
+RewriteRule ^tag/commando/ http://www.helveti.cz/blog/tag/commando/ [R=301,L]
+RewriteRule ^tag/2013/ http://www.helveti.cz/blog/tag/2013/ [R=301,L]
+RewriteRule ^tag/outdoor/ http://www.helveti.cz/blog/tag/outdoor/ [R=301,L]
+RewriteRule ^tag/baselworld/ http://www.helveti.cz/blog/tag/baselworld/ [R=301,L]
+RewriteRule ^tag/roadster/ http://www.helveti.cz/blog/tag/roadster/ [R=301,L]
+RewriteRule ^tag/vojenske/ http://www.helveti.cz/blog/tag/vojenske/ [R=301,L]
+RewriteRule ^tag/hodinkywenger-cz/ http://www.helveti.cz/blog/tag/hodinkywenger-cz/ [R=301,L]
+RewriteRule ^tag/mb-microtec/ http://www.helveti.cz/blog/tag/mb-microtec/ [R=301,L]
+RewriteRule ^tag/novinka/ http://www.helveti.cz/blog/tag/novinka/ [R=301,L]
+RewriteRule ^tag/akce/ http://www.helveti.cz/blog/tag/akce/ [R=301,L]
+RewriteRule ^tag/boccia/ http://www.helveti.cz/blog/tag/boccia/ [R=301,L]
+RewriteRule ^tag/certifikat/ http://www.helveti.cz/blog/tag/certifikat/ [R=301,L]
+RewriteRule ^tag/sea/ http://www.helveti.cz/blog/tag/sea/ [R=301,L]
+RewriteRule ^tag/force/ http://www.helveti.cz/blog/tag/force/ [R=301,L]
+RewriteRule ^tag/2014/ http://www.helveti.cz/blog/tag/2014/ [R=301,L]
+RewriteRule ^tag/safir/ http://www.helveti.cz/blog/tag/safir/ [R=301,L]
+RewriteRule ^tag/officer/ http://www.helveti.cz/blog/tag/officer/ [R=301,L]
+RewriteRule ^tag/kosovo/ http://www.helveti.cz/blog/tag/kosovo/ [R=301,L]
+RewriteRule ^tag/boccia-titanium/ http://www.helveti.cz/blog/tag/boccia-titanium/ [R=301,L]
+RewriteRule ^tag/sponzoring/ http://www.helveti.cz/blog/tag/sponzoring/ [R=301,L]
+RewriteRule ^tag/red-combat/ http://www.helveti.cz/blog/tag/red-combat/ [R=301,L]
+RewriteRule ^tag/manuela-jungo/ http://www.helveti.cz/blog/tag/manuela-jungo/ [R=301,L]
+RewriteRule ^tag/terragraph/ http://www.helveti.cz/blog/tag/terragraph/ [R=301,L]
+RewriteRule ^tag/reminek/ http://www.helveti.cz/blog/tag/reminek/ [R=301,L]
+RewriteRule ^tag/automatic/ http://www.helveti.cz/blog/tag/automatic/ [R=301,L]
+RewriteRule ^tag/master/ http://www.helveti.cz/blog/tag/master/ [R=301,L]
+RewriteRule ^tag/ocel/ http://www.helveti.cz/blog/tag/ocel/ [R=301,L]
+RewriteRule ^tag/escort/ http://www.helveti.cz/blog/tag/escort/ [R=301,L]
+RewriteRule ^tag/steel/ http://www.helveti.cz/blog/tag/steel/ [R=301,L]
+RewriteRule ^tag/urban/ http://www.helveti.cz/blog/tag/urban/ [R=301,L]
+RewriteRule ^tag/naramek/ http://www.helveti.cz/blog/tag/naramek/ [R=301,L]
+RewriteRule ^tag/light/ http://www.helveti.cz/blog/tag/light/ [R=301,L]
+RewriteRule ^tag/arctic/ http://www.helveti.cz/blog/tag/arctic/ [R=301,L]
+RewriteRule ^tag/tah/ http://www.helveti.cz/blog/tag/tah/ [R=301,L]
+RewriteRule ^tag/mitrovice/ http://www.helveti.cz/blog/tag/mitrovice/ [R=301,L]
+RewriteRule ^tag/mostar/ http://www.helveti.cz/blog/tag/mostar/ [R=301,L]
+RewriteRule ^tag/durres/ http://www.helveti.cz/blog/tag/durres/ [R=301,L]
+RewriteRule ^tag/bosna-a-hercegovina/ http://www.helveti.cz/blog/tag/bosna-a-hercegovina/ [R=301,L]
+RewriteRule ^tag/automat/ http://www.helveti.cz/blog/tag/automat/ [R=301,L]
+RewriteRule ^tag/cr/ http://www.helveti.cz/blog/tag/cr/ [R=301,L]
+RewriteRule ^tag/albanie/ http://www.helveti.cz/blog/tag/albanie/ [R=301,L]
+RewriteRule ^tag/vojaci/ http://www.helveti.cz/blog/tag/vojaci/ [R=301,L]
+RewriteRule ^tag/utc/ http://www.helveti.cz/blog/tag/utc/ [R=301,L]
+RewriteRule ^tag/leden/ http://www.helveti.cz/blog/tag/leden/ [R=301,L]
+RewriteRule ^tag/ipsc/ http://www.helveti.cz/blog/tag/ipsc/ [R=301,L]
+RewriteRule ^tag/dominic-meier/ http://www.helveti.cz/blog/tag/dominic-meier/ [R=301,L]
+RewriteRule ^tag/aviator/ http://www.helveti.cz/blog/tag/aviator/ [R=301,L]
+RewriteRule ^tag/strelba/ http://www.helveti.cz/blog/tag/strelba/ [R=301,L]
+RewriteRule ^tag/kitesurfing/ http://www.helveti.cz/blog/tag/kitesurfing/ [R=301,L]
+RewriteRule ^tag/christian-schuler/ http://www.helveti.cz/blog/tag/christian-schuler/ [R=301,L]
+RewriteRule ^tag/lady-diver/ http://www.helveti.cz/blog/tag/lady-diver/ [R=301,L]
+RewriteRule ^tag/red/ http://www.helveti.cz/blog/tag/red/ [R=301,L]
+RewriteRule ^tag/unikatni/ http://www.helveti.cz/blog/tag/unikatni/ [R=301,L]
+RewriteRule ^tag/radioaktivita/ http://www.helveti.cz/blog/tag/radioaktivita/ [R=301,L]
+RewriteRule ^tag/combat/ http://www.helveti.cz/blog/tag/combat/ [R=301,L]
+RewriteRule ^tag/zakaznik/ http://www.helveti.cz/blog/tag/zakaznik/ [R=301,L]
+RewriteRule ^tag/hornbjard/ http://www.helveti.cz/blog/tag/hornbjard/ [R=301,L]
+RewriteRule ^tag/repliky/ http://www.helveti.cz/blog/tag/repliky/ [R=301,L]
+RewriteRule ^tag/field-classic/ http://www.helveti.cz/blog/tag/field-classic/ [R=301,L]
+RewriteRule ^tag/hornstrandir/ http://www.helveti.cz/blog/tag/hornstrandir/ [R=301,L]
+RewriteRule ^tag/squadron-lady/ http://www.helveti.cz/blog/tag/squadron-lady/ [R=301,L]
+RewriteRule ^tag/falzifikaty/ http://www.helveti.cz/blog/tag/falzifikaty/ [R=301,L]
+RewriteRule ^tag/odber/ http://www.helveti.cz/blog/tag/odber/ [R=301,L]
+RewriteRule ^tag/kombinace/ http://www.helveti.cz/blog/tag/kombinace/ [R=301,L]
+RewriteRule ^tag/terragraph-chrono/ http://www.helveti.cz/blog/tag/terragraph-chrono/ [R=301,L]
+RewriteRule ^tag/sea-force-chrono/ http://www.helveti.cz/blog/tag/sea-force-chrono/ [R=301,L]
+RewriteRule ^tag/armadni/ http://www.helveti.cz/blog/tag/armadni/ [R=301,L]
+RewriteRule ^tag/variace/ http://www.helveti.cz/blog/tag/variace/ [R=301,L]
+RewriteRule ^tag/telefon/ http://www.helveti.cz/blog/tag/telefon/ [R=301,L]
+RewriteRule ^tag/zkraceni/ http://www.helveti.cz/blog/tag/zkraceni/ [R=301,L]
+RewriteRule ^tag/chytry/ http://www.helveti.cz/blog/tag/chytry/ [R=301,L]
+RewriteRule ^tag/srebrenica/ http://www.helveti.cz/blog/tag/srebrenica/ [R=301,L]
+RewriteRule ^tag/iphone/ http://www.helveti.cz/blog/tag/iphone/ [R=301,L]
+RewriteRule ^tag/hra/ http://www.helveti.cz/blog/tag/hra/ [R=301,L]
+RewriteRule ^tag/band/ http://www.helveti.cz/blog/tag/band/ [R=301,L]
+RewriteRule ^tag/aplikace/ http://www.helveti.cz/blog/tag/aplikace/ [R=301,L]
+RewriteRule ^tag/pasek/ http://www.helveti.cz/blog/tag/pasek/ [R=301,L]
+RewriteRule ^tag/android/ http://www.helveti.cz/blog/tag/android/ [R=301,L]
+RewriteRule ^tag/odjezd/ http://www.helveti.cz/blog/tag/odjezd/ [R=301,L]
+RewriteRule ^tag/200000/ http://www.helveti.cz/blog/tag/200000/ [R=301,L]
+RewriteRule ^tag/traser-red-bull-hornussen-2014/ http://www.helveti.cz/blog/tag/traser-red-bull-hornussen-2014/ [R=301,L]
+RewriteRule ^tag/christan-schuler/ http://www.helveti.cz/blog/tag/christan-schuler/ [R=301,L]
+RewriteRule ^tag/jura/ http://www.helveti.cz/blog/tag/jura/ [R=301,L]
+RewriteRule ^tag/darek/ http://www.helveti.cz/blog/tag/darek/ [R=301,L]
+RewriteRule ^tag/jan-kalvin/ http://www.helveti.cz/blog/tag/jan-kalvin/ [R=301,L]
+RewriteRule ^tag/jungo/ http://www.helveti.cz/blog/tag/jungo/ [R=301,L]
+RewriteRule ^tag/michal-voska/ http://www.helveti.cz/blog/tag/michal-voska/ [R=301,L]
+RewriteRule ^tag/schwinger/ http://www.helveti.cz/blog/tag/schwinger/ [R=301,L]
+RewriteRule ^tag/armadni-hodinky/ http://www.helveti.cz/blog/tag/armadni-hodinky/ [R=301,L]
+RewriteRule ^tag/protestanti/ http://www.helveti.cz/blog/tag/protestanti/ [R=301,L]
+RewriteRule ^tag/klice/ http://www.helveti.cz/blog/tag/klice/ [R=301,L]
+RewriteRule ^tag/puvod/ http://www.helveti.cz/blog/tag/puvod/ [R=301,L]
+RewriteRule ^tag/nato/ http://www.helveti.cz/blog/tag/nato/ [R=301,L]
+RewriteRule ^tag/specialni-edice/ http://www.helveti.cz/blog/tag/specialni-edice/ [R=301,L]
+RewriteRule ^tag/heureka/ http://www.helveti.cz/blog/tag/heureka/ [R=301,L]
+RewriteRule ^tag/zeneva/ http://www.helveti.cz/blog/tag/zeneva/ [R=301,L]
+RewriteRule ^tag/overeno-zakazniky/ http://www.helveti.cz/blog/tag/overeno-zakazniky/ [R=301,L]
+RewriteRule ^tag/ulozenka/ http://www.helveti.cz/blog/tag/ulozenka/ [R=301,L]
+RewriteRule ^tag/elegance/ http://www.helveti.cz/blog/tag/elegance/ [R=301,L]
+RewriteRule ^tag/datumovka/ http://www.helveti.cz/blog/tag/datumovka/ [R=301,L]
+RewriteRule ^tag/svycarske-hodinky/ http://www.helveti.cz/blog/tag/svycarske-hodinky/ [R=301,L]
+RewriteRule ^tag/barvy/ http://www.helveti.cz/blog/tag/barvy/ [R=301,L]
+RewriteRule ^tag/minimalismus/ http://www.helveti.cz/blog/tag/minimalismus/ [R=301,L]
+RewriteRule ^tag/ikon/ http://www.helveti.cz/blog/tag/ikon/ [R=301,L]
+RewriteRule ^tag/privesek/ http://www.helveti.cz/blog/tag/privesek/ [R=301,L]
+RewriteRule ^tag/sklad/ http://www.helveti.cz/blog/tag/sklad/ [R=301,L]
+RewriteRule ^tag/victorinox/ http://www.helveti.cz/blog/tag/victorinox/ [R=301,L]
+RewriteRule ^tag/slevy/ http://www.helveti.cz/blog/tag/slevy/ [R=301,L]
+RewriteRule ^tag/afrika/ http://www.helveti.cz/blog/tag/afrika/ [R=301,L]
+RewriteRule ^tag/cnb/ http://www.helveti.cz/blog/tag/cnb/ [R=301,L]
+RewriteRule ^tag/urban-classic/ http://www.helveti.cz/blog/tag/urban-classic/ [R=301,L]
+RewriteRule ^tag/nosime-hodinky/ http://www.helveti.cz/blog/tag/nosime-hodinky/ [R=301,L]
+RewriteRule ^tag/fotky/ http://www.helveti.cz/blog/tag/fotky/ [R=301,L]
+RewriteRule ^tag/pioneer/ http://www.helveti.cz/blog/tag/pioneer/ [R=301,L]
+RewriteRule ^tag/volne-misto/ http://www.helveti.cz/blog/tag/volne-misto/ [R=301,L]
+RewriteRule ^tag/keramika/ http://www.helveti.cz/blog/tag/keramika/ [R=301,L]
+RewriteRule ^tag/zdrazeni/ http://www.helveti.cz/blog/tag/zdrazeni/ [R=301,L]
+RewriteRule ^tag/misto/ http://www.helveti.cz/blog/tag/misto/ [R=301,L]
+RewriteRule ^tag/limitovana-edice/ http://www.helveti.cz/blog/tag/limitovana-edice/ [R=301,L]
+RewriteRule ^tag/77052/ http://www.helveti.cz/blog/tag/77052/ [R=301,L]
+RewriteRule ^tag/edice/ http://www.helveti.cz/blog/tag/edice/ [R=301,L]
+RewriteRule ^tag/fotografie/ http://www.helveti.cz/blog/tag/fotografie/ [R=301,L]
+RewriteRule ^tag/tritium/ http://www.helveti.cz/blog/tag/tritium/ [R=301,L]
+RewriteRule ^tag/trigalight/ http://www.helveti.cz/blog/tag/trigalight/ [R=301,L]
+RewriteRule ^tag/h3/ http://www.helveti.cz/blog/tag/h3/ [R=301,L]
+RewriteRule ^tag/wenger/ http://www.helveti.cz/blog/tag/wenger/ [R=301,L]
+RewriteRule ^tag/classic/ http://www.helveti.cz/blog/tag/classic/ [R=301,L]
+RewriteRule ^tag/sea-force/ http://www.helveti.cz/blog/tag/sea-force/ [R=301,L]
+RewriteRule ^tag/traser/ http://www.helveti.cz/blog/tag/traser/ [R=301,L]
+RewriteRule ^tag/squadron/ http://www.helveti.cz/blog/tag/squadron/ [R=301,L]
+
+
+
+#RewriteRule  ^([^/.]+)$  http://www.helveti.cz/$1/  [R=301,L]
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# ~~start~~ Do not remove this comment, Prestashop will keep automatically the code outside this comment when .htaccess will be generated again
+# .htaccess automaticaly generated by PrestaShop e-commerce open-source solution
+# http://www.prestashop.com - http://www.prestashop.com/forums
+
+<IfModule mod_rewrite.c>
+<IfModule mod_env.c>
+SetEnv HTTP_MOD_REWRITE On
+</IfModule>
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.helveti.cz$
+RewriteRule . - [E=REWRITEBASE:/]
+RewriteRule ^api/?(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
+
+# Images
+RewriteCond %{HTTP_HOST} ^www.helveti.cz$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^www.helveti.cz$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^www.helveti.cz$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^www.helveti.cz$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^www.helveti.cz$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^www.helveti.cz$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^www.helveti.cz$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^www.helveti.cz$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^www.helveti.cz$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^www.helveti.cz$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
+# AlphaImageLoader for IE and fancybox
+RewriteCond %{HTTP_HOST} ^www.helveti.cz$
+RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
+
+# Dispatcher
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{HTTP_HOST} ^www.helveti.cz$
+RewriteRule ^.*$ - [NC,L]
+RewriteCond %{HTTP_HOST} ^www.helveti.cz$
+RewriteRule ^.*$ %{ENV:REWRITEBASE}index.php [NC,L]
+</IfModule>
+
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresByType image/gif "access plus 1 month"
+	ExpiresByType image/jpeg "access plus 1 month"
+	ExpiresByType image/png "access plus 1 month"
+	ExpiresByType text/css "access plus 1 week"
+	ExpiresByType text/javascript "access plus 1 week"
+	ExpiresByType application/javascript "access plus 1 week"
+	ExpiresByType application/x-javascript "access plus 1 week"
+	ExpiresByType image/x-icon "access plus 1 year"
+</IfModule>
+
+FileETag INode MTime Size
+<IfModule mod_deflate.c>
+	<IfModule mod_filter.c>
+		AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/x-javascript
+	</IfModule>
+</IfModule>
+
+#If rewrite mod isn't enabled
+ErrorDocument 404 /index.php?controller=404
+
+# ~~end~~ Do not remove this comment, Prestashop will keep automatically the code outside this comment when .htaccess will be generated again
+
+

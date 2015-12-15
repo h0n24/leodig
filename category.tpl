@@ -100,6 +100,8 @@
 				</div>
 			</div>
 			{include file="./product-list.tpl" products=$products}
+			
+			{* puvodni misto strankovani *}
 			{if $nb_products > $products_per_page} 
 			<div class="container category-bot-pag">
 				<div class="col-xs-12 sortPagiBar">
@@ -109,7 +111,7 @@
 						{if $p!=$pages_nb}{($p)*$as_searchs[0]['products_per_page']}{else}{$nb_products}{/if} <span class="w-normal">z</span>
 								{include file="$tpl_dir./category-count.tpl"}
 						</div>
-						 <div class="col-lg-3 col-md-3 porovnat-pag-bot">
+					 	<div class="col-lg-3 col-md-3 porovnat-pag-bot">
 							<div class="inner">
 								{include file="./product-compare.tpl" paginationId='bottom'}
 							</div>
@@ -118,15 +120,14 @@
 							<div class="inner">
 								{include file="./pagination.tpl" paginationId='bottom'}
 							</div>
-						</div>						
+						</div>
 						
 					</div>
 				</div>
 			</div>
 			{/if}
+
 			</div></div></section>
-
-
 		{/if}
 	{elseif $category->id}
 		<p class="warning">{l s='This category is currently unavailable.'}</p>

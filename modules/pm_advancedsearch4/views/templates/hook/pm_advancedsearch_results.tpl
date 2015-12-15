@@ -129,30 +129,36 @@
 				{if $tplCompareExists}
 					{* {include file="$tpl_dir./product-compare.tpl"} *}
 				{/if}
-				
-			{if $nb_products > $products_per_page} 		
-			<div class="container category-bot-pag" >
+
+			{if $nb_products > $products_per_page} 	
+
+	
+			<div class="container category-bot-pag" style="margin-top:30px">
 				<div class="col-xs-12 sortPagiBar">
 					<div class="row">
 						<div class="resumecat category-product-count col-lg-4 col-md-4">
 							{($p)*$as_searchs[0]['products_per_page']-$as_searchs[0]['products_per_page']+1} -
 						{if $p!=$pages_nb}{($p)*$as_searchs[0]['products_per_page']}{else}{$nb_products}{/if} <span class="w-normal">z</span>
 								{include file="$tpl_dir./category-count.tpl"}
-						</div>
-						<div class="col-lg-5 col-md-5 col-sm-8 col-xs-12 obal-pagination-bottom">
-							<div class="inner">
-								{include file="$tpl_dir./pagination.tpl" paginationId='bottom'}
-							</div>
-						</div>						
+						</div>			
 						 <div class="col-lg-3 col-md-3 porovnat-pag-bot">
 							<div class="inner">
 								{include file="$tpl_dir./product-compare.tpl" paginationId='bottom'}
 							</div>
 						</div>
+						<div class="col-lg-5 col-md-5 col-sm-8 col-xs-12 obal-pagination-bottom">
+                            <div class="inner">
+                                {include file="$tpl_dir./pagination.tpl" paginationId='bottom'}
+                            </div>
+                        </div>          
 					</div>
 				</div>
 			</div>
 			{/if}
+
+				
+			{* </div></div></section></div></div>*}
+			</section>
 			
 			
 			{/if}

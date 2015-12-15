@@ -25,8 +25,7 @@
 
 		{if !$content_only}
 		{include file="$tpl_dir./layout/{$LEO_LAYOUT_DIRECTION}/footer.tpl"  }
-	
-		{if $page_name!="category"}
+		{if $page_name!="category" && substr($page_name, 0, 18) != 'advancedsearch-seo'}
 
 		</div></div></section>
 
@@ -61,7 +60,7 @@
 						{if !(isset($inOrderProcess)|| isset($current_step)||$page_name == 'order' )}
 						 <div id="vyhody-hp-vypis" class="col-md-12 ">
 						<div class="block-vyhoda">
-								<p class="hidden-xs"><a title="" href="{$link->getCMSLink('9')}"><img class="img-responsive" style="border-radius: 5px;" src="{$img_dir}helveti/banner/{1|rand:14}.png" alt=""></a></p>
+								<p class="hidden-xs"><a title="" href="{$link->getCMSLink('9')}"><img class="img-responsive br-ra-5" src="{$img_dir}helveti/banner/{1|rand:14}.png" alt=""></a></p>
 						</div>
 						</div>
 						{/if}
@@ -84,9 +83,8 @@
 							<div class="row">
 								<div class="col-sm-{if $HOOK_FOOTNAV}6{else}12{/if}">
 									<div class="copyright">
-											© 2015 Helveti.cz.
-											Vytvořilo <a href="http://www.c3studio.cz" title="C3studio.cz" target="_blank">C3studio.cz</a>
-									</div>
+											© 2015 Helveti.cz - našim <a href="/znacky-hodinek">hodinkám</a> rozumíme.
+																				</div>
 								</div>
 								{if $HOOK_FOOTNAV}
 								<div class="col-sm-6 hidden-xs"><div class="footnav">{$HOOK_FOOTNAV}</div></div>		
@@ -95,6 +93,7 @@
 						</div>
 
 						<div class="footer-pod-odkazy">
+							<span class="hidden-md hidden-lg" id="spanDesktopVersion"> <strong><a href="#" id="desktopVersion">přepnout na desktop verzi</a></strong><br/> </span>
 							Naše specializované eshopy: <a href="http://www.hodinkywenger.cz/" target="_blank">HodinkyWenger.cz</a>, <a href="http://www.hodinkytraser.cz/" target="_blank">HodinkyTraser.cz</a>, <a href="http://www.hodinkyboccia.cz/" target="_blank">HodinkyBoccia.cz</a> a <a href="http://www.hodinkyalfex.cz/" target="_blank">HodinkyAlfex.cz</a>
 						</div>
 					</div>	
@@ -138,5 +137,41 @@
 		<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/991679542/?value=0&amp;guid=ON&amp;script=0"/>
 		</div>
 		</noscript>
+ <script>
+	var switchToDesktop = false;
+
+   $(document).ready(function(){
+	switchToDesktop = $.cookie("switchToDesktop");
+
+	if (switchToDesktop) {
+		funcSwitchToDesktop();
+	}
+
+        $('#desktopVersion').on('click',function(){
+    	    if (switchToDesktop) {
+    		$.removeCookie('switchToDesktop');
+    		location.reload(true);
+    	    } else {
+		funcSwitchToDesktop();
+            }
+        });
+
+	
+      });
+	function funcSwitchToDesktop() {
+		$('head').find('meta').each(function(index, element) {
+			if(this.name == "viewport")
+                        {
+                            $(this).removeAttr('content');
+                            $(this).attr('content','initial-scale=0');
+			    $.cookie("switchToDesktop", 1);
+			    switchToDesktop = 1;
+                        }
+                });
+		$('#desktopVersion').text("Přepnout na mobilní verzi");
+                $('#spanDesktopVersion').removeAttr("class");
+	}
+    </script>
+
 	</body>
 </html>

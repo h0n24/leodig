@@ -23,16 +23,12 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 " lang="{$lang_iso}"> <![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7" lang="{$lang_iso}"> <![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9 ie8" lang="{$lang_iso}"> <![endif]-->
-<!--[if gt IE 8]> <html class="no-js ie9" lang="{$lang_iso}"> <![endif]-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$lang_iso}">
 	<head>
 		<title>{$meta_title|escape:'htmlall':'UTF-8'}</title>
         {if $LEO_RESPONSIVE}
 			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
-        {/if}
+        {/if}    
 {if isset($meta_description) AND $meta_description}
 		<meta name="description" content="{$meta_description|escape:html:'UTF-8'}" />
 {/if}
@@ -58,13 +54,19 @@
 			var priceDisplayMethod = {$priceDisplay};
 			var roundMode = {$roundMode};
 		</script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-{if isset($css_files)}
+         <!-- <link rel="stylesheet" type="text/css" href="{$BOOTSTRAP_CSS_URI}"/>  -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!--          <link rel="stylesheet" type="text/css" href="https://cask.scotch.io/bootstrap-4.0.css">
+ -->{if isset($css_files)}
 	{foreach from=$css_files key=css_uri item=media}
 	<link href="{$css_uri}" rel="stylesheet" type="text/css" media="{$media}" />
 	{/foreach}
 {/if}
-
+{if $LEO_SKIN_DEFAULT &&  $LEO_SKIN_DEFAULT !="default"}
+	<link rel="stylesheet" type="text/css" href="{$content_dir}themes/{$LEO_THEMENAME}/skins/{$LEO_SKIN_DEFAULT}/css/skin.css"/>
+{/if}
+	<link rel="stylesheet" type="text/css" href="{$content_dir}themes/{$LEO_THEMENAME}/css/theme-responsive.css"/>
+    <link rel="stylesheet" type="text/css" href="{$content_dir}themes/{$LEO_THEMENAME}/css/custom.css"/>
 
 {if isset($js_files)}
 	{foreach from=$js_files item=js_uri}
@@ -72,6 +74,7 @@
 	{/foreach}
 {/if}
 {$LEO_CUSTOMWIDTH}
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <script type="text/javascript" src="{$content_dir}themes/{$LEO_THEMENAME}/js/custom.js"></script>
 {if (isset($cms) && $cms->id == 8) || (isset($cms) && $cms->id == 24) }
@@ -84,8 +87,7 @@
 {assign var='classfix' value=0}
 {if in_array($page_name,array(index,'prices-drop','new-products','category','best-sales','manufacturer','search','supplier','product'))}{$classfix=1}{/if}
 
-
-	{$HOOK_HEADER}
+	{$HOOK_HEADER}	
 	{**KONVERZNI KODY**}
 	{literal}
 		<!-- Seznam remarketing -->
@@ -96,30 +98,38 @@
 		</script>
 		<script type="text/javascript" src="//c.imedia.cz/js/retargeting.js"></script>
 
-
-		<!-- FACEBOOK remarketing -->
-		<script>(function() {
-			  var _fbq = window._fbq || (window._fbq = []);
-			  if (!_fbq.loaded) {
-			    var fbds = document.createElement('script');
-			    fbds.async = true;
-			    fbds.src = '//connect.facebook.net/en_US/fbds.js';
-			    var s = document.getElementsByTagName('script')[0];
-			    s.parentNode.insertBefore(fbds, s);
-			    _fbq.loaded = true;
-			  }
-			  _fbq.push(['addPixelId', '294562820691824']);
-			})();
-			window._fbq = window._fbq || [];
-			window._fbq.push(['track', 'PixelInitialized', {}]);
-			</script>
-			<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=294562820691824&amp;ev=PixelInitialized" /></noscript>
+	
+	<!-- Facebook Pixel Code -->
+        <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+        
+        fbq('init', '1697208277161146');
+        fbq('track', 'PageView');
+        {/literal}{if isset($page_name)&&$page_name=="product"}fbq('track', 'ViewContent', {literal}{
+  content_name: '{/literal}{$product->name|escape:'htmlall':'UTF-8'}{literal}',
+  content_ids: ['{/literal}{$product->reference}{literal}'],
+  content_type: 'product', 
+  value: 0.50,
+  currency: 'CZK'
+ }{/literal});{/if}
+        {if $page_name == 'order'}fbq('track', 'AddToCart');{/if}
+        {if isset($page_name)&&$page_name=="order-confirmation"}{literal}fbq('track', 'Purchase', {value: '1.00', currency: 'CZK'});{/literal}{/if}
+        {literal}
+        </script>
+        <noscript><img height="1" width="1" class="display-none"
+        src="https://www.facebook.com/tr?id=1697208277161146&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Facebook Pixel Code -->
 		{/literal}
 	</head>
 
 	<body {if isset($page_name)}id="{$page_name|escape:'htmlall':'UTF-8'}"{/if} class="{$LEO_BGPATTERN} fs{$FONT_SIZE} {if isset($page_name)}{$page_name|escape:'htmlall':'UTF-8'}{/if}{if $hide_left_column} hide-left-column{/if}{if $hide_right_column} hide-right-column{/if}{if $content_only} content_only{/if} keep-header {if isset($as_seo_title)}seostranka{/if} {if $page_name|strstr:"module-blockwishlist-view"}wishlist_stranka{/if}">
-
-	<p style="display: block;" id="back-top"> <a href="#top"><span></span></a> </p>
+		
+	<p class="display-block" id="back-top"> <a href="#top"><span></span></a> </p>
 	{if !$content_only}
 		{if isset($restricted_country_mode) && $restricted_country_mode}
 		<div id="restricted-country">
@@ -127,13 +137,37 @@
 		</div>
 		{/if}
 		<section id="page" class="clearfix">
-
+			
 			<!-- Header -->
 			<header id="header" class="navbar-fixed-top clearfix">
+
+				<!-- Informace o otevírací době -->
+			 	<section id="info-tab-top" class="info-tab-top">
+				 	<div class="container">
+						Máme otevřeno i o <strong>víkendu</strong> SO-NE: 10-14h, přes týden PO-PÁ: 9-19h | <strong>+ Nůž jako dárek</strong>. <a href="http://www.helveti.cz/vanoce-2015">Více informací</a>
+
+						<button type="button" id="close-info-tab" class="close" aria-label="Zavřít">
+						  <span aria-hidden="true">&times;</span>
+						</button>
+				 	</div>	
+				</section> <!--info-tab-top end -->
+
+				<script type="text/javascript">
+					if(localStorage.getItem('hidden')) {
+						 $( "#info-tab-top" ).hide();
+					}
+
+					$( "#close-info-tab" ).click(function() {
+					  $( "#info-tab-top" ).hide( "fast" );
+					  //set local storage
+					  localStorage.setItem('hidden','true');
+					});
+				</script>
+
 				<section id="topbar">
 
 					<div class="container">
-						{$HOOK_TOP}
+						{$HOOK_TOP}	
 					</div>
 				</section>
 				<section id="header-main">
@@ -146,7 +180,7 @@
 							</div>
 							{if !empty($HOOK_HEADERRIGHT)}
 								<div id="header_right" class="col-sm-6 inner">
-									{$HOOK_HEADERRIGHT}
+									{$HOOK_HEADERRIGHT}	
 								</div>
 							{/if}
 							{if !empty($HOOK_TOPNAVIGATION) }
@@ -160,7 +194,7 @@
 							{/if}
 						</div>
 					</div>
-				</section>
+				</section>	
 			</header>
 			{if !(isset($inOrderProcess)|| isset($current_step)||$page_name == 'order' )}
 			<div class="plovouci_blok">
@@ -171,7 +205,7 @@
 				<div class="jsem_zde_pravo">
 					<div class="jsem_zde_nadpis">pro Vás</div>
 					<div class="jsem_zde_jmeno">Jiří Štencek</div>
-					<div class="jsem_zde_kontakt">+420 774 744 763<br/>info@helveti.cz</div>
+					<div class="jsem_zde_kontakt">+420 774 272 737<br/>info@helveti.cz</div>
 				</div>
 				</div></a>
 				<a href="{$link->getCMSLink('9')}">
@@ -184,7 +218,7 @@
 					<span class="proc_unas_link">Přečtěte si</span><br /><strong>10 důvodů</strong>, proč si hodinky koupit právě u nás.
 				</div>
 				</div></a>
-				{* <a href="{$link->getCMSLink('43')}">
+				<a href="{$link->getCMSLink('60')}">
 				<div class="vanocni_akce">
 				<div class="vanocni_akce_levo">
 					<div class="vanocni_akce_img"></div>
@@ -193,7 +227,7 @@
 					Vánoční dárek k hodinkám <strong>zdarma</strong>.<br />
 					<span class="vanocni_akce_link">Zobrazit akci</span>
 				</div>
-				</div></a> *}
+				</div></a>
 				<div class="heureka_widget" ><script type="text/javascript">
 //<![CDATA[
 var _hwq = _hwq || [];
@@ -224,14 +258,14 @@ var _hwq = _hwq || [];
 				</div>
 			</section>
 			{/if}
-			{if !in_array($page_name,array('index'))}
+			{if !in_array($page_name,array('index'))}					
 				<section id="breadcrumb" class="clearfix">
 					<div class="container">
 						<div class="row">
 							{include file="$tpl_dir./breadcrumb.tpl"}
 						</div>
 					</div>
-				</section>
+				</section>					
 			{/if}
 			<section id="columns" class="clearfix">
 				<div class="container columns-container">

@@ -1,0 +1,3 @@
+	RewriteEngine On
+	#prevents files starting with dot to be viewed by browser
+	RewriteRule /\.|^\. - [F]

@@ -1,0 +1,187 @@
+/* NOX custom */
+
+.product-container span.darek1,
+.product-container span.darek2,
+.product-container span.darek3{
+    margin: 1px 0;
+    background-color: #e9584f;
+    color: #FFFFFF;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    z-index: 30;
+    text-align: center;
+    min-width: 50px;
+}
+.product-container span.darek1{
+    top: 28px;
+}
+.product-container span.darek2{
+    top: 56px;
+}
+.product-container span.darek3{
+    top: 84px;
+}
+.product_tag_right{
+    width:105px;
+    background-color: #e9584f;
+    position:absolute;
+    top: 34px;
+    right:10px;
+    color: #FFFFFF;
+    padding:5px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+}
+.darek_nadpis{
+    padding:5px 0 10px;
+    font-size:15px;
+    font-weight:bold;
+    
+}
+.darek_obrazek{
+     -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+    width:95px;
+    min-height:95px;
+    margin:0 auto;
+}
+.darek_obrazek img{
+    margin-top:7px;
+    text-align:center;
+}
+/**FILTRACNI MODUL**/
+a.PM_ASResetSearch{
+    background:none !important;
+    padding-left: 0px !important;
+}
+a.PM_ASResetSearch i{
+    color:#e9584f;
+}
+
+/**VYHLEDAVANI stejne jako #pagenotfound**/
+#search .noexist-hledani .input-group {
+    display: inline-block;
+}
+#search .noexist-hledani {
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#search .hledej-txt {
+    width: 190px;
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block;
+    color: #000;
+}
+#search .noexist-hledani input[type="text"] {
+    height: 40px;
+    border-radius: 6px;
+    border-color: #c8c8c8;
+    background-color: #F5F5F5;
+    padding: 6px 12px 6px 18px;
+    box-shadow: none;
+    width: 510px;
+}
+
+#search .noexist-hledani .btn-search {
+    border-radius: 6px;
+    font-size: 15px;
+    position: relative;
+    padding: 0 50px 0 20px;
+    height: 40px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #e9584f;
+    color: #fff;
+    text-decoration: none;
+    border: 0 solid transparent !important;
+    text-transform: none;
+    margin-left: 12px;
+    font-weight: 700;
+    background-image: url("http://www.helveti.cz/themes/leodig/css/../img/helveti/noexist-hledej.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+#search .noexist-hledani fieldset {
+    display: inline-block;
+    border: 0;
+    }
+#search .noexist-hledani form {
+    display: inline-block;
+}
+#search .noexist-hledani .input-group-btn {
+    display: inline-block;
+}
+/** HOVER EFECT obrazku**/
+.product_block a.product_image:before,
+.media-list .media:before,
+#viewed-products_block_left .block-vi-prod a.content_img:before{
+    -webkit-transition:none;
+    transition:none;
+}
+
+/** Jirka Stencek - edit **/
+
+/* prepisovani hodnot z jineho CSS - casem zapracovat */
+.navbar-fixed-top, .navbar-fixed-bottom { position: static; }
+
+#topbar {background: #fff}
+
+#header-main {border-top:0px;} 
+
+#topbar .links a {border: 0px; background: none;}
+
+.groupe-btn {background: none;}
+
+.ac_results li {font-family: 'Open Sans',sans-serif;}
+
+a#new_comment_tab_btn {color: #fff;}
+
+/* Oprava bugu se přetékajícím stránkováním */
+@media (max-width: 1199px){
+    .obal-pagination-bottom{
+        width: auto;
+    }
+}
+
+/* Zobrazování dalších fotografií u detailu produktu (dále upravováno v custom.js)*/
+.open{
+    height: auto !important;
+}
+
+/* Informace s otevírací dobou */
+.info-tab-top {
+  width: 100%;
+  padding: 5px 0;
+  background: #fbfbe1;
+  border-bottom: 1px solid #e7e7e7;
+}
+.info-tab-top a {
+  text-decoration: underline;
+}
+
+.reseter {
+	border:  0px none;
+	margin:  0px;
+	padding: 0px;
+	float: none;
+	clear: both;
+	width: 0px;
+	height: 0px;
+	line-height: 0px;
+	font-size: 0px;
+}

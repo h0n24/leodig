@@ -94,7 +94,7 @@
 			{/foreach}
 		</ul>
 	</div>
-	<div class="col-sm-6" {if $order->isVirtual()}style="display:none;"{/if} >
+	<div class="col-sm-6" {if $order->isVirtual()}class="display-none"{/if} >
 		<ul class="address alternate_item" >
 			<li class="address_title">{l s='Delivery'}</li>
 			{foreach from=$dlv_adr_fields name=dlv_loop item=field_item}
@@ -364,7 +364,7 @@
 		<table class="detail_step_by_step std">
 			<thead>
 				<tr>
-					<th class="first_item" style="width:150px;">{l s='From'}</th>
+					<th class="first_item width-150">{l s='From'}</th>
 					<th class="last_item">{l s='Message'}</th>
 				</tr>
 			</thead>

@@ -164,11 +164,11 @@
 <form action="{$link->getPageLink('order', true, NULL, 'multi-shipping=1')|escape:'html'}" method="post">
 {else}
 <div id="opc_account" class="opc-main-block">
-	<div id="opc_account-overlay" class="opc-overlay" style="display: none;"></div>
+	<div id="opc_account-overlay" class="opc-overlay display-none"></div>
 {/if}
 	<div class="addresses clearfix">
 		<input type="hidden" name="id_address_delivery" id="id_address_delivery" value="{$cart->id_address_delivery}" onchange="updateAddressesDisplay();{if $opc}updateAddressSelection();{/if}" />
-		<p id="address_invoice_form" class="select" {if $cart->id_address_invoice == $cart->id_address_delivery}style="display: none;"{/if}>
+		<p id="address_invoice_form" class="select" {if $cart->id_address_invoice == $cart->id_address_delivery}class="display-none"{/if}>
 		
 		{if $addresses|@count >= 1}
 			<label for="id_address_invoice" class="strong">{l s='Choose a billing address:'}</label>

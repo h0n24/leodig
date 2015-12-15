@@ -37,7 +37,7 @@
 				<span class="gift-icon">{l s='Gift!'}</span>
 			{else}
 				{if isset($product.is_discounted) && $product.is_discounted}
-					<span style="text-decoration:line-through;" class="old-price">{convertPrice price=$product.price_without_specific_price}</span><br />
+					<span class="old-price txt-decor-line-through">{convertPrice price=$product.price_without_specific_price}</span><br />
 				{/if}
 				{if !$priceDisplay}
 					{convertPrice price=$product.price_wt}
@@ -47,10 +47,10 @@
 			{/if}
 		</span>
 	</td>
-	<td class="cart_quantity"{if isset($customizedDatas.$productId.$productAttributeId) AND $quantityDisplayed == 0} style="text-align: center;"{/if}>
+	<td class="cart_quantity text-align-center"{if isset($customizedDatas.$productId.$productAttributeId) AND $quantityDisplayed == 0}{/if}>
 	<div class="cart_quantity_in">
 		{if isset($cannotModify) AND $cannotModify == 1}
-			<span style="float:left">
+			<span class="float-left">
 				{if $quantityDisplayed == 0 AND isset($customizedDatas.$productId.$productAttributeId)}{$customizedDatas.$productId.$productAttributeId|@count}
 				{else}
 					{$product.cart_quantity-$quantityDisplayed}
@@ -71,7 +71,7 @@
 					<img src="{$img_dir}icon/quantity_down2.gif" alt="{l s='Subtract'}" width="14" height="14" />
 				</a>
 				{else}
-				<a class="cart_quantity_down" style="opacity: 0.3;" href="#" id="cart_quantity_down_{$product.id_product}_{$product.id_product_attribute}_{if $quantityDisplayed > 0}nocustom{else}0{/if}_{$product.id_address_delivery|intval}" title="{l s='You must purchase a minimum of %d of this product.' sprintf=$product.minimal_quantity}">
+				<a class="cart_quantity_down opacity-0-3" href="#" id="cart_quantity_down_{$product.id_product}_{$product.id_product_attribute}_{if $quantityDisplayed > 0}nocustom{else}0{/if}_{$product.id_address_delivery|intval}" title="{l s='You must purchase a minimum of %d of this product.' sprintf=$product.minimal_quantity}">
 					<img src="{$img_dir}icon/quantity_down.gif" width="14" height="9" alt="{l s='Subtract'}" />
 				</a>
 				{/if}

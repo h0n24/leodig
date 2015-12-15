@@ -32,7 +32,7 @@
 
 {include file="$tpl_dir./errors.tpl"}
 {if !$nbProducts}
-	<p class="warning">
+	<h3 class="nbresult warning">
 		{if isset($search_query) && $search_query}
 			{l s='No results were found for your search'}&nbsp;"{if isset($search_query)}{$search_query|escape:'htmlall':'UTF-8'}{/if}"
 		{elseif isset($search_tag) && $search_tag}
@@ -40,16 +40,30 @@
 		{else}
 			{l s='Please enter a search keyword'}
 		{/if}
-	</p>
+	</h3>
+    <div class="noexist-hledani">
+    <p class="hledej-txt">{l s='Hledat v katalogu'}</p>
+    <form action="{$link->getPageLink('search')|escape:'html'}" method="post" class="std">
+        <fieldset>
+            <div class="input-group">
+                <input id="search_query" class="form-control" name="search_query" type="text" value="{if isset($search_query) && $search_query}{$search_query|escape:'htmlall':'UTF-8'}{/if}"/>
+                <span class="input-group-btn">                
+                    <input type="submit" name="Submit" value="Hledat" class="btn btn-search"/>        
+                </span>
+            </div>
+
+        </fieldset>
+    </form>
+    </div>
 {else}
-	<h3 class="nbresult warning"><span class="big">{if $nbProducts == 1}{l s='%d result has been found.' sprintf=$nbProducts|intval}{else}{l s='%d results have been found.' sprintf=$nbProducts|intval}{/if}</span></h3>
+	<h3 class="nbresult success"><span class="big">{if $nbProducts == 1}{l s='%d result has been found.' sprintf=$nbProducts|intval}{else}{l s='%d results have been found.' sprintf=$nbProducts|intval}{/if}</span></h3>
 
 	<div class="content_sortPagiBar">
 		<div class="sortPagiBar row">
 			<div>
 				<div class="inner">
 				 {*} <div class="btn-group" id="productsview">
-					<span style="float: left;">{l s='Display:'}</span>
+					<span class="float-left">{l s='Display:'}</span>
 					<a class="btn-tooltip" title="{l s='Grid'}" href="#" rel="view-grid"><i class="fa fa-th {if Configuration::get('leoview')==1}active{/if}" ></i></a>
 					<a class="btn-tooltip" title="{l s='List'}" href="#"  rel="view-list"><i class="fa fa-th-list {if Configuration::get('leoview')==0}active{/if}"></i></a>
 				  </div> *}
@@ -61,6 +75,8 @@
 		</div>
 	</div>
 	{include file="./product-list.tpl" products=$products}
+	
+	
 	{if $nb_products > $products_per_page} 
 	<div class="container category-bot-pag"> 	
 	<div class="col-xs-12 sortPagiBar">

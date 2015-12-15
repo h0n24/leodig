@@ -23,38 +23,37 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-<script text="javascript">
+<script type="text/javascript">
 {literal}
 $('document').ready(function(){
-	$('#send_friend_button').fancybox({
-		'hideOnContentClick': false
-	});
+    $('#send_friend_button').fancybox({
+        'hideOnContentClick': false
+    });
 
-	$('#sendEmail').click(function(){
-		var datas = [];
-		$('#send_friend_form_content').find(':input').each(function(index){
-			var o = {};
-			o.key = $(this).attr('name');
-			o.value = $(this).val();
-			if (o.value != '')
-				datas.push(o);
-		});
-		if (datas.length >= 3)
-		{
-			$.ajax({
-				{/literal}url: "{$module_dir}sendtoafriend_ajax.php",{literal}
-				type: "POST",
-				headers: {"cache-control": "no-cache"},
-				data: {action: 'sendToMyFriend', secure_key: '{/literal}{$stf_secure_key}{literal}', friend: unescape(JSON.stringify(datas).replace(/\\u/g, '%u'))},{/literal}{literal}
-				dataType: "json",
-				success: function(result){
-					$.fancybox.close();
-				}
-			});
-		}
-		else
-			$('#send_friend_form_error').text("{/literal}{l s='You did not fill required fields' mod='sendtoafriend' js=1}{literal}");
-	});
+    $('#sendEmail').click(function(){
+        
+        var name = $('#friend_name').val();
+        var email = $('#friend_email').val();
+        var id_product = $('#id_product_comment_send').val();
+        if (name && email && !isNaN(id_product))
+        {
+            $.ajax({
+                {/literal}url: "{$module_dir}sendtoafriend_ajax.php",{literal}
+                type: "POST",
+                headers: {"cache-control": "no-cache"},
+                data: {action: 'sendToMyFriend', secure_key: '{/literal}{$stf_secure_key}{literal}', name: name, email: email, id_product: id_product},{/literal}{literal}
+                dataType: "json",
+                success: function(result) {
+                    $.fancybox.close();
+                    var msg = result ? "{/literal}{l s='Your e-mail has been sent successfully' mod='sendtoafriend'}{literal}" : "{/literal}{l s='Your e-mail could not be sent. Please check the e-mail address and try again.' mod='sendtoafriend'}{literal}";
+                    var title = "{/literal}{l s='Send to a friend' mod='sendtoafriend'}{literal}";
+                    fancyMsgBox(msg, title);
+                }
+            });
+        }
+        else
+            $('#send_friend_form_error').text("{/literal}{l s='You did not fill required fields' mod='sendtoafriend' js=1}{literal}");
+    });
 });
 {/literal}
 </script>

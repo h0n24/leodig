@@ -33,7 +33,7 @@
 {include file="$tpl_dir./errors.tpl"}
 
 {assign var='objednavka' value=OrderConfirmationController::detailyObjednavky()}
-
+{assign var='jeVN' value=0}
 <div class="infobox-kosik-container">
 		<div id="rekapitulace_box_kosik" class="box_kosik">
 			<fieldset>
@@ -66,15 +66,17 @@
 					{displayPrice price=$product_cart.total_price_tax_incl} 
 				</td>
 			</tr>
+			{if $product_cart.id_manufacturer==10}{$jeVN=1}{/if}
 		{/foreach}
-		{* NUZ JAKO DAREK
-		{if $objednavka->total_paid>4000}
+		{* NUZ JAKO DAREK*}
+		{*
+		{if $jeVN==1}
 		<tr>
 			<td class="rekapitulace_pocet">
-					<img src="http://www.helveti.cz/themes/leodig/img/helveti/kosikdareknuz.png" title="Zavírací nůž - zdarma" alt="Zavírací nůž - zdarma" width="50"> 
+					<img src="http://www.helveti.cz/themes/leodig/img/helveti/nuzVN.jpg" title="Victorinox Spartan - dárek" alt="Victorinox Spartan - dárek" width="50"> 
 				</td>
 				<td class="rekapitulace_produkt">
-					<span class="rekapitulace_nazev">Zavírací nůž - dárek</span>
+					<span class="rekapitulace_nazev">Victorinox Spartan - dárek</span>
 				</td>
 				<td class="rekapitulace_pocet">
 					1 ks 
@@ -85,6 +87,21 @@
 			</tr>
 			{/if}
 			*}
+				{*VANOCE*}
+		<tr>
+			<td class="rekapitulace_pocet">
+					<img src="http://www.helveti.cz/themes/leodig/img/helveti/kosikdareknuz.png" title="Zavírací nůž - zdarma" alt="Zavírací nůž - zdarma" width="50">
+				</td>
+				<td class="rekapitulace_produkt">
+					<span class="rekapitulace_nazev">Zavírací nůž - zdarma</span>
+				</td>
+				<td class="rekapitulace_pocet">
+					1 ks 
+				</td>
+				<td class="rekapitulace_cena">
+					<span class="zdarma_barva">ZDARMA</span>
+				</td>
+			</tr>
 			<tr>
 			<td class="rekapitulace_pocet">
 					<img src="http://www.helveti.cz/themes/leodig/img/helveti/pojisteni.png" title="Pojištění hodinek na 1 rok" alt="Pojištění hodinek na 1 rok" width="50"> 
@@ -120,6 +137,8 @@
 							Bankovním převodem
 						{elseif $objednavka->module=="cashondelivery"}
 							Hotově při převzetí
+						{elseif $objednavka->module=="add_gopay_new"}
+							Online platba
 						{else}
 							{$objednavka->payment}
 						{/if}
@@ -165,8 +184,8 @@
 <div class="potvrzeni-objednavky-linky">
 {if $is_guest}
 	{*<p>{l s='Your order ID is:'} <span class="bold">{$id_order_formatted}</span> . {l s='Your order ID has been sent via email.'}</p> *}
-	<a href="{$link->getPageLink('history', true)|escape:'html'}" title="{l s='Back to orders'}"><span class="fa fa-shopping-cart" style="margin-right: 10px;"></span>{l s='Sledovat mou zásilku'}</a>
-	{*<a href="{$link->getPageLink('guest-tracking', true, NULL, "id_order={$reference_order}&email={$email}")|escape:'html'}" title="{l s='Follow my order'}"><span class="fa fa-shopping-cart" style="margin-right: 10px;"></span>{l s='Follow my order'}</a>*}
+	<a href="{$link->getPageLink('history', true)|escape:'html'}" title="{l s='Back to orders'}"><span class="fa fa-shopping-cart m-r-10"></span>{l s='Sledovat mou zásilku'}</a>
+	{*<a href="{$link->getPageLink('guest-tracking', true, NULL, "id_order={$reference_order}&email={$email}")|escape:'html'}" title="{l s='Follow my order'}"><span class="fa fa-shopping-cart m-r-10"></span>{l s='Follow my order'}</a>*}
 {else}	
 	<a href="{$link->getPageLink('history', true)|escape:'html'}" title="{l s='Back to orders'}"><span class="shrnuti-ico-kosik"></span>{l s='Sledovat mou zásilku'}</a>
 	<a href="{$link->getPageLink('history', true)|escape:'html'}" title="{l s='Back to orders'}"><span class="shrnuti-ico-nakupy"></span>{l s='Moje nákupy'}</a>
@@ -195,8 +214,8 @@ var google_remarketing_only = false;
 <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/991679542/?value={$total_to_pay}&amp;currency_code=CZK&amp;label=tWwhCLq2_QkQtqjv2AM&amp;guid=ON&amp;script=0"/>
+<div class="display-inline">
+<img height="1" width="1" class="br-style-none" alt="" src="//www.googleadservices.com/pagead/conversion/991679542/?value={$total_to_pay}&amp;currency_code=CZK&amp;label=tWwhCLq2_QkQtqjv2AM&amp;guid=ON&amp;script=0"/>
 </div>
 </noscript>
 
@@ -205,7 +224,7 @@ var google_remarketing_only = false;
 
 
 <!-- Měřicí kód Zbozi.cz -->
-<iframe src="http://www.zbozi.cz/action/109243/conversion?chsum=-X_jnU3sr0UddAqlX130zw==" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="position:absolute; top:-3000px; left:-3000px; width:1px; height:1px; overflow:hidden;"></iframe>
+<iframe src="http://www.zbozi.cz/action/109243/conversion?chsum=-X_jnU3sr0UddAqlX130zw==" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" class="iframe-zbozi-cz"></iframe>
 
 <!-- Měřicí kód Heureka.cz -->
 {literal}
@@ -227,23 +246,4 @@ var _hrq = _hrq || [];
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ho, s);
 })();
 </script>
-{/literal}
-
-{literal}
-<!-- Facebook Conversion Code for helveti.cz - nákup -->
-<script>(function() {
-  var _fbq = window._fbq || (window._fbq = []);
-  if (!_fbq.loaded) {
-    var fbds = document.createElement('script');
-    fbds.async = true;
-    fbds.src = '//connect.facebook.net/en_US/fbds.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(fbds, s);
-    _fbq.loaded = true;
-  }
-})();
-window._fbq = window._fbq || [];
-window._fbq.push(['track', '6019003112247', {'value':'{/literal}{$total_to_pay}{literal}','currency':'CZK'}]);
-</script>
-<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6019003112247&amp;cd[value]={/literal}{$total_to_pay}{literal}&amp;cd[currency]=CZK&amp;noscript=1" /></noscript>
 {/literal}

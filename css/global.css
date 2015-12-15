@@ -382,8 +382,7 @@ table.table_block td {
   border-color: #58B0DA;
   border-style: solid none solid solid;
   background-color: #fff;
-  -webkit-transition: all ease 0.4s;
-          transition: all ease 0.4s;
+  transition: all ease 0.4s;
   opacity: 0;
   -moz-transition: all ease 0.4s;
   -webkit-transition: left ease 0.4s;
@@ -475,7 +474,6 @@ table.table_block td {
   bottom: -500px;
   left: 0;
   position: absolute;
-  -webkit-transition: all 0.6s ease 0s;
   transition: all 0.6s ease 0s;
   width: 100%;
 }
@@ -861,7 +859,6 @@ a:active,
 a:visited {
   text-decoration: none;
   outline: medium none;
-  -webkit-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s;
 }
 a:visited {
@@ -890,8 +887,7 @@ a:hover,
   margin-right: 5px;
   font-style: italic;
   margin-left: 5px;
-  -webkit-transition: background 0.5s;
-          transition: background 0.5s;
+  transition: background 0.5s;
 }
 .order_carrier_content .ikonka_i:hover,
 .paiement_block .ikonka_i:hover {
@@ -907,6 +903,92 @@ form.std fieldset {
 select.form-control {
   padding-left: 7px;
   padding-right: 7px;
+}
+/*----------------------------------------------------------------------------
+All inline styles from .tpl files
+------------------------------------------------------------------------------*/
+.display-none {
+  display: none;
+}
+.display-block {
+  display: block;
+}
+.float-left {
+  float: left;
+}
+.br-ra-5 {
+  border-radisu: 5px;
+}
+.zoom-1 {
+  zoom: 1;
+}
+.width-90 {
+  width: 90px;
+}
+.clear-both {
+  clear: both;
+}
+.text-align-center {
+  text-align: center;
+}
+.opacity-0-3 {
+  opacity: 0.3;
+}
+.mg-r-10 {
+  margin-right: 10px;
+}
+.display-inline {
+  display: inline;
+}
+.br-style-none {
+  border-style: none;
+}
+.iframe-zbozi-cz {
+  position: absolute;
+  top: -3000px;
+  left: -3000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.width-150 {
+  width: 150px;
+}
+.txt-decor-line-through {
+  text-decoration: line-through;
+}
+.iframe-fb {
+  border: none;
+  overflow: hidden;
+  width: 50px;
+  height: 65px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.kosik-box-style {
+  border: 1px solid #666;
+  padding: 8px;
+  background: #ddd;
+}
+.restricted-img {
+  margin-right: 10px;
+  float: left;
+}
+.font-size-9 {
+  font-size: 9px;
+}
+.width-70 {
+  width: 70px;
+}
+/*-------------------------------------------------------------- 
+Overwritten Bootstrap styles
+--------------------------------------------------------------*/
+body {
+  background: #f5f6f7;
+}
+.navbar-nav {
+  margin: 0 auto;
 }
 /*--------------------------------------------------------------
 -- Structure
@@ -947,7 +1029,6 @@ Layout
 .column .bullet li a {
   background: url("../img/default/arrow-li.png") no-repeat scroll 0 13px;
   padding: 7px 0 5px 15px;
-  -webkit-transition: none;
   transition: none;
 }
 .column .bullet li a.selected,
@@ -1238,8 +1319,7 @@ Header
   top: 150px;
   z-index: 1000;
   position: fixed;
-  -webkit-transition: 150ms;
-          transition: 150ms;
+  transition: 150ms;
 }
 .plovouci_blok .jsem_zde,
 .plovouci_blok .proc_unas,
@@ -1501,8 +1581,7 @@ Footer
   color: #808080;
   display: inline-block;
   padding: 0 4%;
-  -webkit-transition: all 0.4s ease 0s;
-          transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 .social .fa {
   font-size: 21px;
@@ -1555,7 +1634,6 @@ Footer
   width: 155px;
   overflow: hidden;
   display: inline-block;
-  display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1608,8 +1686,7 @@ span.exclusive,
   cursor: pointer;
   text-transform: uppercase;
   -web-transition: all 0.1s ease 0s;
-  -webkit-transition: all 0.1s ease 0s;
-          transition: all 0.1s ease 0s;
+  transition: all 0.1s ease 0s;
   display: inline-block;
   font-size: 11px;
   padding: 0 11px;
@@ -1861,8 +1938,7 @@ ul.step li.step_done {
   background-image: url("../img/helveti/kosik-btn-bg.png");
   background-repeat: no-repeat;
   background-position: 259px -2px;
-  -webkit-transition: none;
-          transition: none;
+  transition: none;
 }
 .cart_navigation input.standard-checkout:hover {
   background-position: 259px -59px;
@@ -2943,7 +3019,6 @@ table#cart_summary .gift-icon {
   background-image: url("../img/helveti/kosik-btn-bg-sm.png");
   background-repeat: no-repeat;
   background-position: 138px -2px;
-  -webkit-transition: none;
   transition: none;
   height: 45px;
   width: 180px;
@@ -4394,8 +4469,7 @@ h4.media-heading {
   -webkit-transform: skew(-45deg);
       -ms-transform: skew(-45deg);
           transform: skew(-45deg);
-  -webkit-transition: all 0.6s ease-in-out 0s;
-          transition: all 0.6s ease-in-out 0s;
+  transition: all 0.6s ease-in-out 0s;
   width: 600px;
 }
 .media-list .media:hover:before {
@@ -4429,6 +4503,7 @@ Leo manufacturer scroll
   cursor: pointer;
   position: relative;
   line-height: 0px;
+  min-width: 180px;
 }
 .nbs-flexisel-item img {
   cursor: pointer;
@@ -4692,7 +4767,6 @@ ul.wlp_bought_list li .lnkdel {
   background-image: url("../img/helveti/kosik-btn-bg-sm.png");
   background-repeat: no-repeat;
   background-position: 138px -2px;
-  -webkit-transition: none;
   transition: none;
   height: 45px;
   width: 180px;
@@ -4953,7 +5027,6 @@ Prohlednute produkty
   -webkit-transform: skew(-45deg);
   -ms-transform: skew(-45deg);
       transform: skew(-45deg);
-  -webkit-transition: all 0.6s ease-in-out 0s;
   transition: all 0.6s ease-in-out 0s;
   width: 600px;
 }
@@ -5586,8 +5659,7 @@ span.view_scroll_spacer {
   border: 1px solid #ccc;
   clear: none;
   -wekit-transition: all 0.5s ease-in-out 0s;
-  -webkit-transition: all 0.5s ease-in-out 0s;
-          transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
 }
 #attributes .attribute_list #color_to_pick_list li.selected {
   border-color: #E76D66;
@@ -5881,11 +5953,9 @@ span.view_scroll_spacer {
   padding-right: 40px;
   padding-bottom: 2px;
   text-transform: none;
-  -webkit-transition: all 0;
-          transition: all 0;
+  transition: all 0;
   border: 0px solid transparent !important;
-  -webkit-transition: none;
-          transition: none;
+  transition: none;
 }
 @media (max-width: 767px) {
   .content_prices #add_to_cart .exclusive {
@@ -5961,8 +6031,7 @@ span.view_scroll_spacer {
   display: inline-block;
   padding: 2px 12px;
   margin-right: 6px;
-  -webkit-transition: all 0.5s;
-          transition: all 0.5s;
+  transition: all 0.5s;
 }
 #product .productcats a:hover {
   background-color: #b0b0b0;
@@ -6262,8 +6331,7 @@ ul.idTabs li:first-child {
   color: #3E3D39;
   /* font-family: proximanovasemibold; */
   font-size: 15px;
-  -webkit-transition: none;
-          transition: none;
+  transition: none;
   background-color: #ebebeb;
   margin: 0 3px;
   border: 1px solid #ebebeb;
@@ -6621,7 +6689,6 @@ ul.idTabs li:first-child {
   white-space: nowrap;
   width: auto;
   display: block;
-  background: url("../img/helveti/poslat-emailem.png") no-repeat 3px 4px, -webkit-linear-gradient(90deg, #2d8ede 0%, #4da8f3 100%);
   background: url("../img/helveti/poslat-emailem.png") no-repeat 3px 4px, linear-gradient(0deg, #2d8ede 0%, #4da8f3 100%);
   padding-left: 15px;
   line-height: 18px;
@@ -6677,13 +6744,6 @@ ul.idTabs li:first-child {
   color: #FF0000;
 }
 /* tab vyhody */
-#more_info_sheets a {
-  color: #e9584f;
-  text-decoration: underline;
-}
-#more_info_sheets a:hover {
-  text-decoration: none;
-}
 #more_info_sheets li a {
   display: inline;
   color: #e9584f;
@@ -6741,7 +6801,6 @@ PAGE PASSWORD
   background-image: url("../img/helveti/kosik-btn-bg-sm.png");
   background-repeat: no-repeat;
   background-position: 138px -2px;
-  -webkit-transition: none;
   transition: none;
   height: 45px;
   width: 180px;
@@ -6946,7 +7005,6 @@ PAGE ADD ADRESS
   background-image: url("../img/helveti/kosik-btn-bg-sm.png");
   background-repeat: no-repeat;
   background-position: 138px -2px;
-  -webkit-transition: none;
   transition: none;
   height: 45px;
   width: 180px;
@@ -7070,9 +7128,7 @@ PAGE MANUFACTURER
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxNiUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI1MyUiIHN0b3AtY29sb3I9IiNlM2UzZTMiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI4MyUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(16%, #ffffff), color-stop(53%, #e3e3e3), color-stop(83%, #ffffff));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #ffffff 16%, #e3e3e3 53%, #ffffff 83%);
   /* Chrome10+,Safari5.1+ */
   /* Opera 11.10+ */
   /* IE10+ */
@@ -7696,7 +7752,6 @@ Product list
 /* Product-list */
 .product_block {
   position: relative;
-  -webkit-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s;
   height: 485px;
 }
@@ -7839,7 +7894,6 @@ Product list
   -webkit-transform: skew(-45deg);
   -ms-transform: skew(-45deg);
       transform: skew(-45deg);
-  -webkit-transition: all 0.6s ease-in-out 0s;
   transition: all 0.6s ease-in-out 0s;
   width: 600px;
 }
@@ -7937,7 +7991,6 @@ Product list
   position: relative;
   bottom: -100px;
   display: inline-block;
-  -webkit-transition: bottom 0.5s ease-in-out 0s;
   transition: bottom 0.5s ease-in-out 0s;
   float: left;
 }
@@ -8416,14 +8469,6 @@ h1 {
   margin-top: 0;
   padding: 10px 15px 10px 10px;
 }
-
-.cat_desc a {
-  color: #e9584f;
-  text-decoration: underline;
-}
-.cat_desc a:hover {
-  text-decoration: none;
-}
 .cat_desc .lnk_more {
   margin: 10px 0;
   padding: 0 10px 0 0;
@@ -8556,8 +8601,6 @@ h1 {
   margin-bottom: 10px;
   position: relative;
   top: 85px;
- /* width: 1003px;
-  left: -130px;*/
 }
 .category-bot-pag .category-product-count {
   position: relative;
@@ -9548,8 +9591,7 @@ CMS
   color: #000;
   display: block;
   text-decoration: none;
-  -webkit-transition: all 0.5s ease-in-out 0s;
-          transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
 }
 .cms #center_column .cms-vyhody-vyhoda a:hover .img {
   border: 1px solid #e9584f;
@@ -10419,7 +10461,6 @@ CMS
 }
 .cms #center_column .cms-onas-infograf-osa {
   background: #eee;
-  background: -webkit-linear-gradient(#eeeeee 1px, #ffffff 1px);
   background: linear-gradient(#eeeeee 1px, #ffffff 1px);
   background-size: 100% 3px;
   height: 100%;
@@ -10773,8 +10814,7 @@ CMS
   background-image: url("../img/helveti/kosik-btn-bg-sm.png");
   background-repeat: no-repeat;
   background-position: 98px -2px;
-  -webkit-transition: none;
-          transition: none;
+  transition: none;
   height: 45px;
   width: 140px;
   border: 0px !important;
@@ -11053,8 +11093,7 @@ COMPARATOR
   padding: 6px;
   margin-left: 5px;
   border: 1px solid #CCCCCC;
-  -webkit-transition: all 0.5s ease-in-out 0s;
-          transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
   -web-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
 }
@@ -11084,7 +11123,6 @@ COMPARATOR
   background-image: url("../img/helveti/compare-btn-bg-sm.png");
   background-repeat: no-repeat;
   background-position: 138px -2px;
-  -webkit-transition: none;
   transition: none;
   height: 45px;
   width: 180px;
@@ -11117,7 +11155,6 @@ COMPARATOR
   background-image: url("../img/helveti/compare-btn-bg-exsm.png");
   background-repeat: no-repeat;
   background-position: 139px -2px;
-  -webkit-transition: none;
   transition: none;
   height: 33px;
   width: 170px;
@@ -11239,8 +11276,7 @@ COMPARATOR
   background-position: -1px -1px;
   font-weight: 700;
   text-transform: none;
-  -webkit-transition: none;
-          transition: none;
+  transition: none;
   padding-left: 60px;
 }
 .products-comparison #center_column .ajax_add_to_cart_button:hover {
@@ -11390,7 +11426,6 @@ HISTORY
   background-image: url("../img/helveti/kosik-btn-bg-sm.png");
   background-repeat: no-repeat;
   background-position: 168px -2px;
-  -webkit-transition: none;
   transition: none;
   height: 45px;
   width: 210px;
@@ -11783,7 +11818,6 @@ block bootstrap menu
   height: 5px;
   left: -102%;
   position: absolute;
-  -webkit-transition: left 0.4s ease-out 0s;
   transition: left 0.4s ease-out 0s;
   width: 100%;
 }
@@ -11898,8 +11932,7 @@ ul > li:last-child > a {
   }
   .off-canvas-inactive > #page,
   .off-canvas-inactive > #off-canvas-nav {
-    -webkit-transition: all 500ms ease 0s;
-            transition: all 500ms ease 0s;
+    transition: all 500ms ease 0s;
     transform: translateX(0px);
     -webkit-transform: translateX(0px);
     -moz-transform: translateX(0px);
@@ -11913,8 +11946,7 @@ ul > li:last-child > a {
     -moz-transform: translateX(234px);
     -ms-transform: translateX(234px);
     -o-transform: translateX(234px);
-    -webkit-transition: all 500ms ease 0s;
-            transition: all 500ms ease 0s;
+    transition: all 500ms ease 0s;
   }
   .off-canvas-active #page {
     position: fixed;
@@ -12680,7 +12712,6 @@ Block CONTACTINFOS
 ------------------------------------------------------------------------------*/
 #block_contact_infos li {
   padding: 7px 0;
-  -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 #block_contact_infos li span {
@@ -12695,8 +12726,7 @@ Block CONTACTINFOS
   text-align: center;
   width: 30px;
   box-shadow: 0 0 20px transparent inset;
-  -webkit-transition: all 0.4s ease-in-out 0s;
-          transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
 }
 #block_contact_infos li:hover {
   color: #E76D66;
@@ -13412,7 +13442,6 @@ Leocoinslider
   top: 42%;
   width: 36px;
   z-index: 99;
-  -webkit-transition: none;
   transition: none;
 }
 .leo-coinslider-basic .nivo-directionNav .nivo-nextNav {
@@ -13640,8 +13669,7 @@ block top user information
   font-size: 14px;
   margin-top: -2px;
   padding: 4px 6px;
-  -webkit-transition: all 0.3s ease 0s;
-          transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 #topbar .links a:hover .fa-shopping-cart {
   background-color: #E76D66;
@@ -14287,13 +14315,11 @@ a.PM_ASResetSearch {
   background: url(../img/helveti/adv-search/slider_handles.png) 0px 0px no-repeat !important;
   width: 30px !important;
   height: 26px !important;
-  -webkit-transition: none;
-          transition: none;
+  transition: none;
 }
 .PM_ASForm .ui-slider .ui-slider-handle:hover {
   background: url(../img/helveti/adv-search/slider_handles.png) 0px -30px no-repeat !important;
-  -webkit-transition: none;
-          transition: none;
+  transition: none;
 }
 .PM_ASForm .ui-slider .ui-slider-range {
   background-color: #c24841 !important;
@@ -14335,7 +14361,6 @@ a.PM_ASResetSearch {
   background-image: url("../img/helveti/kosik-btn-bg-sm.png");
   background-repeat: no-repeat;
   background-position: 188px -2px;
-  -webkit-transition: none;
   transition: none;
   height: 45px;
   width: 230px;

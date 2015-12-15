@@ -49,7 +49,7 @@
 				{l s='In order to perform website maintenance, our online store will be temporarily offline.'}<br /><br />
 				{l s='We apologize for the inconvenience and ask that you please try again later.'}
 			 </p>
-			 <span style="clear:both;">&nbsp;</span>
+			 <span class="clear-both">&nbsp;</span>
 		</div>
 	</body>
 </html>

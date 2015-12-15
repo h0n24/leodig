@@ -54,7 +54,7 @@
 		{/if}
 		
 		<div id="block-history">
-			<div id="block-order-detail" class="std" style="zoom:1">
+			<div id="block-order-detail" class="std zoom-1">
 			{include file="./order-detail.tpl"}
 			</div>
 		</div>

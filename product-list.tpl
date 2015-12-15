@@ -54,7 +54,7 @@
   								{assign var=nova_zobrazena_dlazdice value=1|rand:14}	
 						{/while}
 						{assign var=zobrazena_dlazdice value=$nova_zobrazena_dlazdice}
-						<p class="hidden-xs"><a title="" href="{$link->getCMSLink('9')}"><img class="img-responsive" style="border-radius: 5px;" src="{$img_dir}helveti/banner2/{$zobrazena_dlazdice}.jpg" alt=""></a></p>
+						<p class="hidden-xs"><a title="" href="{$link->getCMSLink('9')}"><img class="img-responsive br-ra-5" src="{$img_dir}helveti/banner2/{$zobrazena_dlazdice}.jpg" alt=""></a></p>
 					</div>		
 				</div>
 			</div>	
@@ -74,6 +74,11 @@
 							{if $proReduce}<span class="hot">{l s='Sleva'} -{$proReduce}%</span>{/if}
 							{if {Product::skladovost($product.id_product,"skladem")}} <span class="skladem">{l s='Skladem'}</span>{/if}
 							{if $product.condition=="used"} <span class="bazar">{l s='Bazar'}</span>{/if}
+							{*
+							{if $product.id_manufacturer==10}
+							 <span class="darek{if $proReduce}2{else if $product.condition=="used"}3{else}1{/if}">{l s='DÁREK'}</span>
+							 {/if}
+							 *}
 						</a>
 					</div>
 					<div class="right_block">
@@ -90,7 +95,7 @@
 								{if isset($product.show_price) && $product.show_price && !isset($restricted_country_mode)}
 								<span class="price {if $product.reduction}zlevneno{/if}">
 									{if !$priceDisplay}
-										{if $product.reduction}<span class="cena_pred" style="text-decoration:line-through">{convertPrice price=$product.price_without_reduction}</span>{/if}
+										{if $product.reduction}<span class="cena_pred txt-decor-line-through">{convertPrice price=$product.price_without_reduction}</span>{/if}
 										{convertPrice price=$product.price}
 									{else}
 										{convertPrice price=$product.price_tax_exc}
@@ -123,7 +128,7 @@
 						{/for}
 						</div>
 						{*
-						<a class="rating_box leo-rating-{$product.id_product}" href="#" rel="{$product.id_product}" style="display:none">
+						<a class="rating_box leo-rating-{$product.id_product} display-none" href="#" rel="{$product.id_product}">
 							<i class="fa fa-star-o"></i>
 							<i class="fa fa-star-o"></i>
 							<i class="fa fa-star-o"></i>
@@ -137,7 +142,7 @@
 							<p class="compare">
 								<input type="checkbox" class="comparator" id="comparator_item_{$product.id_product}" value="comparator_item_{$product.id_product}" {if isset($compareProducts) && in_array($product.id_product, $compareProducts)}checked="checked"{/if} autocomplete="off"/> 
 								<label for="comparator_item_{$product.id_product}">{l s='Porovnat'}</label>
-								<div class="spinner-product-list spinner loading-comparator_item_{$product.id_product}" style="display:none;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>
+								<div class="spinner-product-list spinner loading-comparator_item_{$product.id_product} display-none"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>
 							</p>
 						{/if}
 					</div>								

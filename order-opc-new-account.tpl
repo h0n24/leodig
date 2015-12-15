@@ -1,13 +1,13 @@
 <div id="opc_new_account" class="opc-main-block">
-	<div id="opc_new_account-overlay" class="opc-overlay" style="display: none;"></div>
+	<div id="opc_new_account-overlay" class="opc-overlay display-none"></div>
 	<h2><span>1</span> {l s='Account'}</h2>
 	<form action="{$link->getPageLink('authentication', true, NULL, "back=order-opc")|escape:'html'}" method="post" id="login_form" class="std form-horizontal">
 		<fieldset>
 			<h3>{l s='Already registered?'}</h3>
 			<p><a href="#" id="openLoginFormBlock">&raquo; {l s='Click here'}</a></p>
-			<div id="login_form_content" style="display:none;">
+			<div id="login_form_content" class="display-none">
 				<!-- Error return block -->
-				<div id="opc_login_errors" class="error" style="display:none;"></div>
+				<div id="opc_login_errors" class="error display-none"></div>
 				<!-- END Error return block -->
 				<div class="row form-group">
 					<div class="col-sm-6">
@@ -108,7 +108,7 @@
 				{/literal}
 				</script>
 				<!-- Error return block -->
-				<div id="opc_account_errors" class="error" style="display:none;"></div>
+				<div id="opc_account_errors" class="error display-none"></div>
 				<!-- END Error return block -->
 				<!-- Account -->
 				<input type="hidden" id="is_new_customer" name="is_new_customer" value="0" />
@@ -229,7 +229,7 @@
 					</div>
 				</div>
 				{elseif $field_name eq "vat_number"}	
-				<div id="vat_number_block" style="display:none;">
+				<div id="vat_number_block" class="display-none">
 					<div class="text form-group">
 						<label class="control-label col-sm-4" for="vat_number">{l s='VAT number'}</label>
 						<div class="col-sm-6">
@@ -303,7 +303,7 @@
 			
 				{elseif $field_name eq "state" || $field_name eq 'State:name'}
 				{$stateExist = true}
-				<div class="form-group required id_state select" style="display:none;">
+				<div class="form-group required id_state select display-none">
 					<label class="control-label col-sm-4" for="id_state">{l s='State'} <sup>*</sup></label>
 					<div class="col-sm-6">
 						<select class="form-control" name="id_state" id="id_state">
@@ -388,7 +388,7 @@
 						</div>
 					</div>
 					{elseif $field_name eq "vat_number"}
-					<div id="vat_number_block_invoice" class="is_customer_param" style="display:none;">
+					<div id="vat_number_block_invoice" class="is_customer_param display-none">
 						<div class="form-group text">
 							<label class="col-sm-4 control-label" for="vat_number_invoice">{l s='VAT number'}</label>
 							<div class="col-sm-6">
@@ -462,7 +462,7 @@
 					</div>
 					{elseif $field_name eq "state" || $field_name eq 'State:name'}
 					{$stateExist = true}
-					<div class="form-group required id_state_invoice select" style="display:none;">
+					<div class="form-group required id_state_invoice select display-none">
 						<label class="control-label col-sm-4" for="id_state_invoice">{l s='State'} <sup>*</sup></label>
 						<div class="col-sm-6">
 							<select name="id_state_invoice" id="id_state_invoice" class="form-control">
@@ -528,7 +528,7 @@
 					<div class="submit col-sm-8">
 						<input type="submit" class="exclusive button" name="submitAccount" id="submitAccount" value="{l s='Save'}" />
 					</div>
-					<div style="display: none;" id="opc_account_saved" class="clearfix">
+					<div id="opc_account_saved" class="clearfix display-none">
 						{l s='Account information saved successfully'}
 					</div>
 				</div>

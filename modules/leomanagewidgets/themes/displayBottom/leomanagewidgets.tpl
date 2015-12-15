@@ -35,39 +35,4 @@
 					<h3>{$datas.title}</h3>
 				{/if}
 				<div class="block_content">	
-					<ul id="productTabs-{$datas.id_leomanagewidgets}" class="nav nav-tabs">
-					{foreach from=$datas.contents item=content}
-						{if $content.products}
-							<li><a href="#leotab-{$datas.id_leomanagewidgets}-{$content.id}" data-toggle="tab">{if $content.image}<img src="{$content.image}" alt=""/>{/if}{$content.title}</a></li>
-						{/if}
-					{/foreach}
-					</ul>
-				</div>
-				<div id="productTabsContent-{$datas.id_leomanagewidgets}" class="tab-content">
-					{foreach from=$datas.contents item=content}
-						{if $content.products}
-							<div class="tab-pane" id="leotab-{$datas.id_leomanagewidgets}-{$content.id}">
-								{$mproducts=$content.products}{$tabname = $content.id}
-								{include file="{$tab_product_tpl}"}
-							</div>
-						{/if}
-					{/foreach}
-				</div>
-			</div>
-		{/if}
-	{/foreach}
-</div>
-<script>
-$(document).ready(function() {
-    $('.carousel').each(function(){
-        $(this).carousel({
-            pause: true,
-            interval: false
-        });
-    });
-	$(".blockleoproducttabs").each( function(){
-		$(".nav-tabs li", this).first().addClass("active");
-		$(".tab-content .tab-pane", this).first().addClass("active");
-	} );
-});
-</script>
+					<ul id="productTabs-{$datas.id_leomanagewidgets}" class="nav na

@@ -192,7 +192,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 							<span class="discount_tag">{l s='Reduced price!'}</span>
 						{/if}
 				{*!custom nox*}
-						<p id="reduction_amount" {if !$product->specificPrice OR $product->specificPrice.reduction_type != 'amount' || $product->specificPrice.reduction|intval ==0} style="display:none"{/if}>
+						<p id="reduction_amount" {if !$product->specificPrice OR $product->specificPrice.reduction_type != 'amount' || $product->specificPrice.reduction|intval ==0} class="display-none"{/if}>
 				<span class="span_link">{l s='Maximize'}</span>
 			</span>
 		{else}
@@ -228,7 +228,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 		{if isset($images) && count($images) > 3}<a id="view_scroll_right" title="{l s='Other views'}" href="javascript:{ldelim}{rdelim}"><i class="fa fa-chevron-circle-right"></i></a>{/if}
 		</div>
 		{/if}
-		{if isset($images) && count($images) > 1}<p class="resetimg clear"><span id="wrapResetImages" style="display: none;"><img src="{$img_dir}icon/cancel_11x13.gif" alt="{l s='Cancel'}" width="11" height="13"/> <a id="resetImages" href="{$link->getProductLink($product)|escape:'html'}" onclick="$('span#wrapResetImages').hide('slow');return (false);">{l s='Display all pictures'}</a></span></p>{/if}		
+		{if isset($images) && count($images) > 1}<p class="resetimg clear"><span id="wrapResetImages" class="display-none"><img src="{$img_dir}icon/cancel_11x13.gif" alt="{l s='Cancel'}" width="11" height="13"/> <a id="resetImages" href="{$link->getProductLink($product)|escape:'html'}" onclick="$('span#wrapResetImages').hide('slow');return (false);">{l s='Display all pictures'}</a></span></p>{/if}		
 	</div>
 
 	<!-- left infos-->
@@ -332,7 +332,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 				{/foreach}
 				</div>
 			{/if}
-			<p id="product_reference" {if isset($groups) OR !$product->reference}style="display: none;"{/if}>
+			<p id="product_reference" {if isset($groups) OR !$product->reference}class="display-none"{/if}>
 				<label for="product_reference">{l s='Reference:'} </label>
 				<span class="editable">{$product->reference|escape:'htmlall':'UTF-8'}</span>
 			</p>
@@ -340,7 +340,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 			
 
 			<!-- minimal quantity wanted -->
-			<p id="minimal_quantity_wanted_p"{if $product->minimal_quantity <= 1 OR !$product->available_for_order OR $PS_CATALOG_MODE} style="display: none;"{/if}>
+			<p id="minimal_quantity_wanted_p"{if $product->minimal_quantity <= 1 OR !$product->available_for_order OR $PS_CATALOG_MODE} class="display-none"{/if}>
 				{l s='This product is not sold individually. You must select at least'} <b id="minimal_quantity_label">{$product->minimal_quantity}</b> {l s='quantity for this product.'}
 			</p>
 			{if $product->minimal_quantity > 1}
@@ -350,7 +350,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 			{/if}
 		</div>
 
-		<div class="content_prices clearfix kosik_box" style="border:1px solid #666; padding:8px;background:#ddd">
+		<div class="content_prices clearfix kosik_box kosik-box-style">
 			<!-- prices -->
 			{if $product->show_price AND !isset($restricted_country_mode) AND !$PS_CATALOG_MODE}
 
@@ -378,8 +378,8 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 					<span id="pretaxe_price"><span id="pretaxe_price_display">{convertPrice price=$product->getPrice(false, $smarty.const.NULL)}</span>&nbsp;{l s='tax excl.'}</span>
 				{/if}
 			</div>
-			<p id="reduction_percent" {if !$product->specificPrice OR $product->specificPrice.reduction_type != 'percentage'} style="display:none;"{/if}><span id="reduction_percent_display">{if $product->specificPrice AND $product->specificPrice.reduction_type == 'percentage'}-{$product->specificPrice.reduction*100}%{/if}</span></p>
-			<p id="reduction_amount" {if !$product->specificPrice OR $product->specificPrice.reduction_type != 'amount' || $product->specificPrice.reduction|intval ==0} style="display:none"{/if}>
+			<p id="reduction_percent" {if !$product->specificPrice OR $product->specificPrice.reduction_type != 'percentage'} class="display-none"{/if}><span id="reduction_percent_display">{if $product->specificPrice AND $product->specificPrice.reduction_type == 'percentage'}-{$product->specificPrice.reduction*100}%{/if}</span></p>
+			<p id="reduction_amount" {if !$product->specificPrice OR $product->specificPrice.reduction_type != 'amount' || $product->specificPrice.reduction|intval ==0} class="display-none"{/if}>
 				<span id="reduction_amount_display">
 				{if $product->specificPrice AND $product->specificPrice.reduction_type == 'amount' AND $product->specificPrice.reduction|intval !=0}
 					-{convertPrice price=$productPriceWithoutReduction-$productPrice|floatval}
@@ -393,7 +393,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 			{/if}
 			</p>
 			{if $packItems|@count && $productPrice < $product->getNoPackPrice()}
-				<p class="pack_price">{l s='Instead of'} <span style="text-decoration: line-through;">{convertPrice price=$product->getNoPackPrice()}</span></p>
+				<p class="pack_price">{l s='Instead of'} <span class="txt-decor-line-through">{convertPrice price=$product->getNoPackPrice()}</span></p>
 				<br class="clear" />
 			{/if}
 			{if $product->ecotax != 0}
@@ -411,37 +411,37 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 			{/if}
 			
 				<!-- availability -->
-			<p id="availability_statut"{if ($product->quantity <= 0 && !$product->available_later && $allow_oosp) OR ($product->quantity > 0 && !$product->available_now) OR !$product->available_for_order OR $PS_CATALOG_MODE} style="display: none;"{/if}>
+			<p id="availability_statut"{if ($product->quantity <= 0 && !$product->available_later && $allow_oosp) OR ($product->quantity > 0 && !$product->available_now) OR !$product->available_for_order OR $PS_CATALOG_MODE} class="display-none"{/if}>
 				<span id="availability_label">{l s='Availability:'}</span>
 				<span id="availability_value"{if $product->quantity <= 0} class="warning_inline"{/if}>{if $product->quantity <= 0}{if $allow_oosp}{$product->available_later}{else}{l s='This product is no longer in stock'}{/if}{else}{$product->available_now}{/if}</span>				
 			</p>
-			<p id="availability_date"{if ($product->quantity > 0) OR !$product->available_for_order OR $PS_CATALOG_MODE OR !isset($product->available_date) OR $product->available_date < $smarty.now|date_format:'%Y-%m-%d'} style="display: none;"{/if}>
+			<p id="availability_date"{if ($product->quantity > 0) OR !$product->available_for_order OR $PS_CATALOG_MODE OR !isset($product->available_date) OR $product->available_date < $smarty.now|date_format:'%Y-%m-%d'} class="display-none"{/if}>
 				<span id="availability_date_label">{l s='Availability date:'}</span>
 				<span id="availability_date_value">{dateFormat date=$product->available_date full=false}</span>
 			</p>
 			<!-- number of item in stock -->
 			{if ($display_qties == 1 && !$PS_CATALOG_MODE && $product->available_for_order)}
-			<p id="pQuantityAvailable"{if $product->quantity <= 0} style="display: none;"{/if}>
+			<p id="pQuantityAvailable"{if $product->quantity <= 0} class="display-none"{/if}>
 				<span id="quantityAvailable">{$product->quantity|intval}</span>
-				<span {if $product->quantity > 1} style="display: none;"{/if} id="quantityAvailableTxt">{l s='Item in stock'}</span>
-				<span {if $product->quantity == 1} style="display: none;"{/if} id="quantityAvailableTxtMultiple">{l s='Items in stock'}</span>
+				<span {if $product->quantity > 1} class="display-none"{/if} id="quantityAvailableTxt">{l s='Item in stock'}</span>
+				<span {if $product->quantity == 1} class="display-none"{/if} id="quantityAvailableTxtMultiple">{l s='Items in stock'}</span>
 			</p>
 			{/if}
 
 			<!-- Out of stock hook -->
-			<div id="oosHook"{if $product->quantity > 0} style="display: none;"{/if}>
+			<div id="oosHook"{if $product->quantity > 0} class="display-none"{/if}>
 				{$HOOK_PRODUCT_OOS}
 			</div>
 
-			<p class="warning_inline" id="last_quantities"{if ($product->quantity > $last_qties OR $product->quantity <= 0) OR $allow_oosp OR !$product->available_for_order OR $PS_CATALOG_MODE} style="display: none"{/if} >{l s='Warning: Last items in stock!'}</p>
+			<p class="warning_inline" id="last_quantities"{if ($product->quantity > $last_qties OR $product->quantity <= 0) OR $allow_oosp OR !$product->available_for_order OR $PS_CATALOG_MODE} class="display-none"{/if} >{l s='Warning: Last items in stock!'}</p>
 			
 			
 			<!-- quantity wanted -->
-			<p id="quantity_wanted_p"{if (!$allow_oosp && $product->quantity <= 0) OR $virtual OR !$product->available_for_order OR $PS_CATALOG_MODE} style="display: none;"{/if}>
+			<p id="quantity_wanted_p"{if (!$allow_oosp && $product->quantity <= 0) OR $virtual OR !$product->available_for_order OR $PS_CATALOG_MODE} class="display-none"{/if}>
 				<label>{l s='Quantity:'}</label>
 				<input type="text" name="qty" id="quantity_wanted" class="text form-control" value="{if isset($quantityBackup)}{$quantityBackup|intval}{else}{if $product->minimal_quantity > 1}{$product->minimal_quantity}{else}1{/if}{/if}" size="2" maxlength="3" {if $product->minimal_quantity > 1}onkeyup="checkMinimalQuantity({$product->minimal_quantity});"{/if} />
 			</p>
-			<p id="add_to_cart" {if (!$allow_oosp && $product->quantity <= 0) OR !$product->available_for_order OR (isset($restricted_country_mode) AND $restricted_country_mode) OR $PS_CATALOG_MODE}style="display:none"{/if} class="buttons_bottom_block">
+			<p id="add_to_cart" {if (!$allow_oosp && $product->quantity <= 0) OR !$product->available_for_order OR (isset($restricted_country_mode) AND $restricted_country_mode) OR $PS_CATALOG_MODE}class="display-none"{/if} class="buttons_bottom_block">
 				<span></span>
 				<input type="submit" name="Submit" value="{l s='Add to cart'}" class="exclusive" />
 			</p>
@@ -467,7 +467,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 {if (isset($quantity_discounts) && count($quantity_discounts) > 0)}
 <!-- quantity discount -->
 <ul class="idTabs clearfix">
-	<li><a href="#discount" style="cursor: pointer" class="selected">{l s='Sliding scale pricing'}</a></li>
+	<li><a href="#discount" class="selected cursor-pointer">{l s='Sliding scale pricing'}</a></li>
 </ul>
 <div id="quantityDiscount">
 	<table class="std">
@@ -592,7 +592,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 										<div class="product_desc">
 											{$accessory.description_short|strip_tags|truncate:80:'...'}
 										</div>
-										<a class="rating_box leo-rating-{$accessory.id_product}" href="#" rel="{$accessory.id_product}" style="display:none">
+										<a class="rating_box leo-rating-{$accessory.id_product} display-none" href="#" rel="{$accessory.id_product}">
 											<i class="fa fa-star-o"></i>
 											<i class="fa fa-star-o"></i>
 											<i class="fa fa-star-o"></i>
@@ -675,7 +675,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 					<input type="hidden" name="quantityBackup" id="quantityBackup" value="" />
 					<input type="hidden" name="submitCustomizedDatas" value="1" />
 					<input type="button" class="button" value="{l s='Save'}" onclick="javascript:saveCustomization()" />
-					<span id="ajax-loader" style="display:none"><img src="{$img_ps_dir}loader.gif" alt="loader" /></span>
+					<span id="ajax-loader" class="display-none"><img src="{$img_ps_dir}loader.gif" alt="loader" /></span>
 				</p>
 			</form>
 			<p class="clear required"><sup>*</sup> {l s='required fields'}</p>

@@ -1,7 +1,10 @@
 <script>
 {literal}
 $(document).ready(function() {
-slajdujTlacitko();
+if(typeof slajdujTlacitko == 'function'){
+    slajdujTlacitko();
+}
+
 })
 {/literal}
 </script>

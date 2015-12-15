@@ -33,7 +33,7 @@
 			<div class="col-sm-4 hidden-xs">
 				<div class="inner">
 				  <div class="btn-group" id="productsview">
-					<span style="float: left;">{l s='Display:'}</span>
+					<span class="float-left">{l s='Display:'}</span>
 					<a class="btn-tooltip" title="{l s='Grid'}" href="#" rel="view-grid"><i class="fa fa-th {if Configuration::get('leoview')==1}active{/if}" ></i></a>
 					<a class="btn-tooltip" title="{l s='List'}" href="#"  rel="view-list"><i class="fa fa-th-list {if Configuration::get('leoview')==0}active{/if}"></i></a>
 				  </div>

@@ -42,7 +42,7 @@
 				<th class="item">{l s='Payment: '}</th>
 				<th class="item">{l s='Status'}</th>
 				<th class="item">{l s='Invoice'}</th>
-				<th class="last_item" style="width:90px">&nbsp;</th>
+				<th class="last_item width-90">&nbsp;</th>
 			</tr>
 		</thead>
 		<tbody>

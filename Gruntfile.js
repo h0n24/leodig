@@ -32,17 +32,17 @@ module.exports = function(grunt) {
             ]
           }
         },
-        'ftp-deploy': { // upload obsahu složky upload na ftp (v případě vývoje mimo localhost)
-              build: {
-                auth: {
-                  host: 'ftp.helveti.cz',
-                  port: 21,
-                  authKey: 'key1'
-                },
-                src: 'less/upload',
-                dest: '/themes/leodig/css'
-              }
-            },
+        // 'ftp-deploy': { // upload obsahu složky upload na ftp (v případě vývoje mimo localhost)
+        //       build: {
+        //         auth: {
+        //           host: 'ftp.helveti.cz',
+        //           port: 21,
+        //           authKey: 'key1'
+        //         },
+        //         src: 'less/upload',
+        //         dest: '/themes/leodig/css'
+        //       }
+        //     },
         watch: {  // sledovací task
             styles: {
                options: {
@@ -51,14 +51,14 @@ module.exports = function(grunt) {
                     event: ["added", "deleted", "changed"]
                 },
                 files: [ "less/components/basic/*.css", "less/components/basic/*.less", "less/components/structure/*.css", "less/components/structure/*.less", "less/components/component/*.css", "less/components/component/*.less", "less/components/page/*.css", "less/components/page/*.less", "less/components/module/*.css", "less/components/module/*.less", "less/bootstrap/*.less", "less/font-awesome/*.less", "less/**/*.js"],
-                tasks: [ "less", "autoprefixer", "copy", "ftp-deploy" ]
+                tasks: [ "less", "autoprefixer", "copy" ]
             }
         }
     });
 
     grunt.loadNpmTasks("grunt-contrib-less");
     grunt.loadNpmTasks("grunt-contrib-watch");
-    grunt.loadNpmTasks('grunt-ftp-deploy');
+    // grunt.loadNpmTasks('grunt-ftp-deploy');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-autoprefixer');
 

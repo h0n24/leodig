@@ -84,6 +84,7 @@
 {hook h='cmsFooter'}
 {/if}
 <br />
+<script type="text/javascript" src="/js/jquery/plugins/fancybox/jquery.fancybox.js"></script>
 <script>
 	$(document).ready(function() {
 	
@@ -91,3 +92,4 @@
 	
 	});
 </script>
+

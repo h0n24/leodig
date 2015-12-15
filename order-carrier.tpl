@@ -90,7 +90,7 @@
 	<form class="form-horizontal" id="form" action="{$link->getPageLink('order', true, NULL, "multi-shipping={$multi_shipping}")|escape:'html'}" method="post" onsubmit="return acceptCGV();">
 {else}
 	<div id="opc_delivery_methods" class="opc-main-block">
-	<div id="opc_delivery_methods-overlay" class="opc-overlay" style="display: none;"></div>
+	<div id="opc_delivery_methods-overlay" class="opc-overlay display-none"></div>
 {/if}
 
 <div class="kosik-container kosik-container-delivery">
@@ -240,7 +240,7 @@
 	{/if}
 	
 	</div>
-	<div style="display: none;" id="extra_carrier"></div>
+	<div class="display-none" id="extra_carrier"></div>
 	
 		{if $giftAllowed}
 		<h3 class="gift_title">{l s='Gift'}</h3>

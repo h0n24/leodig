@@ -63,7 +63,7 @@
 							</select>
 						<!-- <div id="desc_contact0" class="desc_contact">&nbsp;</div> -->
 							{foreach from=$contacts item=contact}
-								<p id="desc_contact{$contact.id_contact|intval}" class="desc_contact" style="display:none;">
+								<p id="desc_contact{$contact.id_contact|intval}" class="desc_contact display-none" >
 									{$contact.description|escape:'htmlall':'UTF-8'}
 								</p>
 							{/foreach}

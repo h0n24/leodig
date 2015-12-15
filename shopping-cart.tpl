@@ -50,7 +50,7 @@
 	var deliveryAddress = {$cart->id_address_delivery|intval};
 	// ]]>
 	</script>
-	<p style="display:none" id="emptyCartWarning" class="warning">{l s='Your shopping cart is empty.'}</p>
+	<p id="emptyCartWarning" class="warning display-none">{l s='Your shopping cart is empty.'}</p>
 {if isset($lastProductAdded) AND $lastProductAdded}
 	<div class="cart_last_product">
 		<div class="cart_last_product_header">
@@ -80,7 +80,7 @@
 		</thead>
 		
 		<tbody>
-		
+		{assign var='jeVN' value=0}
 		{assign var='odd' value=0}
 		{foreach $products as $product}
 			{assign var='productId' value=$product.id_product}
@@ -125,7 +125,7 @@
 						</td>
 						<td class="cart_quantity" colspan="2">
 							{if isset($cannotModify) AND $cannotModify == 1}
-								<span style="float:left">{if $quantityDisplayed == 0 AND isset($customizedDatas.$productId.$productAttributeId)}{$customizedDatas.$productId.$productAttributeId|@count}{else}{$product.cart_quantity-$quantityDisplayed}{/if}</span>
+								<span class="float-left">{if $quantityDisplayed == 0 AND isset($customizedDatas.$productId.$productAttributeId)}{$customizedDatas.$productId.$productAttributeId|@count}{else}{$product.cart_quantity-$quantityDisplayed}{/if}</span>
 							{else}
 								<div class="cart_quantity_button">
 								<a rel="nofollow" class="cart_quantity_up" id="cart_quantity_up_{$product.id_product}_{$product.id_product_attribute}_{$id_customization}_{$product.id_address_delivery|intval}" href="{$link->getPageLink('cart', true, NULL, "add=1&amp;id_product={$product.id_product|intval}&amp;ipa={$product.id_product_attribute|intval}&amp;id_address_delivery={$product.id_address_delivery}&amp;id_customization={$id_customization}&amp;token={$token_cart}")|escape:'html'}" title="{l s='Add'}"><img src="{$img_dir}icon/quantity_up.gif" alt="{l s='Add'}" width="14" height="9" /></a><br />
@@ -134,7 +134,7 @@
 									<img src="{$img_dir}icon/quantity_down.gif" alt="{l s='Subtract'}" width="14" height="9" />
 								</a>
 								{else}
-								<a class="cart_quantity_down" style="opacity: 0.3;" id="cart_quantity_down_{$product.id_product}_{$product.id_product_attribute}_{$id_customization}" href="#" title="{l s='Subtract'}">
+								<a class="cart_quantity_down opacity-0-3" id="cart_quantity_down_{$product.id_product}_{$product.id_product_attribute}_{$id_customization}" href="#" title="{l s='Subtract'}">
 									<img src="{$img_dir}icon/quantity_down.gif" alt="{l s='Subtract'}" width="14" height="9" />
 								</a>
 								{/if}
@@ -157,20 +157,35 @@
 				{* If it exists also some uncustomized products *}
 				{if $product.quantity-$quantityDisplayed > 0}{include file="$tpl_dir./shopping-cart-product-line.tpl" productLast=$product@last productFirst=$product@first}{/if}
 			{/if}
+			{if $product.id_manufacturer==10}{$jeVN=1}{/if}
 		{/foreach}
-		{* NUZ JAKO DAREK
-				{if $total_price>4000}
+		{* NUZ JAKO DAREK*}
+				{*if $total_price>4000*}
 		<tr>
-			<td class="cart_product"><a href="http://www.helveti.cz/vanoce-2014" target="_blank"><img src="http://www.helveti.cz/themes/leodig/img/helveti/kosikdareknuz.png" title="Zavírací nůž - zdarma" alt="Zavírací nůž - zdarma" width="81"></a></td>
-			<td class="cart_description"><p class="s_title_block"><a href="http://www.helveti.cz/vanoce-2014" target="_blank">Zavírací nůž - dárek</a></p></td>
+			<td class="cart_product"><a href="http://www.helveti.cz/vanoce-2015" target="_blank"><img src="http://www.helveti.cz/themes/leodig/img/helveti/kosikdareknuz.png" title="Zavírací nůž - zdarma" alt="Zavírací nůž - zdarma" width="81"></a></td>
+			<td class="cart_description"><p class="s_title_block"><a href="http://www.helveti.cz/vanoce-2015" target="_blank">Zavírací nůž - dárek</a></p></td>
 			<td class="cart_ref">skladem</td>
 			<td class="cart_unit"><span class="price">ZDARMA</span></td>
 			<td class="cart_quantity"></td>
 			<td class="cart_total"><span class="price">ZDARMA</span></td>
 			<td class="cart_delete"></td>
 		</tr>
-		{/if}
-		*}
+		{*/if*}
+
+		{* NUZ u VICTORINOX JAKO DAREK*}
+		{*
+         {if $jeVN==1}
+        <tr>
+            <td class="cart_product"><a href="http://www.helveti.cz/darek-k-objednavce" target="_blank"><img src="http://www.helveti.cz/themes/leodig/img/helveti/nuzVN.jpg" title="Victorinox Spartan - dárek" alt="Victorinox Spartan - dárek" width="81"></a></td>
+            <td class="cart_description"><p class="s_title_block"><a href="http://www.helveti.cz/darek-k-objednavce" target="_blank">Victorinox Spartan - dárek</a></p></td>
+            <td class="cart_ref">skladem</td>
+            <td class="cart_unit"><span class="price">ZDARMA</span></td>
+            <td class="cart_quantity"></td>
+            <td class="cart_total"><span class="price">ZDARMA</span></td>
+            <td class="cart_delete"></td>
+        </tr>
+        {/if}
+        *}
 		<tr>
 					<td class="cart_product"><a href="http://www.helveti.cz/pojisteni-hodinek" target="_blank"><img src="http://www.helveti.cz/themes/leodig/img/helveti/pojisteni.png" title="Pojištění hodinek na 1 rok" alt="Pojištění hodinek na 1 rok" width="81"></a></td>
 					<td class="cart_description"><p class="s_title_block"><a href="http://www.helveti.cz/pojisteni-hodinek" target="_blank">Pojištění hodinek na 1 rok</a></p></td>
@@ -213,7 +228,7 @@
 			</tr>
 		{/if}
 
-			<tr{if $total_wrapping == 0} style="display: none;"{/if}>
+			<tr{if $total_wrapping == 0} class="display-none"{/if}>
 				<td colspan="4">
 				{if $use_taxes}
 					{if $display_tax_label}{l s='Total gift wrapping (tax incl.):'}{else}{l s='Total gift-wrapping cost:'}{/if}
@@ -313,7 +328,7 @@
 						<span class="ikonka_i">i</span> Dopravu a platbu si <strong>můžete vybrat v 3.kroku objednávky.</strong>
 					</div>
 					<div id="kupon">
-						<input type="checkbox" id="kupon_helper" name="kupon_helper" {if isset($discount_name) && $discount_name}checked{/if}><label for="kupon_helper">Mám slevový kupón<i class="fa fa-chevron-down"></i></label>
+						<input type="checkbox" id="kupon_helper" name="kupon_helper" {if isset($discount_name) && $discount_name}checked{/if}><label for="kupon_helper">Mám slevový kupón nebo Sphere card<i class="fa fa-chevron-down"></i></label>
 					</div>
 				{if $voucherAllowed}
 					{if isset($errors_discount) && $errors_discount}

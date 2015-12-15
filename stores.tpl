@@ -95,7 +95,7 @@
 		<div class="form-group clearfix">
 			<div class="col-sm-3 control-label"></div>
 			<div class="col-sm-9">
-				<input type="button" class="button" onclick="searchLocations();" value="{l s='Search'}" style="display: inline;" /> 
+				<input type="button" class="button display-inline" onclick="searchLocations();" value="{l s='Search'}" /> 
 			</div>
 		</div>
 		<div class="form-group">

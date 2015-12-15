@@ -1,8 +1,8 @@
 <div class="cms-vydejni-pravo">
 <div class="cms-rozcestnik"><fieldset><legend>Potřebujete poradit?</legend>
 <div class="cms-kontakt-tel">
-<h2>+420 774 744 763</h2>
-<h3>+420 777 056 319</h3>
+<h2>+420 774 272 737</h2>
+<h3>+420 774 744 763</h3>
 </div>
 <div class="cms-kontakt-mail">
 <h2>info@helveti.cz</h2>

@@ -45,7 +45,7 @@
 	{include file="$tpl_dir./errors.tpl"}
 {else}
 	<div id="opc_payment_methods" class="opc-main-block">
-		<div id="opc_payment_methods-overlay" class="opc-overlay" style="display: none;"></div>
+		<div id="opc_payment_methods-overlay" class="opc-overlay display-none"></div>
 {/if}
 
 <div class="kosik-container kosik-container-payment">
@@ -78,12 +78,23 @@
 	<script>
 		$("#test").click(function(){
 			url=$("input[name=pay]:checked").attr("rel");
-			if(url)
+			if(url&&url!=="gopay")
 				window.location.replace(url);
+			else if(url=="gopay"){
+				document.getElementById('gopay-payment-form-new').submit(); 
+				return false;
+			}
 			else
 				alert("Vyberte prosím způsob platby.");
 			return false;
-		})
+		});
+		//gopay
+		$(".delivery_option label").click(function(){
+			var what_payment=$(this).attr("for");
+			//$(".go_content").slideToggle();
+			if(what_payment=="pay_badd_gopay_new")$("#pay_div_add_gopay_new .go_content").show();
+			else $("#pay_div_add_gopay_new .go_content").hide();
+		});
 	</script>
 	{/literal}		
 {else}

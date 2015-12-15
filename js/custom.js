@@ -109,7 +109,8 @@ $("input[name=processCarrier]").click(function(){
 } );
 $(window).ready( function(){
      /* automatic keep header always displaying on top */
-    /* automatic keep header always displaying on top */
+    /* ZRUSENO vyjizdeni a zajizdeni menu 
+    
     if( $("body").hasClass("keep-header") ){
          $("#header").addClass( "navbar-fixed-top" );
         var hideheight =  $("#header").height()+120; 
@@ -125,7 +126,7 @@ $(window).ready( function(){
             } 
 
         });
-    }
+    }*/
  
  //ostatni
  //kupony
@@ -179,46 +180,19 @@ function LeoWishlistCart(id, action, id_product, id_product_attribute, quantity)
 
 
 // rozbalení dalších fotek v detailu produktu
-
 $(window).ready( function(){
-
-	var obrazku = $('.miniatura-img').length;
-	var radek = obrazku / 4;
-
 	$('#dalsi-fotografie').click(function(){
-		var vyska = $('#thumbs_list').height();
-		if(vyska == 130) {
-			$('#thumbs_list').animate({height:(130*Math.ceil(radek))+'px'}, 500);
-			/*if( (radek > 1) && (radek <= 2)) {
-				$('#thumbs_list').animate({height:'260px'}, 500);
-			}
-
-			if( (radek > 2) && (radek <= 3)) {
-				$('#thumbs_list').animate({height:'390px'}, 500);
-			}
-
-			if( (radek > 3) && (radek <= 4)) {
-				$('#thumbs_list').animate({height:'520px'}, 500);
-			}
-
-			if( (radek > 4) && (radek <= 5)) {
-				$('#thumbs_list').animate({height:'650px'}, 500);
-			};*/
-
+		$('#thumbs_list').toggleClass('open', 500);
+		
+		if($('#thumbs_list').hasClass('open')) {
 			$( "#fotografie-zabaleno" ).hide();
-
 			$( "#fotografie-rozbaleno" ).show();
-
-		} else {
-			$('#thumbs_list').animate({height:'130px'}, 500);
-
+		} 
+		else{
 			$( "#fotografie-zabaleno" ).show();
-
 			$( "#fotografie-rozbaleno" ).hide();
 		};
-
 	});
+});
 
-
-} );
 

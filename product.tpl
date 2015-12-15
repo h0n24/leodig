@@ -186,6 +186,11 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 						{if $product->top200}
 							<span class="product_tag toptag">{l s='TOP'}</span>
 						{/if}
+						{*
+						{if $product->id_manufacturer==10}
+                            <a href="http://www.helveti.cz/darek-k-objednavce"><div class="product_tag_right"><div class="darek_nadpis">{l s='+ Dárek'}</div><div class="darek_obrazek"><img src="http://www.helveti.cz/themes/leodig/img/helveti/nuzVN.jpg" title="Zavírací nůž - zdarma" alt="Zavírací nůž - zdarma" width="80"></div></div></a><br />
+                        {/if}
+                        *}
 				<div class="img-product-tags">
 						{if {Product::skladovost($product->id,"skladem")}} <a href="http://www.helveti.cz/s/1/hodinky-skladem"><span class="product_tag skladem">{l s='Skladem'}</span></a><br />{/if}
 						{if $product->specificPrice.reduction_type == 'percentage'}
@@ -237,7 +242,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 		</div>
 		{if isset($images) && count($images) > 4}<span id="dalsi-fotografie" title="{l s='Další fotografie'}">
 		<span id="fotografie-zabaleno">{l s='Další fotografie'} ({count($images)})<i class="fa fa-chevron-down"></i></span>
-		<span id="fotografie-rozbaleno" style="display: none;">{l s='Méně fotografií'}<i class="fa fa-chevron-up"></i></span>
+		<span id="fotografie-rozbaleno" class="display-none">{l s='Méně fotografií'}<i class="fa fa-chevron-up"></i></span>
 		</span>{/if}
 		</div>
 		{/if}		
@@ -371,7 +376,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 			
 
 			<!-- minimal quantity wanted -->
-			<p id="minimal_quantity_wanted_p"{if $product->minimal_quantity <= 1 OR !$product->available_for_order OR $PS_CATALOG_MODE} style="display: none;"{/if}>
+			<p id="minimal_quantity_wanted_p"{if $product->minimal_quantity <= 1 OR !$product->available_for_order OR $PS_CATALOG_MODE} class="display-none"{/if}>
 				{l s='This product is not sold individually. You must select at least'} <b id="minimal_quantity_label">{$product->minimal_quantity}</b> {l s='quantity for this product.'}
 			</p>
 			{if $product->minimal_quantity > 1}
@@ -390,8 +395,8 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 
 			<div class="price{if $product->specificPrice || $product->specificPrice.reduction} price-sleva{/if}">
 			<div id="blok_slevy">
-				<p id="reduction_percent" {if !$product->specificPrice OR $product->specificPrice.reduction_type != 'percentage'} style="display:none;"{/if}><span id="reduction_percent_display">{if $product->specificPrice AND $product->specificPrice.reduction_type == 'percentage'}-{$product->specificPrice.reduction*100}%{/if}</span></p>
-				<p id="reduction_amount" {if !$product->specificPrice OR $product->specificPrice.reduction_type != 'amount' || $product->specificPrice.reduction|intval ==0} style="display:none"{/if}>
+				<p id="reduction_percent" {if !$product->specificPrice OR $product->specificPrice.reduction_type != 'percentage'} class="display-none"{/if}><span id="reduction_percent_display">{if $product->specificPrice AND $product->specificPrice.reduction_type == 'percentage'}-{$product->specificPrice.reduction*100}%{/if}</span></p>
+				<p id="reduction_amount" {if !$product->specificPrice OR $product->specificPrice.reduction_type != 'amount' || $product->specificPrice.reduction|intval ==0} class="display-none"{/if}>
 						<span id="reduction_amount_display">
 							{if $product->specificPrice AND $product->specificPrice.reduction_type == 'amount' AND $product->specificPrice.reduction|intval !=0}
 								-{convertPrice price=$productPriceWithoutReduction-$productPrice|floatval}
@@ -437,24 +442,24 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 				<!-- availability -->
 
 	
-			<p id="availability_statut"{if ($product->quantity <= 0 && !$product->available_later && $allow_oosp) OR ($product->quantity > 0 && !$product->available_now) OR !$product->available_for_order OR $PS_CATALOG_MODE} style="display: none;"{/if}>
+			<p id="availability_statut"{if ($product->quantity <= 0 && !$product->available_later && $allow_oosp) OR ($product->quantity > 0 && !$product->available_now) OR !$product->available_for_order OR $PS_CATALOG_MODE} class="display-none"{/if}>
 				{*<span id="availability_label">{if {Product::skladovost($product->id,"skladem")}}Skladem- {else}Dodání - {/if}</span>
 				<span id="availability_value"{if $product->quantity <= 0} class="warning_inline"{/if}>{if $product->quantity <= 0}{if $allow_oosp}{$product->available_later}{else}{l s='This product is no longer in stock'}{/if}{else}{$product->available_now}{/if}</span>*}	
 				<span class="availability_skladovost {Product::skladovost($product->id,"barva")} ">{Product::skladovost($product->id,"text")} - </span>
 				<span class="btn-tooltip availability_dodani" data-html="true" data-placement="right" data-original-title="{Product::skladovost($product->id,"tooltip")}">{Product::skladovost($product->id,"datum")}</span>, doprava zdarma		
 			</p>
-			<p id="availability_date"{if ($product->quantity > 0) OR !$product->available_for_order OR $PS_CATALOG_MODE OR !isset($product->available_date) OR $product->available_date < $smarty.now|date_format:'%Y-%m-%d'} style="display: none;"{/if}>
+			<p id="availability_date"{if ($product->quantity > 0) OR !$product->available_for_order OR $PS_CATALOG_MODE OR !isset($product->available_date) OR $product->available_date < $smarty.now|date_format:'%Y-%m-%d'} class="display-none"{/if}>
 				<span id="availability_date_label">{l s='Availability date:'}</span>
 				<span id="availability_date_value">{dateFormat date=$product->available_date full=false} </span>
 			</p>
 
 			<!-- Out of stock hook -->
-			<div id="oosHook"{if $product->quantity > 0} style="display: none;"{/if}>
+			<div id="oosHook"{if $product->quantity > 0} class="display-none"{/if}>
 				{$HOOK_PRODUCT_OOS}
 			</div>
 			
 			
-			<p id="add_to_cart" {if (!$allow_oosp && $product->quantity <= 0) OR !$product->available_for_order OR (isset($restricted_country_mode) AND $restricted_country_mode) OR $PS_CATALOG_MODE}style="display:none"{/if} class="buttons_bottom_block">
+			<p id="add_to_cart" {if (!$allow_oosp && $product->quantity <= 0) OR !$product->available_for_order OR (isset($restricted_country_mode) AND $restricted_country_mode) OR $PS_CATALOG_MODE}class="display-none"{/if} class="buttons_bottom_block">
 				<span></span>
 				<input type="submit" name="Submit" value="{l s='Add to cart'}" class="exclusive" />
 			</p>
@@ -468,7 +473,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 				Doprava zdarma
 			</span></a>
 			<a href="{$link->getCMSLink('40')}"><span class="produkt-iconky-zaruka produkt-iconky-icon">
-				3-letá záruka
+				3letá záruka
 			</span></a>
 			</div>
 
@@ -493,7 +498,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 			</div>
 
 			<div class="facebook-product-share">	
-			<iframe src="//www.facebook.com/plugins/like.php?locale=en_GB&amp;href={$base_dir}{$current_url}&amp;width&amp;layout=box_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=65&amp;appId=1526409284245153" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:65px;" allowTransparency="true"></iframe>
+			<iframe src="//www.facebook.com/plugins/like.php?locale=en_GB&amp;href={$base_dir}{$current_url}&amp;width&amp;layout=box_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=65&amp;appId=1526409284245153" scrolling="no" frameborder="0" class="iframe-fb" allowTransparency="true"></iframe>
 			</div>
 
 			<div class="clearfix">	</div>
@@ -506,7 +511,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 {if (isset($quantity_discounts) && count($quantity_discounts) > 0)}
 <!-- quantity discount -->
 <ul class="idTabs clearfix">
-	<li><a href="#discount" style="cursor: pointer" class="selected">{l s='Sliding scale pricing'}</a></li>
+	<li><a href="#discount" class="selected cursor-pointer">{l s='Sliding scale pricing'}</a></li>
 </ul>
 <div id="quantityDiscount">
 	<table class="std">
@@ -632,7 +637,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 										<div class="product_desc">
 											{$accessory.description_short|strip_tags|truncate:80:'...'}
 										</div>
-										<a class="rating_box leo-rating-{$accessory.id_product}" href="#" rel="{$accessory.id_product}" style="display:none">
+										<a class="rating_box leo-rating-{$accessory.id_product} display-none" href="#" rel="{$accessory.id_product}" >
 											<i class="fa fa-star-o"></i>
 											<i class="fa fa-star-o"></i>
 											<i class="fa fa-star-o"></i>
@@ -715,7 +720,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 					<input type="hidden" name="quantityBackup" id="quantityBackup" value="" />
 					<input type="hidden" name="submitCustomizedDatas" value="1" />
 					<input type="button" class="button" value="{l s='Save'}" onclick="javascript:saveCustomization()" />
-					<span id="ajax-loader" style="display:none"><img src="{$img_ps_dir}loader.gif" alt="loader" /></span>
+					<span id="ajax-loader" class="display-none"><img src="{$img_ps_dir}loader.gif" alt="loader" /></span>
 				</p>
 			</form>
 			<p class="clear required"><sup>*</sup> {l s='required fields'}</p>

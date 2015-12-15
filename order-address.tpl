@@ -211,7 +211,7 @@
 		</div>
 	{/if}
 <div id="opc_account" class="opc-main-block">
-	<div id="opc_account-overlay" class="opc-overlay" style="display: none;"></div>
+	<div id="opc_account-overlay" class="opc-overlay display-none"></div>
 {/if}
 	<div class="addresses clearfix">
 		<div  class="address_delivery select form-group clearfix">
@@ -226,14 +226,14 @@
 				</select>
 			</div>
 		</div>
-		<div class="form-group addressesAreEquals col-xs-12 clearfix" {if $cart->isVirtualCart()}style="display:none;"{/if}>
+		<div class="form-group addressesAreEquals col-xs-12 clearfix" {if $cart->isVirtualCart()}class="display-none"{/if}>
 			<div class="checkbox ">
 				<input type="checkbox" name="same" id="addressesAreEquals" value="1" onclick="updateAddressesDisplay();{if $opc}updateAddressSelection();{/if}"{if $cart->id_address_invoice == $cart->id_address_delivery || $addresses|@count == 1} checked="checked"{/if} autocomplete="off"/>
 				<label for="addressesAreEquals">{l s='Use the delivery address as the billing address.'}</label>
 			</div>
 		</div>
 
-		<div id="address_invoice_form" class="select" {if $cart->id_address_invoice == $cart->id_address_delivery}style="display: none;"{/if}>
+		<div id="address_invoice_form" class="select" {if $cart->id_address_invoice == $cart->id_address_delivery}class="display-none"{/if}>
 
 		{if $addresses|@count > 1}
 			<label for="id_address_invoice" class="strong control-label">{l s='Choose a billing address:'}</label>
@@ -251,7 +251,7 @@
 		</div>
 		<div class="clearfix row">
 			<div class="col-sm-6 ">
-				<ul class="address item" id="address_delivery" {if $cart->isVirtualCart()}style="display:none;"{/if}>
+				<ul class="address item" id="address_delivery" {if $cart->isVirtualCart()}class="display-none"{/if}>
 				</ul>
 			</div>	
 			<div class="col-sm-6 ">
@@ -275,7 +275,7 @@
 	<p class="cart_navigation submit">
 		<input type="hidden" class="hidden" name="step" value="2" />
 		<input type="hidden" name="back" value="{$back}" />
-		<a href="{$link->getPageLink($back_order_page, true, NULL, "step=0{if $back}&back={$back}{/if}")|escape:'html'}" title="{l s='Previous'}" class="zpet-do-obchodu"><i class="fa fa-chevron-left"></i> {l s='Zpět na dodací údaje'}</a>
+		<a href="{$link->getPageLink($back_order_page, true, NULL, "step=0{if $back}&back={$back}{/if}")|escape:'html'}" title="{l s='Previous'}" class="zpet-do-obchodu"><i class="fa fa-chevron-left"></i> {l s='Zpět do obchodu'}</a>
 		<input type="submit" name="processAddress" value="{l s='Vyberte způsob dopravy'}" class="button standard-checkout pull-right" />
 	</p>
 </form>

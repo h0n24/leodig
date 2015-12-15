@@ -80,7 +80,7 @@
 </ul>
 <!-- /Steps -->
 {/if}
-{if $current_step != 'summary' && $page_name != 'module-bankwire-payment' && $page_name != 'module-cashondelivery-validation' && $page_name != 'order-confirmation'}
+{if $current_step != 'summary' && $page_name != 'module-bankwire-payment' && $page_name != 'module-cashondelivery-validation' && $page_name != 'module-add_gopay_new-validation' && $page_name != 'order-confirmation'}
 <div class="infobox-kosik-container">
 	<div id="info_box_kosik" class="box_kosik">
 		<fieldset>
@@ -99,6 +99,7 @@
 		</div>
 		</fieldset>
 	</div>
+	{assign var='jeVN' value=0}
 	{if $cart->id && Cart::getTotalCart($cart->id)}
 		<div id="rekapitulace_box_kosik" class="box_kosik">
 			<fieldset>
@@ -117,6 +118,7 @@
 					{displayPrice price=$product_cart.total_wt} 
 				</td>
 			</tr>
+			{if $product_cart.id_manufacturer==10}{$jeVN=1}{/if}
 		{/foreach}
 		{foreach $cart_info.discounts as $sleva_cart}
 				<tr>
@@ -131,8 +133,22 @@
 				</td>
 			</tr>
 		{/foreach}
-		{* NUZ JAKO DAREK
-		{if $cart_info.total_price>4000}
+		{* NUZ JAKO DAREK*}
+		{*
+		{if $jeVN==1}
+			<tr>
+				<td class="rekapitulace_produkt">
+					<span class="rekapitulace_nazev">Victorinox Spartan - dárek</span>
+				</td>
+				<td class="rekapitulace_pocet">
+				1 ks 
+				</td>
+				<td class="rekapitulace_cena">
+					ZDARMA 
+				</td>
+			</tr>
+			{/if}
+			*}
 			<tr>
 				<td class="rekapitulace_produkt">
 					<span class="rekapitulace_nazev">Zavírací nůž - dárek</span>
@@ -144,8 +160,6 @@
 					ZDARMA 
 				</td>
 			</tr>
-			{/if}
-			*}
 			<tr>
 				<td class="rekapitulace_produkt">
 					<span class="rekapitulace_nazev">Pojištění hodinek na 1 rok</span>
