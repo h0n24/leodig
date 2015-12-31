@@ -45,19 +45,11 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		<meta name="google-site-verification" content="Pl6FMFqlU8tU-qcROHjWht59cHWY8QjgvOIDcJHN5Kw" />
 
-		<script type="text/javascript">
-			var baseDir = '{$content_dir|addslashes}';
-			var baseUri = '{$base_uri|addslashes}';
-			var static_token = '{$static_token|addslashes}';
-			var token = '{$token|addslashes}';
-			var priceDisplayPrecision = {$priceDisplayPrecision*$currency->decimals};
-			var priceDisplayMethod = {$priceDisplay};
-			var roundMode = {$roundMode};
-		</script>
-         <!-- <link rel="stylesheet" type="text/css" href="{$BOOTSTRAP_CSS_URI}"/>  -->
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<!--          <link rel="stylesheet" type="text/css" href="https://cask.scotch.io/bootstrap-4.0.css">
- -->{if isset($css_files)}
+
+<!-- <link rel="stylesheet" type="text/css" href="{$BOOTSTRAP_CSS_URI}"/>  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+ {if isset($css_files)}
 	{foreach from=$css_files key=css_uri item=media}
 	<link href="{$css_uri}" rel="stylesheet" type="text/css" media="{$media}" />
 	{/foreach}
@@ -91,35 +83,10 @@
 	{**KONVERZNI KODY**}
 	{literal}
 		<!-- Seznam remarketing -->
-		<script type="text/javascript">
-		/* <![CDATA[ */
-			var seznam_retargeting_id = 20375;
-		/* ]]> */
-		</script>
 		<script type="text/javascript" src="//c.imedia.cz/js/retargeting.js"></script>
 
 	
 	<!-- Facebook Pixel Code -->
-        <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-        document,'script','//connect.facebook.net/en_US/fbevents.js');
-        
-        fbq('init', '1697208277161146');
-        fbq('track', 'PageView');
-        {/literal}{if isset($page_name)&&$page_name=="product"}fbq('track', 'ViewContent', {literal}{
-  content_name: '{/literal}{$product->name|escape:'htmlall':'UTF-8'}{literal}',
-  content_ids: ['{/literal}{$product->reference}{literal}'],
-  content_type: 'product', 
-  value: 0.50,
-  currency: 'CZK'
- }{/literal});{/if}
-        {if $page_name == 'order'}fbq('track', 'AddToCart');{/if}
-        {if isset($page_name)&&$page_name=="order-confirmation"}{literal}fbq('track', 'Purchase', {value: '1.00', currency: 'CZK'});{/literal}{/if}
-        {literal}
-        </script>
         <noscript><img height="1" width="1" class="display-none"
         src="https://www.facebook.com/tr?id=1697208277161146&ev=PageView&noscript=1"
         /></noscript>
@@ -141,28 +108,7 @@
 			<!-- Header -->
 			<header id="header" class="navbar-fixed-top clearfix">
 
-				<!-- Informace o otevírací době -->
-			 	<section id="info-tab-top" class="info-tab-top">
-				 	<div class="container">
-						Máme otevřeno i o <strong>víkendu</strong> SO-NE: 10-14h, přes týden PO-PÁ: 9-19h | <strong>+ Nůž jako dárek</strong>. <a href="http://www.helveti.cz/vanoce-2015">Více informací</a>
-
-						<button type="button" id="close-info-tab" class="close" aria-label="Zavřít">
-						  <span aria-hidden="true">&times;</span>
-						</button>
-				 	</div>	
-				</section> <!--info-tab-top end -->
-
-				<script type="text/javascript">
-					if(localStorage.getItem('hidden')) {
-						 $( "#info-tab-top" ).hide();
-					}
-
-					$( "#close-info-tab" ).click(function() {
-					  $( "#info-tab-top" ).hide( "fast" );
-					  //set local storage
-					  localStorage.setItem('hidden','true');
-					});
-				</script>
+				
 
 				<section id="topbar">
 

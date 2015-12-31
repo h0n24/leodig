@@ -163,16 +163,6 @@ a#new_comment_tab_btn {color: #fff;}
     height: auto !important;
 }
 
-/* Informace s otevírací dobou */
-.info-tab-top {
-  width: 100%;
-  padding: 5px 0;
-  background: #fbfbe1;
-  border-bottom: 1px solid #e7e7e7;
-}
-.info-tab-top a {
-  text-decoration: underline;
-}
 
 .reseter {
 	border:  0px none;

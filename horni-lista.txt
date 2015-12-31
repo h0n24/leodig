@@ -1,0 +1,43 @@
+Horní lišta s inforamcemi o otevírací době (nebo něčím jiným), v header.tpl pod <header id="header" class="navbar-fixed-top clearfix">
+
+============ HTML =============
+
+<!-- Informace o otevírací době -->
+<section id="info-tab-top" class="info-tab-top">
+	<div class="container">
+		Máme otevřeno i o <strong>víkendu</strong> SO-NE: 10-14h, přes týden PO-PÁ: 9-19h | <strong>+ Nůž jako dárek</strong>. <a href="http://www.helveti.cz/vanoce-2015">Více informací</a>
+
+		<button type="button" id="close-info-tab" class="close" aria-label="Zavřít">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>	
+</section> <!--info-tab-top end -->
+
+
+=========== CSS ============
+
+.info-tab-top {
+  width: 100%;
+  padding: 5px 0;
+  background: #fbfbe1;
+  border-bottom: 1px solid #e7e7e7;
+}
+.info-tab-top a {
+  text-decoration: underline;
+}
+
+
+============ JS ================
+
+<!-- Zapamatovat si pomocí LocalStorage, když uživatel schová lištu a při příští návštěvě už nezobarzovat. -->
+<script type="text/javascript">
+	if(localStorage.getItem('hidden')) {
+		$( "#info-tab-top" ).hide();
+	}
+
+	$( "#close-info-tab" ).click(function() {
+		$( "#info-tab-top" ).hide( "fast" );
+					  //set local storage
+					  localStorage.setItem('hidden','true');
+					});
+</script>

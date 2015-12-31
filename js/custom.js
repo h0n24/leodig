@@ -1,4 +1,44 @@
 $(document).ready( function(){
+	//inline skripty z header.tpl
+	var baseDir = '{$content_dir|addslashes}';
+	var baseUri = '{$base_uri|addslashes}';
+	var static_token = '{$static_token|addslashes}';
+	var token = '{$token|addslashes}';
+	var priceDisplayPrecision = {$priceDisplayPrecision*$currency->decimals};
+	var priceDisplayMethod = {$priceDisplay};
+	var roundMode = {$roundMode};
+
+
+	//seznam remarketing
+		/* <![CDATA[ */
+			var seznam_retargeting_id = 20375;
+		/* ]]> */
+
+
+	//facebook pixel code
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+        
+        fbq('init', '1697208277161146');
+        fbq('track', 'PageView');
+        {/literal}{if isset($page_name)&&$page_name=="product"}fbq('track', 'ViewContent', {literal}{
+  content_name: '{/literal}{$product->name|escape:'htmlall':'UTF-8'}{literal}',
+  content_ids: ['{/literal}{$product->reference}{literal}'],
+  content_type: 'product', 
+  value: 0.50,
+  currency: 'CZK'
+ }{/literal});{/if}
+        {if $page_name == 'order'}fbq('track', 'AddToCart');{/if}
+        {if isset($page_name)&&$page_name=="order-confirmation"}{literal}fbq('track', 'Purchase', {value: '1.00', currency: 'CZK'});{/literal}{/if}
+        {literal}
+
+
+
+
+
 	if(	navigator.appVersion.indexOf("MSIE 7.")!=-1||
 		navigator.appVersion.indexOf("MSIE 6.")!=-1){
 			$("#low_ie_overlay").show();
